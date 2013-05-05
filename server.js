@@ -13,8 +13,10 @@ var app = express();
 
 // all environments
 
-var portz = (process.env.OPENSHIFT_INTERNAL_PORT || process.env.PORT);
-var dirz = (process.env.OPENSHIFT_REPO_DIR || __dirname);
+var portz = (process.env.PORT);
+var dirz = (__dirname);
+console.log(process.env.PORT);
+console.log(__dirname);
 
 app.set('port', portz || 3000);
 app.set('views', dirz + '/views');
