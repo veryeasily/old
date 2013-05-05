@@ -1,0 +1,31 @@
+{
+  "name": "Ideabin",
+  "version": "1.0.0",
+  "description": "Heroku version of ideabin",
+  "keywords": [
+    "Node.js",
+    "application"
+  ],
+  "author": {
+    "name": "OpenShift",
+    "email": "ramr@example.org",
+    "url":  "http://openshift.redhat.com/"
+  },
+  "homepage": "http://lju.me/",
+  "engines": {
+    "node": "0.10.x",
+    "npm": "1.2.x"
+  },
+
+  "dependencies": {
+    "express": "*",
+    "jade": "*",
+    "less-middleware": "*",
+    "github": "0.1.8"
+  },
+  "devDependencies": {},
+  "bundleDependencies": [],
+
+  "private": true,
+  "main": "server.js"
+}

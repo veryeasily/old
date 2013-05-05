@@ -1,0 +1,7 @@
+.artwrapper {
+  display: inline-block;
+}
+.artwrapper img {
+  border: 1px solid black;
+  box-shadow: 10px 10px 2pt #767676;
+}
