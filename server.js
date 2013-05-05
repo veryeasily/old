@@ -1,13 +1,5 @@
-#!/bin/env node
-
 var express = require('express')
-  , exec = require('child_process').exec
   , routes = require('./routes')
-  , user = require('./routes/user')
-  , http = require('http')
-  , path = require('path')
-  , fs = require('fs')
-  , GithubAPI = require('github');
 
 var app = express();
 
@@ -18,8 +10,7 @@ var dirz = (__dirname);
 console.log(process.env.PORT);
 console.log(__dirname);
 
-app.set('port', portz || 3000);
-app.set('views', dirz + '/views');
+app.set('views', './views');
 app.set('view engine', 'jade');
 app.set('view options', {layout: false });
 
@@ -28,7 +19,6 @@ app.use(express.logger('dev'));
 app.use(express.bodyParser());
 app.use(express.methodOverride());
 app.use(app.router);
-app.use(require('less-middleware')({ src: (process.env.OPENSHIFT_REPO_DIR || '.') + '/public' }));
 app.use(express.static(dirz + '/public'));
 
 // development only
@@ -37,8 +27,7 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', routes.index);
-app.get('/users', user.list);
 
-app.listen(app.get('port'), (process.env.OPENSHIFT_INTERNAL_IP || '127.0.0.1'), function(){
+app.listen(process.env.PORT || 5000, function(){
   console.log('Express server listening on port ' + app.get('port'));
 });
