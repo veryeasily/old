@@ -21,15 +21,15 @@ html(lang='en')
       div#warp
         a.slice#one(href="#1")
           div.subwindow
-            // .container-fluid
-            //  - var arr = (function(){for(var i=0, temp=[];i<40;i++){temp.push(Math.floor(Math.random()*21)+1);}
-            //  -     return temp;})();
-            //  - console.log(arr);
-            //  each number, i in arr
-            //    .artwrapper
-            //      // i.icon-arrow-up.icon-2x.arrow
-            //      img(src='images/art/mediums/artwork_#{number}_medium.jpg')
-            //      // i.icon-arrow-down.icon-2x.arrow
+            .container-fluid
+             - var arr = (function(){for(var i=0, temp=[];i<40;i++){temp.push(Math.floor(Math.random()*21)+1);}
+             -     return temp;})();
+             - console.log(arr);
+             each number, i in arr
+               .artwrapper
+                 // i.icon-arrow-up.icon-2x.arrow
+                 img(src='images/art/mediums/artwork_#{number}_medium.jpg')
+                 // i.icon-arrow-down.icon-2x.arrow
         a.slice#two(href="#2")
           //
             div.subwindow

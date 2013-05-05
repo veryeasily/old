@@ -126,8 +126,8 @@ body {
   -ms-transform: translateZ(0);
   -o-transform: translateZ(0);
   transform: translateZ(0);
-  -webkit-transform: skewX(31.9deg) translateX(200px) scaleX(0.625);
-  transform: skewX(31.9deg) translateX(200px) scaleX(0.625);
+  -webkit-transform: skewX(31.9deg) translateX(180px) scaleX(0.625);
+  transform: skewX(31.9deg) translateX(180px) scaleX(0.625);
 }
 #two .subwindow {
   -webkit-transform-origin: left top;
@@ -268,6 +268,7 @@ body {
 #warp.go .subwindow {
   -webkit-transform: skewX(0deg) translateX(0%) scaleX(0.25);
   transform: skewX(0deg) translateX(0%) scaleX(0.25);
+  width: 25%;
   left: 50%;
   margin-left: -125px;
 }
