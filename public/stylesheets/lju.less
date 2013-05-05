@@ -1,0 +1,128 @@
+@import 'art.css';
+@import 'navbar.less';
+@import 'blog.less';
+@import 'main.css';
+@import 'mixins.less';
+
+@warpstretch: 160%;
+@warper-left-margin: -10%;
+
+html{height:100%;position:relative;}
+body{height:100%;position:relative;overflow:hidden;background-color: transparent;}
+
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+.cont {height:100%;}
+
+.subwindow {
+    position: absolute;
+    height: 100%;
+    width: 1000px;
+    .transition(2s);
+    margin: 0 auto;
+}
+
+#one .subwindow {
+    .transorig;
+    .transformtranslate(200px, 31.9deg, 0.625);
+}
+
+#two .subwindow {
+    .transorig;
+    .transformtranslate(-400px, 31.9deg, 0.625);
+}
+
+#three .subwindow {
+    .transorig;
+    .transformtranslate(0 , 31.9deg, 0.625);
+}
+
+#four .subwindow {
+    .transorig;
+    .transformtranslate(-77.5%, 31.9deg, 0.625);
+    overflow-y: hidden;
+}
+
+
+#warp {
+    overflow: visible;
+    position: relative;
+    height: 100%;
+    .transorig;
+    .transformtranslate(-100px, -45deg, 1.6);
+    .transition(2s);
+    > .slice {
+        position: relative;
+        overflow: hidden;
+        height: 100%;
+        width: 24.999%;
+        float: left;
+        .transition(2s);
+        .transorig;
+        .transformtranslate(0px, 0deg, 1);
+    }
+
+    > #one {
+        background-color: rgba(140, 140, 140, 0.65);
+        // left: 0%;
+    }
+    > #two {
+        background-color: rgba(0, 191, 215, 0.65);
+        // left: 25%;
+    }
+    > #three {
+        background-color: rgba(255, 255, 1, 0.65);
+        // left: 50%;
+    }
+    > #four {
+        background-color: rgba(254, 0, 0, 0.65);
+        // left: 75%;
+    }
+}
+
+#warp.go {
+
+    &.goone {
+        .transformtranslate(0%, 0, 4);
+    }
+    &.gotwo {
+        .transformtranslate(-100%, 0, 4);
+    }
+    &.gothree {
+        .transformtranslate(-200%, 0, 4);
+    }
+    &.gofour {
+        .transformtranslate(-300%, 0, 4);
+    }
+
+    .subwindow {
+        .transformtranslate(0%, 0deg, 0.25);
+        left: 50%;
+        margin-left: -125px;
+    }
+
+    .left1 > .subwindow {
+        .transformtranslate(100%, 0deg, 0.25);
+    }
+    > .left2 > .subwindow {
+        .transformtranslate(200%, 0deg, 0.25);
+    }
+    > .left3 > .subwindow {
+        .transformtranslate(300%, 0deg, 0.25);
+    }
+
+    > .right1 > .subwindow {
+        .transformtranslate(-100%, 0deg, 0.25);
+    }
+    > .right2 > .subwindow {
+        .transformtranslate(-200%, 0deg, 0.25);
+    }
+    > .right3 > .subwindow {
+        .transformtranslate(-300%, 0deg, 0.25);
+    }
+}
+

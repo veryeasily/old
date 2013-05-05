@@ -1,0 +1,297 @@
+@import 'art.css';
+
+@import 'main.css';
+.mainbar {
+  background-color: rgba(255, 255, 1, 0.25);
+  position: absolute;
+  top: 20%;
+  left: -100%;
+  width: 100%;
+  height: 65%;
+  transition: left 2s ease-in-out;
+  -webkit-transition: left 2s ease-in-out;
+  -mox-transition: left 2s ease-in-out;
+  -o-transition: left 2s ease-in-out;
+}
+.mainbar.activated {
+  left: 0%;
+}
+.silenter {
+  -webkit-filter: invert(1);
+  -ms-filter: invert(1);
+  -moz-filter: invert(1);
+  -o-filter: invert(1);
+  position: absolute;
+  z-index: 100;
+  text-align: center;
+  left: 0;
+  right: 0;
+}
+.silenter .name {
+  width: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+.silenter .name span {
+  font-size: 50px;
+  line-height: 65px;
+}
+.silenter .navigation {
+  color: #252824;
+}
+.silenter .navigation a {
+  color: #252824;
+  font-size: 30px;
+  line-height: 0px;
+  padding: 0pt 3pt;
+  text-decoration: none;
+}
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+#blog > .container-fluid {
+  height: 100%;
+  padding: 0 175px;
+}
+#blog iframe {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+#four subwindow {
+  overflow-y: hidden;
+}
+.transorig {
+  -webkit-transform-origin: left top;
+  transform-origin: left top;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  -ms-perspective: 1000;
+  perspective: 1000;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+}
+html {
+  height: 100%;
+  position: relative;
+}
+body {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+}
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+.cont {
+  height: 100%;
+}
+.subwindow {
+  position: absolute;
+  height: 100%;
+  width: 1000px;
+  -webkit-transition: all 2s;
+  transition: all 2s;
+  margin: 0 auto;
+}
+#one .subwindow {
+  -webkit-transform-origin: left top;
+  transform-origin: left top;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  -ms-perspective: 1000;
+  perspective: 1000;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-transform: skewX(31.9deg) translateX(200px) scaleX(0.625);
+  transform: skewX(31.9deg) translateX(200px) scaleX(0.625);
+}
+#two .subwindow {
+  -webkit-transform-origin: left top;
+  transform-origin: left top;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  -ms-perspective: 1000;
+  perspective: 1000;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-transform: skewX(31.9deg) translateX(-400px) scaleX(0.625);
+  transform: skewX(31.9deg) translateX(-400px) scaleX(0.625);
+}
+#three .subwindow {
+  -webkit-transform-origin: left top;
+  transform-origin: left top;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  -ms-perspective: 1000;
+  perspective: 1000;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-transform: skewX(31.9deg) translateX(0%) scaleX(0.625);
+  transform: skewX(31.9deg) translateX(0%) scaleX(0.625);
+}
+#four .subwindow {
+  -webkit-transform-origin: left top;
+  transform-origin: left top;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  -ms-perspective: 1000;
+  perspective: 1000;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-transform: skewX(31.9deg) translateX(-77.5%) scaleX(0.625);
+  transform: skewX(31.9deg) translateX(-77.5%) scaleX(0.625);
+  overflow-y: hidden;
+}
+#warp {
+  overflow: visible;
+  position: relative;
+  height: 100%;
+  -webkit-transform-origin: left top;
+  transform-origin: left top;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  -ms-perspective: 1000;
+  perspective: 1000;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-transform: skewX(-45deg) translateX(-100px) scaleX(1.6);
+  transform: skewX(-45deg) translateX(-100px) scaleX(1.6);
+  -webkit-transition: all 2s;
+  transition: all 2s;
+}
+#warp > .slice {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  width: 24.999%;
+  float: left;
+  -webkit-transition: all 2s;
+  transition: all 2s;
+  -webkit-transform-origin: left top;
+  transform-origin: left top;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  -ms-perspective: 1000;
+  perspective: 1000;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-transform: skewX(0deg) translateX(0px) scaleX(1);
+  transform: skewX(0deg) translateX(0px) scaleX(1);
+}
+#warp > #one {
+  background-color: rgba(140, 140, 140, 0.65);
+}
+#warp > #two {
+  background-color: rgba(0, 191, 215, 0.65);
+}
+#warp > #three {
+  background-color: rgba(255, 255, 1, 0.65);
+}
+#warp > #four {
+  background-color: rgba(254, 0, 0, 0.65);
+}
+#warp.go.goone {
+  -webkit-transform: skewX(0deg) translateX(0%) scaleX(4);
+  transform: skewX(0deg) translateX(0%) scaleX(4);
+}
+#warp.go.gotwo {
+  -webkit-transform: skewX(0deg) translateX(-100%) scaleX(4);
+  transform: skewX(0deg) translateX(-100%) scaleX(4);
+}
+#warp.go.gothree {
+  -webkit-transform: skewX(0deg) translateX(-200%) scaleX(4);
+  transform: skewX(0deg) translateX(-200%) scaleX(4);
+}
+#warp.go.gofour {
+  -webkit-transform: skewX(0deg) translateX(-300%) scaleX(4);
+  transform: skewX(0deg) translateX(-300%) scaleX(4);
+}
+#warp.go .subwindow {
+  -webkit-transform: skewX(0deg) translateX(0%) scaleX(0.25);
+  transform: skewX(0deg) translateX(0%) scaleX(0.25);
+  left: 50%;
+  margin-left: -125px;
+}
+#warp.go .left1 > .subwindow {
+  -webkit-transform: skewX(0deg) translateX(100%) scaleX(0.25);
+  transform: skewX(0deg) translateX(100%) scaleX(0.25);
+}
+#warp.go > .left2 > .subwindow {
+  -webkit-transform: skewX(0deg) translateX(200%) scaleX(0.25);
+  transform: skewX(0deg) translateX(200%) scaleX(0.25);
+}
+#warp.go > .left3 > .subwindow {
+  -webkit-transform: skewX(0deg) translateX(300%) scaleX(0.25);
+  transform: skewX(0deg) translateX(300%) scaleX(0.25);
+}
+#warp.go > .right1 > .subwindow {
+  -webkit-transform: skewX(0deg) translateX(-100%) scaleX(0.25);
+  transform: skewX(0deg) translateX(-100%) scaleX(0.25);
+}
+#warp.go > .right2 > .subwindow {
+  -webkit-transform: skewX(0deg) translateX(-200%) scaleX(0.25);
+  transform: skewX(0deg) translateX(-200%) scaleX(0.25);
+}
+#warp.go > .right3 > .subwindow {
+  -webkit-transform: skewX(0deg) translateX(-300%) scaleX(0.25);
+  transform: skewX(0deg) translateX(-300%) scaleX(0.25);
+}
