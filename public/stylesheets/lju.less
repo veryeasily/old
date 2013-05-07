@@ -11,7 +11,8 @@
 @import 'main.css';
 @import 'mixins.less';
 
-@amount-to-left: -17%;
+@skewAngle: 40deg;
+@amount-to-left: -10%;
 @subwindow-offset: ((@amount-to-left)*-1);
 
 .container-fluid {
@@ -32,7 +33,7 @@
     height: 100%;
     .transorig;
     .transition(2s);
-    .transformtranslate((@amount-to-left), -30deg, 2);
+    .transformtranslate((@amount-to-left),((-1)*@skewAngle), 2);
     > .slice {
         position: relative;
         overflow: hidden;
@@ -58,19 +59,19 @@
 /* We care which slice we're in, because we have to translateX each subwindo back to the viewport a different amount. */ 
 
 #one .subwindow {
-    .transformtranslaterev((@subwindow-offset), 30deg, 0.5);
+    .transformtranslaterev((@subwindow-offset), @skewAngle, 0.5);
 }
 
 #two .subwindow {
-    .transformtranslaterev((@subwindow-offset) - 25%, 30deg, 0.5);
+    .transformtranslaterev((@subwindow-offset) - 25%, @skewAngle, 0.5);
 }
 
 #three .subwindow {
-    .transformtranslaterev((@subwindow-offset) - 50%, 30deg, 0.5);
+    .transformtranslaterev((@subwindow-offset) - 50%, @skewAngle, 0.5);
 }
 
 #four .subwindow {
-    .transformtranslaterev((@subwindow-offset) - 75%, 30deg, 0.5);
+    .transformtranslaterev((@subwindow-offset) - 75%, @skewAngle, 0.5);
 }
 
 

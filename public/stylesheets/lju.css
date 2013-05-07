@@ -10,16 +10,16 @@ body {
   background-color: transparent;
 }
 #one {
-  background-color: rgba(46, 204, 113, 0.4);
+  background-color: rgba(46, 204, 113, 0.7);
 }
 #two {
-  background-color: rgba(41, 128, 185, 0.4);
+  background-color: rgba(41, 128, 185, 0.7);
 }
 #three {
-  background-color: rgba(255, 255, 1, 0.1);
+  background-color: rgba(241, 196, 15, 0.7);
 }
 #four {
-  background-color: rgba(254, 0, 0, 0.1);
+  background-color: rgba(231, 76, 60, 0.7);
 }
 * {
   box-sizing: border-box;
@@ -186,8 +186,8 @@ body {
   perspective: 1000;
   -webkit-transition: all 2s;
   transition: all 2s;
-  -webkit-transform: translateZ(0) scaleX(2) skewX(-30deg) translateX(-17%);
-  transform: translateZ(0) scaleX(2) skewX(-30deg) translateX(-17%);
+  -webkit-transform: translateZ(0) scaleX(2) skewX(-40deg) translateX(-10%);
+  transform: translateZ(0) scaleX(2) skewX(-40deg) translateX(-10%);
 }
 #warp > .slice {
   position: relative;
@@ -228,20 +228,20 @@ body {
   perspective: 1000;
 }
 /* We care which slice we're in, because we have to translateX each subwindo back to the viewport a different amount. */#one .subwindow {
-  -webkit-transform: translateZ(0) skewX(30deg) translateX(17%) scaleX(0.5);
-  transform: translateZ(0) skewX(30deg) translateX(17%) scaleX(0.5);
+  -webkit-transform: translateZ(0) skewX(40deg) translateX(10%) scaleX(0.5);
+  transform: translateZ(0) skewX(40deg) translateX(10%) scaleX(0.5);
 }
 #two .subwindow {
-  -webkit-transform: translateZ(0) skewX(30deg) translateX(-8%) scaleX(0.5);
-  transform: translateZ(0) skewX(30deg) translateX(-8%) scaleX(0.5);
+  -webkit-transform: translateZ(0) skewX(40deg) translateX(-15%) scaleX(0.5);
+  transform: translateZ(0) skewX(40deg) translateX(-15%) scaleX(0.5);
 }
 #three .subwindow {
-  -webkit-transform: translateZ(0) skewX(30deg) translateX(-33%) scaleX(0.5);
-  transform: translateZ(0) skewX(30deg) translateX(-33%) scaleX(0.5);
+  -webkit-transform: translateZ(0) skewX(40deg) translateX(-40%) scaleX(0.5);
+  transform: translateZ(0) skewX(40deg) translateX(-40%) scaleX(0.5);
 }
 #four .subwindow {
-  -webkit-transform: translateZ(0) skewX(30deg) translateX(-58%) scaleX(0.5);
-  transform: translateZ(0) skewX(30deg) translateX(-58%) scaleX(0.5);
+  -webkit-transform: translateZ(0) skewX(40deg) translateX(-65%) scaleX(0.5);
+  transform: translateZ(0) skewX(40deg) translateX(-65%) scaleX(0.5);
 }
 #warp.go.goone {
   -webkit-transform: translateZ(0) scaleX(4) skewX(0deg) translateX(0%);
