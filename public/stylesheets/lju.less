@@ -1,109 +1,95 @@
-@import 'art.css';
+// Central stylesheet for Luke Underwood's (elju's) personal site.
+// url:  http://elju.me
+
+
+@import 'basic.less';
 @import 'navbar.less';
+@import 'art.less';
+@import 'code.less';
+@import 'other.less';
 @import 'blog.less';
 @import 'main.css';
 @import 'mixins.less';
 
-@warpstretch: 160%;
-@warper-left-margin: -10%;
+@amount-to-left: -17%;
+@subwindow-offset: ((@amount-to-left)*-1);
 
-html{height:100%;position:relative;}
-body{height:100%;position:relative;overflow:hidden;background-color: transparent;}
-
-* {
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
+.container-fluid {
+    margin: 15px 10px;
 }
 
-.cont {height:100%;}
-
-.subwindow {
-    position: absolute;
-    height: 100%;
-    width: 1000px;
-    .transition(2s);
-    margin: 0 auto;
-}
-
-#one .subwindow {
-    .transorig;
-    .transformtranslate(180px, 31.9deg, 0.625);
-}
-
-#two .subwindow {
-    .transorig;
-    .transformtranslate(-400px, 31.9deg, 0.625);
-}
-
-#three .subwindow {
-    .transorig;
-    .transformtranslate(0 , 31.9deg, 0.625);
-}
-
-#four .subwindow {
-    .transorig;
-    .transformtranslate(-77.5%, 31.9deg, 0.625);
-    overflow-y: hidden;
-}
-
+//  I set up the warp mesh first and then place the
+//  subwindows inside of it.  The warp mesh itself is
+//  200% of the screen and scooted over 17% to the left
+//  @amount-to-left. All of this happens within the
+//  .transformtranslate() mixin in mixins.less.
+//  Order of operations on the transformations matters,
+//  and winds up being super important to keep track of.
 
 #warp {
     overflow: visible;
     position: relative;
     height: 100%;
     .transorig;
-    .transformtranslate(-100px, -45deg, 1.6);
     .transition(2s);
+    .transformtranslate((@amount-to-left), -30deg, 2);
     > .slice {
         position: relative;
         overflow: hidden;
         height: 100%;
-        width: 24.999%;
+        width: 25%;
         float: left;
         .transition(2s);
         .transorig;
-        .transformtranslate(0px, 0deg, 1);
-    }
-
-    > #one {
-        background-color: rgba(140, 140, 140, 0.65);
-        // left: 0%;
-    }
-    > #two {
-        background-color: rgba(0, 191, 215, 0.65);
-        // left: 25%;
-    }
-    > #three {
-        background-color: rgba(255, 255, 1, 0.65);
-        // left: 50%;
-    }
-    > #four {
-        background-color: rgba(254, 0, 0, 0.65);
-        // left: 75%;
+        // .transformtranslate(0px, 0deg, 1);
+        -webkit-transform: none;
+        transform: none;
     }
 }
 
-#warp.go {
+.subwindow {
+    position: absolute;
+    height: 100%;
+    width: 400%;
+    .transition(2s);
+    .transorig;
+}
 
+/* We care which slice we're in, because we have to translateX each subwindo back to the viewport a different amount. */ 
+
+#one .subwindow {
+    .transformtranslaterev((@subwindow-offset), 30deg, 0.5);
+}
+
+#two .subwindow {
+    .transformtranslaterev((@subwindow-offset) - 25%, 30deg, 0.5);
+}
+
+#three .subwindow {
+    .transformtranslaterev((@subwindow-offset) - 50%, 30deg, 0.5);
+}
+
+#four .subwindow {
+    .transformtranslaterev((@subwindow-offset) - 75%, 30deg, 0.5);
+}
+
+
+#warp.go {
     &.goone {
         .transformtranslate(0%, 0, 4);
     }
     &.gotwo {
-        .transformtranslate(-100%, 0, 4);
+        .transformtranslate(-25%, 0, 4);
     }
     &.gothree {
-        .transformtranslate(-200%, 0, 4);
+        .transformtranslate(-50%, 0, 4);
     }
     &.gofour {
-        .transformtranslate(-300%, 0, 4);
+        .transformtranslate(-75%, 0, 4);
     }
 
     .subwindow {
         .transformtranslate(0%, 0deg, 0.25);
-        width: 1000px;
-        left: 50%;
-        margin-left: -125px;
     }
 
     .left1 > .subwindow {

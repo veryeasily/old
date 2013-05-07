@@ -1,7 +1,62 @@
-.artwrapper {
+/*
+    Why is everything so uniform?
+    this is the CSS files for the art-container
+    subwindow.
+*/
+
+@import 'mixins.less';
+
+#arts-container {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.work-holder {
     display: inline-block;
+    margin: 0px 24px -20px 24px;
+    border-right-color: rgba(10,10,10,0.35);
+    border-right-width: 20px;
+    border-right-style: solid;
+    border-left-color: rgba(10,10,10,0.35);
+    border-left-width: 20px;
+    border-left-style: solid;
+    border-top-color: rgba(10,10,10,0.35);
+    border-top-width: 20px;
+    border-top-style: solid;
+    border-bottom-color: rgba(10,10,10,0.35);
+    border-bottom-width: 20px;
+    border-bottom-style: solid;
+    border-radius: 7px;
     img {
-        border: 1px solid black;
-        box-shadow: 10px 10px 2pt darken(darkgrey, 20%);
+        // margin: 10px;
+        // border: 1px solid black;
+        // box-shadow: 2px 2px 1pt darken(lightgrey, 20%);
     }
+}
+
+#screen {
+    position: absolute;
+    z-index: 5;
+    left: 0%;
+    top: 0%;
+    width: 100%;
+    background-color: rgba(40,40,40,0.7)
+}
+
+.display-case {
+    text-align: center;
+    margin-top: -150px;
+}
+
+.art-front-and-center {
+    .filter(invert(1));
+};
+
+.bundle {
+    width: 950px;
+    margin: 20px auto 100px auto;
+    padding: 10px;
+    border-radius: 7px;
+    position: relative;
+    z-index: 10;
 }

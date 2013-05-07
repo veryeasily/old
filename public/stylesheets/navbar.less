@@ -1,49 +1,33 @@
-.mainbar {
-    background-color: rgba(255, 255, 1, 0.25);
-    position: absolute;
-    top: 20%;
-    left: -100%;
-    width: 100%;
-    height: 65%;
-    transition: left 2s ease-in-out;
-    -webkit-transition: left 2s ease-in-out;
-    -mox-transition: left 2s ease-in-out;
-    -o-transition: left 2s ease-in-out;
-}
-
-.mainbar.activated {
-    left: 0%;
-}
+@import 'mixins.less';
 
 .silenter {
-    -webkit-filter: invert(1);
-    -ms-filter: invert(1);
-    -moz-filter: invert(1);
-    -o-filter: invert(1);
-    position: absolute;
-    z-index: 100;
-    text-align: center;
+    position: fixed;
     left: 0;
     right: 0;
-    .name {
-        width: 200px;
+    z-index: 5;
+    margin: 0 20px;
+    .filter(invert(1));
+    #logo {
         display: block;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 20px;
-        span {
-            font-size: 50px;
-            line-height: 65px;
-        }
-    }
-    .navigation {
-        color: hsl(105, 5%, 15%);
-        a {
-            color: hsl(105, 5%, 15%);
-            font-size: 30px;
-            line-height: 0px;
-            padding: 0pt 3pt;
+        float: right;
+        margin-top: 5px;
+        font-size: 20px;
+        font-weight: 200;
+        text-shadow: 0 1px 0 green;
+        line-height: 25px;
+        &:hover,
+        &:focus {
             text-decoration: none;
         }
+    }
+}
+.navigation {
+    color: hsl(105, 5%, 15%);
+    a {
+        color: hsl(105, 5%, 15%);
+        font-size: 30px;
+        line-height: 0px;
+        padding: 0pt 3pt;
+        text-decoration: none;
     }
 }

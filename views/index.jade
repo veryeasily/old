@@ -9,41 +9,24 @@ html(lang='en')
       link(rel='alternate', href=locals.url+'/feed.xml', type='application/rss+xml', title=locals.description)
       link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Fredericka+the+Great')
       link(rel='stylesheet', href='stylesheets/github.css')
-      link(rel='stylesheet', href='css/bootstrap.min.css')
-      link(rel='stylesheet', href='css/font-awesome.min.css')
-      link(rel='stylesheet', href='css/font-awesome-ie7.min.css')
+      // link(rel='stylesheet', href='css/bootstrap.min.css')
+      // link(rel='stylesheet', href='css/font-awesome.min.css')
+      // link(rel='stylesheet', href='css/font-awesome-ie7.min.css')
       link(rel='stylesheet', href='stylesheets/lju.css')
       script(src='javascripts/jquery-2.0.0.min.js')
       script(src='javascripts/main.js')
   body
     include navbar
-    div.cont
-      div#warp
-        a.slice#one(href="#1")
-          div.subwindow
-            .container-fluid
-             - var arr = (function(){for(var i=0, temp=[];i<40;i++){temp.push(Math.floor(Math.random()*21)+1);}
-             -     return temp;})();
-             - console.log(arr);
-             each number, i in arr
-               .artwrapper
-                 // i.icon-arrow-up.icon-2x.arrow
-                 img(src='https://s3.amazonaws.com/ideabin-images/art-medium/artwork_#{number}_medium.jpg')
-                 // i.icon-arrow-down.icon-2x.arrow
-        a.slice#two(href="#2")
-          //
-            div.subwindow
-              .container-fluid
-        a.slice#three(href="#3")
-          //
-            div.subwindow
-              .container-fluid
-                .table
-                  .subones
-                    h3 Learn more!
-                  .subones
-                    h3 Even More!
-        a.slice#four(href="#4")
-          div.subwindow
-            include blog
-    div.mainbar
+    #warp
+      a.slice#one(href="#1")
+        .subwindow
+          include code
+      a.slice#two(href="#2")
+        .subwindow
+          include art
+      a.slice#three(href="#3")
+        .subwindow
+          include other
+      a.slice#four(href="#4")
+        .subwindow
+          include blog

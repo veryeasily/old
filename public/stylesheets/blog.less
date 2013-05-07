@@ -1,22 +1,19 @@
-* {
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    -o-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-}
-
-#blog > .container-fluid {
+#blog-container > .container-fluid {
     height:100%;
     padding: 0 175px;
 }
 
-#blog iframe {
-    overflow: hidden;
+#blog-container iframe {
+    // overflow: hidden;
+    display: block;
     height: 100%;
     width: 100%;
 }
 
-#four subwindow {
+#blog-container subwindow {
     overflow-y: hidden;
+}
+
+#blog-container {
+    height: 100%;
 }

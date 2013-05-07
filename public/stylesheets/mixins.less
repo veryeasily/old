@@ -2,15 +2,29 @@
     // -ms-transform-origin: left top;
     -webkit-transform-origin: left top;
     transform-origin: left top;
-    // -ms-transform: skewX((@deg + 0deg));
-    -webkit-transform: skewX((@deg + 0deg));
-    transform: skewX((@deg + 0deg));
+    // -ms-transform: skewX((@deg + 0deg)) translateZ(0);
+    -webkit-transform: skewX((@deg + 0deg)) translateZ(0);
+    transform: skewX((@deg + 0deg)) translateZ(0);
+}
+
+.filter(@string) {
+    -webkit-filter: (@string);
+    -ms-filter: (@string);
+    -moz-filter: (@string);
+    -o-filter: (@string);
+    filter: (@string);
 }
 
 .transformtranslate(@amt, @deg, @scale) {
-    // -ms-transform: skewX((@deg + 0deg)) translateX((@amt + 0%)) scaleX((@scale));
-    -webkit-transform: skewX((@deg + 0deg)) translateX((@amt + 0%)) scaleX((@scale));
-    transform: skewX((@deg + 0deg)) translateX((@amt + 0%)) scaleX((@scale));
+    // -ms-transform: translateZ(0) scaleX((@scale)) skewX((@deg + 0deg)) translateX((@amt + 0%));
+    -webkit-transform: translateZ(0) scaleX((@scale)) skewX((@deg + 0deg)) translateX((@amt + 0%));
+    transform: translateZ(0) scaleX((@scale)) skewX((@deg + 0deg)) translateX((@amt + 0%));
+}
+
+.transformtranslaterev(@amt, @deg, @scale) {
+    // -ms-transform: translateZ(0) translateX((@amt + 0%)) skewX((@deg + 0deg)) scaleX((@scale));
+    -webkit-transform: translateZ(0) skewX((@deg + 0deg)) translateX((@amt + 0%)) scaleX((@scale));
+    transform: translateZ(0) skewX((@deg + 0deg)) translateX((@amt + 0%)) scaleX((@scale));
 }
 
 .transorig {
@@ -27,12 +41,6 @@
    -moz-perspective: 1000;
    -ms-perspective: 1000;
    perspective: 1000;
-
-   -webkit-transform: translateZ(0);
-   -moz-transform: translateZ(0);
-   -ms-transform: translateZ(0);
-   -o-transform: translateZ(0);
-   transform: translateZ(0);
 }
 
 .transition(@sec) {

@@ -1,10 +1,24 @@
-block art
-  .container-fluid
-    - var arr = (function(){for(var i=0, temp=[];i<40;i++){temp.push(Math.floor(Math.random()*21)+1);}
-    -     return temp;})();
-    - console.log(arr);
-    each number, i in arr
-      .artwrapper
-        // i.icon-arrow-up.icon-2x.arrow
-        img(src='images/art/mediums/artwork_#{number}_medium.jpg')
-        // i.icon-arrow-down.icon-2x.arrow
+#arts-container
+  .display-case.container-fluid
+   - ljuHelper = {};
+   - ljuHelper.arrayOfRands = function(){
+   -    var num = Math.ceil(Math.random()*8);
+   -    for(var i=0, temp=[];i<num; i++){temp.push(Math.floor(Math.random()*6)+1);}
+   -     return temp;};
+   - ljuHelper.populateGallery = function(fn, option) {
+   -    var i, temp, stop = Math.ceil(Math.random()*13);
+   -    for (i=0, temp=[]; i<stop; i++) {
+   -        temp.push(fn());
+   -    }
+   -    return temp;
+   -  };
+   -  ljuHelper.images = ljuHelper.populateGallery(ljuHelper.arrayOfRands);
+   -  ljuHelper.colors = ['rgba(64,224,208,0.3)', 'rgba(188,143,143,0.3)', 'rgba(220,20,60,0.3)', 'rgba(240,230,140,0.3)', 'rgba(128,128,0,0.3)'];
+   each _array, _i in ljuHelper.images
+     - var _color = Math.floor(Math.random()*5);
+     .bundle
+       each number, _j in _array 
+         .work-holder
+           // i.icon-arrow-up.icon-2x.arrow
+           img.artwork(src='https://s3.amazonaws.com/ideabin-images/art-large/artwork_#{number}_large.jpg')
+           // i.icon-arrow-down.icon-2x.arrow
