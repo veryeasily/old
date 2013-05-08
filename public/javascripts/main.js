@@ -8,12 +8,10 @@ $(document).on('ready', function() {
             e.stopPropagation();
             var $this, $right, $left, $others;
 
-            if (window.location.hash && window.location.hash !== '#') {
+            if ($(this).data('clicked')) {
                 $('#warp').removeClass('go goone gotwo gothree gofour')
-                $('.slice').removeClass('right1 right2 right3 left1 left2 left3');
-                $('.subwindow').css('overflow-y', 'inherit');
-                window.location.hash = '';
-                e.preventDefault();
+                $('.slice').removeClass('right1 right2 right3 left1 left2 left3 scrollEnabled');
+                $(this).data('clicked', false);
             } else {
                 $right = $slices.filter('#' + this.id + ' ~ a');
                 $left = $slices.not($right).not(this);
@@ -22,10 +20,20 @@ $(document).on('ready', function() {
                 $right.each(function(i) {
                     $(this).addClass('right' + (i + 1)); });
                 $('#warp').addClass('go').addClass('go' + this.id);
+                $(this).data('clicked', true);
                 var that = this;
-                ['transitionend', 'webkitTransitionEnd', 'oTransitionEnd'].forEach(function (el, i) {
-                    $(that).on(el, function() {$(this).children().css('overflow-y', 'auto');}); } );
-
+                if (this.id === "two") { // dumb hack to catch the art subwindow right now.
+                    ['transitionend', 'webkitTransitionEnd', 'oTransitionEnd'].forEach(function (evnt, i) {
+                    // set timeout is functional, so I have to make a wrapper function to attach an event. The plot thickens...
+                        console.log("about to call set timeout!");
+                        $(that).on(evnt, function(e) {
+                            setTimeout(function () {
+                                if (!$(that).data('clicked')) {
+                                    return; }
+                                console.log("done with set timeout.");                         // apparently I already made it so that
+                                $(that).children().addClass('scrollEnabled'); }, 1500);});} ); // overflow-y get's added :-/
+                }
+                                                                                                        // learn something new everyday!
             }
         } else {
             e.preventDefault();

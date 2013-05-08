@@ -61,6 +61,9 @@ a:active {
   -ms-perspective: 1000;
   perspective: 1000;
 }
+#silenter h3 {
+  color: #dda56c;
+}
 .silenter {
   position: fixed;
   color: #951c2d;
@@ -68,13 +71,13 @@ a:active {
   right: 0;
   z-index: 5;
   margin: 0 20px;
+}
+.silenter #logo {
   -webkit-filter: invert(1);
   -ms-filter: invert(1);
   -moz-filter: invert(1);
   -o-filter: invert(1);
   filter: invert(1);
-}
-.silenter #logo {
   display: block;
   float: right;
   margin-top: 5px;
@@ -113,18 +116,6 @@ a:active {
   -moz-perspective: 1000;
   -ms-perspective: 1000;
   perspective: 1000;
-}
-@keyframes move {
-  0% {
-    overflow-y: hidden;
-  }
-  100% {
-    overflow-y: auto;
-  }
-}
-.go > .slice {
-  animation: move 2s;
-  -webkit-animation: move 2s;
 }
 #arts-container {
   width: 1000px;
@@ -173,7 +164,7 @@ a:active {
   margin-top: 0px;
 }
 #others-container {
-  line-height: 2;
+  line-height: 1.4;
 }
 a:-webkit-any-link {
   text-decoration: none;
@@ -197,6 +188,12 @@ a:-webkit-any-link {
 }
 #blog-container {
   height: 100%;
+}
+.subwindow > #blog-container {
+  margin-top: 35px;
+}
+#warp #four {
+  overflow-y: hidden;
 }
 .transorig {
   -webkit-transform-origin: left top;
@@ -274,6 +271,9 @@ a:-webkit-any-link {
 .subwindow > div {
   margin-top: 136px;
 }
+.slice:not(#four) .subwindow {
+  height: 100%;
+}
 /* We care which slice we're in, because we have to translateX each subwindo back to the viewport a different amount. */#one .subwindow {
   -webkit-transform: translateZ(0) translateX(10%) skewX(40deg) scaleX(0.5);
   transform: translateZ(0) translateX(10%) skewX(40deg) scaleX(0.5);
@@ -336,4 +336,7 @@ a:-webkit-any-link {
 #warp.go > .right3 > .subwindow {
   -webkit-transform: translateZ(0) scaleX(0.25) skewX(0deg) translateX(-300%);
   transform: translateZ(0) scaleX(0.25) skewX(0deg) translateX(-300%);
+}
+#warp.go .scrollEnabled {
+  overflow-y: auto;
 }

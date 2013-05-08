@@ -64,6 +64,10 @@
     }
 }
 
+.slice:not(#four) .subwindow {
+    height: 100%;
+}
+
 /* We care which slice we're in, because we have to translateX each subwindo back to the viewport a different amount. */ 
 
 #one .subwindow {
@@ -123,6 +127,10 @@
     }
     > .right3 > .subwindow {
         .transformtranslate(-300%, 0deg, 0.25);
+    }
+
+    .scrollEnabled {
+        overflow-y: auto;
     }
 }
 

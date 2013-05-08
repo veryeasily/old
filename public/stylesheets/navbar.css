@@ -10,6 +10,9 @@
   -ms-perspective: 1000;
   perspective: 1000;
 }
+#silenter h3 {
+  color: #dda56c;
+}
 .silenter {
   position: fixed;
   color: #951c2d;
@@ -17,13 +20,13 @@
   right: 0;
   z-index: 5;
   margin: 0 20px;
+}
+.silenter #logo {
   -webkit-filter: invert(1);
   -ms-filter: invert(1);
   -moz-filter: invert(1);
   -o-filter: invert(1);
   filter: invert(1);
-}
-.silenter #logo {
   display: block;
   float: right;
   margin-top: 5px;
