@@ -9,6 +9,24 @@ body {
   overflow: hidden;
   background-color: transparent;
 }
+a {
+  text-decoration: none;
+}
+a:hover,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+.slice {
+  color: #0c0910;
+}
+.slice:hover,
+.slice:focus {
+  color: #1d1c21;
+}
+#blogHeading {
+  float: left;
+}
 #one {
   background-color: rgba(46, 204, 113, 0.7);
 }
@@ -20,6 +38,9 @@ body {
 }
 #four {
   background-color: rgba(231, 76, 60, 0.7);
+}
+.slice {
+  overflow: auto;
 }
 * {
   box-sizing: border-box;
@@ -42,6 +63,7 @@ body {
 }
 .silenter {
   position: fixed;
+  color: #951c2d;
   left: 0;
   right: 0;
   z-index: 5;
@@ -92,26 +114,29 @@ body {
   -ms-perspective: 1000;
   perspective: 1000;
 }
+@keyframes move {
+  0% {
+    overflow-y: hidden;
+  }
+  100% {
+    overflow-y: auto;
+  }
+}
+.go > .slice {
+  animation: move 2s;
+  -webkit-animation: move 2s;
+}
 #arts-container {
   width: 1000px;
-  margin: 0 auto;
+  margin: 136px auto;
 }
 .work-holder {
   display: inline-block;
-  margin: 0px 24px -20px 24px;
-  border-right-color: rgba(10, 10, 10, 0.35);
-  border-right-width: 20px;
-  border-right-style: solid;
-  border-left-color: rgba(10, 10, 10, 0.35);
-  border-left-width: 20px;
-  border-left-style: solid;
-  border-top-color: rgba(10, 10, 10, 0.35);
-  border-top-width: 20px;
-  border-top-style: solid;
-  border-bottom-color: rgba(10, 10, 10, 0.35);
-  border-bottom-width: 20px;
-  border-bottom-style: solid;
+  margin: 0px 0px -20px 0px;
+  border-color: #8b6153;
+  border-width: 20px;
   border-radius: 7px;
+  border-style: solid;
 }
 #screen {
   position: absolute;
@@ -140,6 +165,23 @@ body {
   position: relative;
   z-index: 10;
 }
+#to {
+  font-size: 66px;
+}
+#three > .subwindow > div {
+  margin-top: 0px;
+}
+#others-container {
+  line-height: 2;
+}
+a:-webkit-any-link {
+  text-decoration: none;
+  cursor: default;
+}
+#resume {
+  font-size: 206px;
+  color: ##225a93;
+}
 #blog-container > .container-fluid {
   height: 100%;
   padding: 0 175px;
@@ -167,11 +209,14 @@ body {
   -ms-perspective: 1000;
   perspective: 1000;
 }
+* {
+  padding: 0;
+  margin: 0;
+}
 .container-fluid {
   margin: 15px 10px;
 }
 #warp {
-  overflow: visible;
   position: relative;
   height: 100%;
   -webkit-transform-origin: left top;
@@ -207,11 +252,9 @@ body {
   -moz-perspective: 1000;
   -ms-perspective: 1000;
   perspective: 1000;
-  -webkit-transform: none;
-  transform: none;
 }
 .subwindow {
-  position: absolute;
+  position: relative;
   width: 400%;
   -webkit-transition: all 2s;
   transition: all 2s;
@@ -225,6 +268,9 @@ body {
   -moz-perspective: 1000;
   -ms-perspective: 1000;
   perspective: 1000;
+}
+.subwindow > div {
+  margin-top: 136px;
 }
 /* We care which slice we're in, because we have to translateX each subwindo back to the viewport a different amount. */#one .subwindow {
   -webkit-transform: translateZ(0) skewX(40deg) translateX(10%) scaleX(0.5);
@@ -261,6 +307,9 @@ body {
 #warp.go .subwindow {
   -webkit-transform: translateZ(0) scaleX(0.25) skewX(0deg) translateX(0%);
   transform: translateZ(0) scaleX(0.25) skewX(0deg) translateX(0%);
+}
+#warp.go > .slice {
+  overflow-x: none;
 }
 #warp.go .left1 > .subwindow {
   -webkit-transform: translateZ(0) scaleX(0.25) skewX(0deg) translateX(100%);

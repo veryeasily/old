@@ -1,6 +1,25 @@
 html{height:100%;position:relative;}
 body{height:100%;position:relative;overflow:hidden;background-color: transparent;}
 
+a {
+    &:hover, &:visited, &:active {
+        text-decoration: none;
+    }
+    text-decoration: none;
+}
+
+.slice {
+    color: #0c0910;
+}
+
+.slice:hover, .slice:focus {
+    color: #1d1c21;
+}
+
+#blogHeading {
+    float: left;
+}
+
 #one {
     background-color: rgba(46, 204, 113,0.7);
     // left: 0%;
@@ -16,6 +35,10 @@ body{height:100%;position:relative;overflow:hidden;background-color: transparent
 #four {
     background-color: rgba(231, 76, 60, 0.7);
     // left: 75%;
+}
+
+.slice {
+    overflow: auto;
 }
 
 * {

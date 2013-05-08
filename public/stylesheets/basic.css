@@ -8,6 +8,24 @@ body {
   overflow: hidden;
   background-color: transparent;
 }
+a {
+  text-decoration: none;
+}
+a:hover,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+.slice {
+  color: #0c0910;
+}
+.slice:hover,
+.slice:focus {
+  color: #1d1c21;
+}
+#blogHeading {
+  float: left;
+}
 #one {
   background-color: rgba(46, 204, 113, 0.7);
 }
@@ -19,6 +37,9 @@ body {
 }
 #four {
   background-color: rgba(231, 76, 60, 0.7);
+}
+.slice {
+  overflow: auto;
 }
 * {
   box-sizing: border-box;

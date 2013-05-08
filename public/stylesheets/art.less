@@ -6,27 +6,33 @@
 
 @import 'mixins.less';
 
+
+@keyframes move {
+ 0% { 
+   overflow-y: hidden;
+ }
+ 100% {
+   overflow-y: auto;
+ }
+}
+
+.go > .slice {
+    animation: move 2s;
+    -webkit-animation: move 2s;
+}
+
 #arts-container {
     width: 1000px;
-    margin: 0 auto;
+    margin: 136px auto;
 }
 
 .work-holder {
     display: inline-block;
-    margin: 0px 24px -20px 24px;
-    border-right-color: rgba(10,10,10,0.35);
-    border-right-width: 20px;
-    border-right-style: solid;
-    border-left-color: rgba(10,10,10,0.35);
-    border-left-width: 20px;
-    border-left-style: solid;
-    border-top-color: rgba(10,10,10,0.35);
-    border-top-width: 20px;
-    border-top-style: solid;
-    border-bottom-color: rgba(10,10,10,0.35);
-    border-bottom-width: 20px;
-    border-bottom-style: solid;
+    margin: 0px 0px -20px 0px;
+    border-color: #8b6153;
+    border-width: 20px;
     border-radius: 7px;
+    border-style: solid;
     img {
         // margin: 10px;
         // border: 1px solid black;

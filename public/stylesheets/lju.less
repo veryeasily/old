@@ -2,18 +2,23 @@
 // url:  http://elju.me
 
 
+@import 'main.css';
 @import 'basic.less';
 @import 'navbar.less';
 @import 'art.less';
 @import 'code.less';
 @import 'other.less';
 @import 'blog.less';
-@import 'main.css';
 @import 'mixins.less';
 
 @skewAngle: 40deg;
 @amount-to-left: -10%;
 @subwindow-offset: ((@amount-to-left)*-1);
+
+* {
+    padding: 0;
+    margin: 0;
+}
 
 .container-fluid {
     margin: 15px 10px;
@@ -28,31 +33,32 @@
 //  and winds up being super important to keep track of.
 
 #warp {
-    overflow: visible;
     position: relative;
     height: 100%;
     .transorig;
     .transition(2s);
     .transformtranslate((@amount-to-left),((-1)*@skewAngle), 2);
     > .slice {
-        position: relative;
-        overflow: hidden;
+        position: relative; // this fixes a webkit bug where it can't see anchor elements otherwise.
+        overflow: hidden; // fixes a chrome bug where it was saying #two was like 15,000 px.
         height: 100%;
         width: 25%;
         float: left;
         .transition(2s);
-        .transorig;
+        .transorig; // this makes the animations work smoothly and not be all fucked up on webkit
+                    // for some reason you have to include it even though it's not animated.
         // .transformtranslate(0px, 0deg, 1);
-        -webkit-transform: none;
-        transform: none;
     }
 }
 
 .subwindow {
-    position: absolute;
+    position: relative;
     width: 400%;
     .transition(2s);
     .transorig;
+    > div {
+        margin-top:136px;
+    }
 }
 
 /* We care which slice we're in, because we have to translateX each subwindo back to the viewport a different amount. */ 
@@ -90,6 +96,10 @@
 
     .subwindow {
         .transformtranslate(0%, 0deg, 0.25);
+    }
+
+    > .slice {
+        overflow-x: none; // this continues correcting for the Webkit browser glitch.
     }
 
     .left1 > .subwindow {
