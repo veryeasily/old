@@ -167,6 +167,7 @@ a:active {
 }
 #to {
   font-size: 66px;
+  color: #f5851f;
 }
 #three > .subwindow > div {
   margin-top: 0px;
@@ -180,7 +181,7 @@ a:-webkit-any-link {
 }
 #resume {
   font-size: 206px;
-  color: ##225a93;
+  color: #225a93;
 }
 #blog-container > .container-fluid {
   height: 100%;
@@ -254,6 +255,7 @@ a:-webkit-any-link {
   perspective: 1000;
 }
 .subwindow {
+  overflow-y: auto;
   position: relative;
   width: 400%;
   -webkit-transition: all 2s;
@@ -273,20 +275,20 @@ a:-webkit-any-link {
   margin-top: 136px;
 }
 /* We care which slice we're in, because we have to translateX each subwindo back to the viewport a different amount. */#one .subwindow {
-  -webkit-transform: translateZ(0) skewX(40deg) translateX(10%) scaleX(0.5);
-  transform: translateZ(0) skewX(40deg) translateX(10%) scaleX(0.5);
+  -webkit-transform: translateZ(0) translateX(10%) skewX(40deg) scaleX(0.5);
+  transform: translateZ(0) translateX(10%) skewX(40deg) scaleX(0.5);
 }
 #two .subwindow {
-  -webkit-transform: translateZ(0) skewX(40deg) translateX(-15%) scaleX(0.5);
-  transform: translateZ(0) skewX(40deg) translateX(-15%) scaleX(0.5);
+  -webkit-transform: translateZ(0) translateX(-15%) skewX(40deg) scaleX(0.5);
+  transform: translateZ(0) translateX(-15%) skewX(40deg) scaleX(0.5);
 }
 #three .subwindow {
-  -webkit-transform: translateZ(0) skewX(40deg) translateX(-40%) scaleX(0.5);
-  transform: translateZ(0) skewX(40deg) translateX(-40%) scaleX(0.5);
+  -webkit-transform: translateZ(0) translateX(-40%) skewX(40deg) scaleX(0.5);
+  transform: translateZ(0) translateX(-40%) skewX(40deg) scaleX(0.5);
 }
 #four .subwindow {
-  -webkit-transform: translateZ(0) skewX(40deg) translateX(-65%) scaleX(0.5);
-  transform: translateZ(0) skewX(40deg) translateX(-65%) scaleX(0.5);
+  -webkit-transform: translateZ(0) translateX(-65%) skewX(40deg) scaleX(0.5);
+  transform: translateZ(0) translateX(-65%) skewX(40deg) scaleX(0.5);
 }
 #warp.go.goone {
   -webkit-transform: translateZ(0) scaleX(4) skewX(0deg) translateX(0%);

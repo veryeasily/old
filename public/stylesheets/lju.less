@@ -37,7 +37,7 @@
     height: 100%;
     .transorig;
     .transition(2s);
-    .transformtranslate((@amount-to-left),((-1)*@skewAngle), 2);
+    .transformtranslate((@amount-to-left),((-1)*@skewAngle), 2); //shift left, skew in the reverse of the variable, and stretch by 2
     > .slice {
         position: relative; // this fixes a webkit bug where it can't see anchor elements otherwise.
         overflow: hidden; // fixes a chrome bug where it was saying #two was like 15,000 px.
@@ -52,10 +52,13 @@
 }
 
 .subwindow {
+    overflow-y: auto; // strange bug? in browsers where it messes up placement, but only until clicked w/out this change.
     position: relative;
     width: 400%;
+
     .transition(2s);
     .transorig;
+
     > div {
         margin-top:136px;
     }
