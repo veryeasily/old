@@ -13,6 +13,9 @@
 #silenter h3 {
   color: #dda56c;
 }
+.silenter > .container-fluid {
+  background-color: white;
+}
 .silenter {
   position: fixed;
   color: #951c2d;

@@ -2,11 +2,11 @@
   .display-case.container-fluid
    - ljuHelper = {};
    - ljuHelper.arrayOfRands = function(){
-   -    var num = Math.ceil(Math.random()*8);
-   -    for(var i=0, temp=[];i<num; i++){temp.push(Math.floor(Math.random()*6)+1);}
+   -    var num = Math.ceil(Math.random()*6);
+   -    for(var i=0, temp=[];i<num; i++){temp.push(Math.floor(Math.random()*4)+1);}
    -     return temp;};
    - ljuHelper.populateGallery = function(fn, option) {
-   -    var i, temp, stop = Math.ceil(Math.random()*13);
+   -    var i, temp, stop = Math.ceil(Math.random()*5);
    -    for (i=0, temp=[]; i<stop; i++) {
    -        temp.push(fn());
    -    }
