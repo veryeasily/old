@@ -11,6 +11,12 @@ function raiseNavbar(e) {
 $(function() {
     $('#navbar').on('raisenav', $.proxy(raiseNavbar, document.getElementById('navbar')));
 }); 
+
+$(function() {
+    $('.bundle').mousewheel(function(event, delta) {
+        this.scrollLeft += (delta * 105);
+    });
+});
     
 $(document).on('ready', function() {
     $('.subwindow a').click(function (e) {
