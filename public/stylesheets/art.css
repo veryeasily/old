@@ -48,20 +48,25 @@
   filter: invert(1);
 }
 .bundle {
+  background-color: black;
+  border: solid darkgrey 1px;
   border-radius: 7px;
   margin: auto;
   overflow-x: auto;
   overflow-y: hidden;
+  padding-right: 37px;
   white-space: nowrap;
 }
 .bundle .artwork:first-child,
 .bundle .artwork:first-child img {
-  margin-left: 0;
+  margin-left: 17px;
 }
 .bundle .artwork {
   display: inline-block;
   margin-left: 35%;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 .bundle img {
-  max-height: 600px;
+  max-height: 580px;
 }
