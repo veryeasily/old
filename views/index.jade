@@ -18,15 +18,15 @@ html(lang='en')
   body
     include navbar
     #warp
-      .slice#one(href="#/code")
-        .subwindow
-          include code
-      .slice#two(href="#/art")
+      .slice#one(href="#/art")
         .subwindow
           include art
-      .slice#three(href="#/other")
-        .subwindow
-          include other
-      .slice#four(href="#/blog")
+      .slice#two(href="#/blog")
         .subwindow
           include blog
+      .slice#three(href="#/code")
+        .subwindow
+          include code
+      .slice#four(href="#/other")
+        .subwindow
+          include other

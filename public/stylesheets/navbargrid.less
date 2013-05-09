@@ -1,0 +1,42 @@
+@number: 10;
+@width: percentage((1-.27) / @number);
+@gutter: percentage(.2699/(@number - 1));
+
+#navbar {
+    .row-fluid [class*="span"] {
+        margin-left: @gutter;
+    }
+    .row-fluid [class*="span"]:first-child {
+        margin-left: 0%;
+    }
+    .span1 {
+        width: (@width * 1);
+    }
+    .span2 {
+        width: ((@width * 2) + (@gutter * (2 - 1)));
+    }
+    .span3 {
+        width: ((@width * 3) + (@gutter * (3 - 1)));
+    }
+    .span4 {
+        width: ((@width * 4) + (@gutter * (4 - 1)));
+    }
+    .span5 {
+        width: ((@width * 5) + (@gutter * (5 - 1)));
+    }
+    .span6 {
+        width: ((@width * 6) + (@gutter * (6 - 1)));
+    }
+    .span7 {
+        width: ((@width * 7) + (@gutter * (7 - 1)));
+    }
+    .span8 {
+        width: ((@width * 8) + (@gutter * (8 - 1)));
+    }
+    .span9 {
+        width: ((@width * 9) + (@gutter * (9 - 1)));
+    }
+    .span10 {
+        width: ((@width * 10) + (@gutter * (10 - 1)));
+    }
+}

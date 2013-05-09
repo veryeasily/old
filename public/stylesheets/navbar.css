@@ -10,13 +10,49 @@
   -ms-perspective: 1000;
   perspective: 1000;
 }
-#silenter h3 {
-  color: #dda56c;
+#navbar .row-fluid [class*="span"] {
+  margin-left: 2.9988888888888883%;
 }
-.silenter > .container-fluid {
+#navbar .row-fluid [class*="span"]:first-child {
+  margin-left: 0%;
+}
+#navbar .span1 {
+  width: 7.3%;
+}
+#navbar .span2 {
+  width: 17.598888888888887%;
+}
+#navbar .span3 {
+  width: 27.897777777777776%;
+}
+#navbar .span4 {
+  width: 38.196666666666665%;
+}
+#navbar .span5 {
+  width: 48.495555555555555%;
+}
+#navbar .span6 {
+  width: 58.79444444444444%;
+}
+#navbar .span7 {
+  width: 69.09333333333333%;
+}
+#navbar .span8 {
+  width: 79.39222222222222%;
+}
+#navbar .span9 {
+  width: 89.69111111111111%;
+}
+#navbar .span10 {
+  width: 99.99%;
+}
+#navbar > .container-fluid {
   background-color: rgba(255, 255, 255, 0.5);
 }
-.silenter {
+#navbar a {
+  color: #951c2d;
+}
+#navbar {
   position: fixed;
   color: #951c2d;
   left: 0;
@@ -24,7 +60,7 @@
   z-index: 5;
   margin: 0 20px;
 }
-.silenter #logo {
+#navbar span.logo {
   -webkit-filter: invert(1);
   -ms-filter: invert(1);
   -moz-filter: invert(1);
@@ -38,8 +74,8 @@
   text-shadow: 0 1px 0 green;
   line-height: 25px;
 }
-.silenter #logo:hover,
-.silenter #logo:focus {
+#navbar span.logo:hover,
+#navbar span.logo:focus {
   text-decoration: none;
 }
 .navigation {

@@ -1,18 +1,19 @@
 $(document).on('ready', function() {
     var $slices, $artwork, $activeHeap, undoInvert, pullUpViewer, Inverter;
-    $slices = $('.slice');
+    $slices = $('.slice').attr('data-clicked', "false");
     $slices.on('click', function alternate (e) {
         console.log(e);
+        // check to see if we're in art viewing mode...
         if (!$(document.documentElement).hasClass('inverted')) { 
 
             e.stopPropagation();
             var $this, $right, $left, $others;
-
-            if ($(this).data('clicked')) {
-                $('#warp').removeClass('go goone gotwo gothree gofour')
-                $('.slice').removeClass('right1 right2 right3 left1 left2 left3 scrollEnabled');
-                $(this).data('clicked', false);
+            $('#warp').removeClass('go goone gotwo gothree gofour')
+            $slices.removeClass('right1 right2 right3 left1 left2 left3 scrollEnabled');
+            if (this.dataset.clicked === "true") {
+                this.dataset.clicked = "false";
             } else {
+                $slices.attr('data-clicked', "false");
                 $right = $slices.filter('#' + this.id + ' ~ a');
                 $left = $slices.not($right).not(this);
                 $left.each(function(i) {
@@ -20,7 +21,7 @@ $(document).on('ready', function() {
                 $right.each(function(i) {
                     $(this).addClass('right' + (i + 1)); });
                 $('#warp').addClass('go').addClass('go' + this.id);
-                $(this).data('clicked', true);
+                this.dataset.clicked = "true";
                 var that = this;
                 if (this.id === "two") { // dumb hack to catch the art subwindow right now.
                     ['transitionend', 'webkitTransitionEnd', 'oTransitionEnd'].forEach(function (evnt, i) {
@@ -28,7 +29,7 @@ $(document).on('ready', function() {
                         console.log("about to call set timeout!");
                         $(that).on(evnt, function(e) {
                             setTimeout(function () {
-                                if (!$(that).data('clicked')) {
+                                if (that.dataset.clicked !== "true") {
                                     return; }
                                 console.log("done with set timeout.");                         // apparently I already made it so that
                                 $(that).children().addClass('scrollEnabled'); }, 1500);});} ); // overflow-y get's added :-/
@@ -72,5 +73,13 @@ $(document).on('ready', function() {
     };
 
     $('.artwork').on('click', Inverter.pullUpViewer);
-
+    $('#navbar a[data-slice]').on('click'
+            , function(e) {
+                $(this.dataset.slice).click();
+            });
+    $('#navbar a.logo').on('click'
+            , function(e) {
+                console.log("logo clicked!");
+                $('div[data-clicked="true"]').click();
+            });
 });

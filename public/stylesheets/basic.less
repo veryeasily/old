@@ -1,6 +1,11 @@
 html{height:100%;position:relative;}
 body{height:100%;position:relative;overflow:hidden;background-color: transparent;}
 
+@firstcolor: rgba(41, 128, 185, 1);
+@secondcolor: rgba(46, 204, 113, 1);
+@thirdcolor: rgba(231, 76, 60, 1);
+@fourthcolor: rgba(241, 196, 15, 1);
+
 a {
     &:hover, &:visited, &:active {
         text-decoration: none;
@@ -21,21 +26,29 @@ a {
 }
 
 #one {
-    background-color: rgba(46, 204, 113,0.7);
+    background-color: fadeout(@firstcolor, 30%);
     // left: 0%;
 }
 #two {
-    background-color: rgba(41, 128, 185,0.7);
+    background-color: fadeout(@secondcolor, 30%);
     // left: 25%;
 }
 #three {
-    background-color: rgba(241, 196, 15,0.7);
+    background-color: fadeout(@thirdcolor, 30%);
     // left: 50%;
 }
 #four {
-    background-color: rgba(231, 76, 60, 0.7);
+    background-color: fadeout(@fourthcolor, 30%);
     // left: 75%;
 }
+
+div#navbar {
+    .one h3 {color: @firstcolor;}
+    .two h3 {color: @secondcolor;}
+    .three h3 {color: @thirdcolor;}
+    .four h3 {color: @fourthcolor;}
+}
+
 
 .slice {
     overflow: auto;

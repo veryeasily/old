@@ -1,21 +1,26 @@
 @import 'mixins.less';
+@import 'navbargrid.less';
 
-#silenter h3 {
-    color: #dda56c;
-}
+//  #navbar h3 {
+//      color: #dda56c;
+//  }
 
-.silenter > .container-fluid {
+#navbar > .container-fluid {
     background-color: rgba(255, 255, 255, 0.5);
 }
 
-.silenter {
+#navbar a {
+    color: #951c2d;
+}
+
+#navbar {
     position: fixed;
     color: #951c2d;
     left: 0;
     right: 0;
     z-index: 5;
     margin: 0 20px;
-    #logo {
+    span.logo {
         .filter(invert(1));
         display: block;
         float: right;

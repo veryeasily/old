@@ -1,17 +1,32 @@
-#silenter.silenter
+#navbar.ljuNavbar
   .container-fluid
     .row-fluid
-      .span3
-        a
-          h3#codeHeading code
-      .span3
-        a
-          h3#artHeading art
-      .span3
-        a
-          h3#otherHeading other
-      .span3
-        a
-          h3#blogHeading blog
-        span#logo lju
-
+      .span2.one
+        .row-fluid
+          .span2
+            a.art(data-slice="#one")
+              h3.art art
+      .span2.two
+        .row-fluid
+          .span2
+          .span2
+            a.blog(data-slice="#two")
+              h3.blog blog
+      .span2.three
+        .row-fluid
+          .span4
+          .span2
+            a.code(data-slice="#three")
+              h3.code code
+      .span2.four
+        .row-fluid
+          .span6
+          .span2
+            a.other(data-slice="#four")
+              h3.other other
+      .span2.five
+        .row-fluid
+          .span8
+          .span2
+            a.logo
+              span.logo lju
