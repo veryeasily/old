@@ -14,21 +14,57 @@
 }
 
 #navbar {
-    position: fixed;
     color: #951c2d;
     left: 0;
-    right: 0;
-    z-index: 5;
     margin: 0 20px;
+    position: fixed;
+    right: 0;
+    -ms-transition: margin 1.5s;
+    -moz-transition: margin 1.5s;
+    -webkit-transition: margin 1.5s;
+    transition: margin 1.5s;
+    z-index: 5;
+
+    a[data-slice="#one"] {
+        cursor: w-resize;
+    }
+    a[data-slice="#two"] {
+        cursor: sw-resize;
+    }
+    a[data-slice="#three"] {
+        cursor: se-resize;
+    }
+    a[data-slice="#four"] {
+        cursor: e-resize;
+    }
+
+    &.raise {          // this raises the navbar when #one is clicked
+        margin: 0 15px 0 0;
+        > .container-fluid {
+            margin: 0 10px;
+        }
+    }
+
+    > .container-fluid {
+        -ms-transition: margin 1.5s;
+        -moz-transition: margin 1.5s;
+        -webkit-transition: margin 1.5s;
+        transition: margin 1.5s;
+    }
+
+    a.logo {
+        cursor: ew-resize;
+        cursor: -moz-zoom-out;
+    }
     span.logo {
         .filter(invert(1));
         display: block;
         float: right;
-        margin-top: 5px;
         font-size: 20px;
         font-weight: 200;
-        text-shadow: 0 1px 0 green;
         line-height: 25px;
+        margin-top: 5px;
+        text-shadow: 0 1px 0 green;
         &:hover,
         &:focus {
             text-decoration: none;

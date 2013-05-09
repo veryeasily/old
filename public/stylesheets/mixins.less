@@ -18,12 +18,14 @@
 .transformtranslate(@amt, @deg, @scale) {
     // -ms-transform: translateZ(0) scaleX((@scale)) skewX((@deg + 0deg)) translateX((@amt + 0%));
     -webkit-transform: translateZ(0) scaleX((@scale)) skewX((@deg + 0deg)) translateX((@amt + 0%));
+    -moz-transform: translateZ(0) scaleX((@scale)) skewX((@deg + 0deg)) translateX((@amt + 0%));
     transform: translateZ(0) scaleX((@scale)) skewX((@deg + 0deg)) translateX((@amt + 0%));
 }
 
 .transformtranslaterev(@amt, @deg, @scale) {
     // -ms-transform: translateZ(0) translateX((@amt + 0%)) skewX((@deg + 0deg)) scaleX((@scale));
     -webkit-transform: translateZ(0) translateX((@amt + 0%)) skewX((@deg + 0deg)) scaleX((@scale));
+    -moz-transform: translateZ(0) translateX((@amt + 0%)) skewX((@deg + 0deg)) scaleX((@scale));
     transform: translateZ(0) translateX((@amt + 0%)) skewX((@deg + 0deg)) scaleX((@scale));
 }
 
@@ -44,8 +46,11 @@
 }
 
 .transition(@sec) {
-    -webkit-transition: all (@sec);
+    -webkit-transition: -webkit-transform (@sec);
+    -webkit-transition: transform (@sec);
     // -o-transition: transform ((@sec) + 0s), margin-left ((@sec) + 0s), width ((@sec) + 0s);
-    // -moz-transition: transform ((@sec) + 0s), margin-left ((@sec) + 0s), width ((@sec) + 0s);
-    transition: all (@sec);
+    -moz-transition: -moz-transform ((@sec) + 0s);
+    -moz-transition: transform ((@sec) + 0s);
+    transition: -webkit-transform (@sec);
+    transition: transform (@sec);
 }

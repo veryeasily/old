@@ -116,12 +116,44 @@ div#navbar .four h3 {
   color: #951c2d;
 }
 #navbar {
-  position: fixed;
   color: #951c2d;
   left: 0;
-  right: 0;
-  z-index: 5;
   margin: 0 20px;
+  position: fixed;
+  right: 0;
+  -ms-transition: margin 1.5s;
+  -moz-transition: margin 1.5s;
+  -webkit-transition: margin 1.5s;
+  transition: margin 1.5s;
+  z-index: 5;
+}
+#navbar a[data-slice="#one"] {
+  cursor: w-resize;
+}
+#navbar a[data-slice="#two"] {
+  cursor: sw-resize;
+}
+#navbar a[data-slice="#three"] {
+  cursor: se-resize;
+}
+#navbar a[data-slice="#four"] {
+  cursor: e-resize;
+}
+#navbar.raise {
+  margin: 0 15px 0 0;
+}
+#navbar.raise > .container-fluid {
+  margin: 0 10px;
+}
+#navbar > .container-fluid {
+  -ms-transition: margin 1.5s;
+  -moz-transition: margin 1.5s;
+  -webkit-transition: margin 1.5s;
+  transition: margin 1.5s;
+}
+#navbar a.logo {
+  cursor: ew-resize;
+  cursor: -moz-zoom-out;
 }
 #navbar span.logo {
   -webkit-filter: invert(1);
@@ -131,11 +163,11 @@ div#navbar .four h3 {
   filter: invert(1);
   display: block;
   float: right;
-  margin-top: 5px;
   font-size: 20px;
   font-weight: 200;
-  text-shadow: 0 1px 0 green;
   line-height: 25px;
+  margin-top: 5px;
+  text-shadow: 0 1px 0 green;
 }
 #navbar span.logo:hover,
 #navbar span.logo:focus {
@@ -170,7 +202,7 @@ div#navbar .four h3 {
 }
 #arts-container {
   width: 1000px;
-  margin: 66px auto;
+  margin: 28px auto 0 auto;
 }
 .work-holder {
   display: inline-block;
@@ -201,15 +233,25 @@ div#navbar .four h3 {
   filter: invert(1);
 }
 .bundle {
-  width: 950px;
-  margin: 20px auto 100px auto;
-  padding: 10px;
   border-radius: 7px;
-  position: relative;
-  z-index: 10;
+  margin: auto;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+.bundle .artwork:first-child,
+.bundle .artwork:first-child img {
+  margin-left: 0;
+}
+.bundle .artwork {
+  display: inline-block;
+  margin-left: 35%;
+}
+.bundle img {
+  max-height: 600px;
 }
 #to {
-  font-size: 66px;
+  font-size: 55px;
   color: #f5851f;
 }
 #three > .subwindow > div {
@@ -279,19 +321,29 @@ a:-webkit-any-link {
   -moz-perspective: 1000;
   -ms-perspective: 1000;
   perspective: 1000;
-  -webkit-transition: all 2s;
-  transition: all 2s;
+  -webkit-transition: -webkit-transform 2s;
+  -webkit-transition: transform 2s;
+  -moz-transition: -moz-transform 2s;
+  -moz-transition: transform 2s;
+  transition: -webkit-transform 2s;
+  transition: transform 2s;
   -webkit-transform: translateZ(0) scaleX(2) skewX(-40deg) translateX(-10%);
+  -moz-transform: translateZ(0) scaleX(2) skewX(-40deg) translateX(-10%);
   transform: translateZ(0) scaleX(2) skewX(-40deg) translateX(-10%);
 }
 #warp > .slice {
+  border: solid transparent 8px;
   position: relative;
   overflow: hidden;
   height: 100%;
   width: 25%;
   float: left;
-  -webkit-transition: all 2s;
-  transition: all 2s;
+  -webkit-transition: -webkit-transform 2s;
+  -webkit-transition: transform 2s;
+  -moz-transition: -moz-transform 2s;
+  -moz-transition: transform 2s;
+  transition: -webkit-transform 2s;
+  transition: transform 2s;
   -webkit-transform-origin: left top;
   transform-origin: left top;
   -webkit-backface-visibility: hidden;
@@ -304,11 +356,15 @@ a:-webkit-any-link {
   perspective: 1000;
 }
 .subwindow {
-  overflow-y: auto;
+  overflow-y: none;
   position: relative;
   width: 400%;
-  -webkit-transition: all 2s;
-  transition: all 2s;
+  -webkit-transition: -webkit-transform 2s;
+  -webkit-transition: transform 2s;
+  -moz-transition: -moz-transform 2s;
+  -moz-transition: transform 2s;
+  transition: -webkit-transform 2s;
+  transition: transform 2s;
   -webkit-transform-origin: left top;
   transform-origin: left top;
   -webkit-backface-visibility: hidden;
@@ -323,43 +379,52 @@ a:-webkit-any-link {
 .subwindow > div {
   margin-top: 136px;
 }
-.slice:not(#four) .subwindow {
+.slice:not(#two) .subwindow {
   height: 100%;
 }
 /* We care which slice we're in, because we have to translateX each subwindo back to the viewport a different amount. */#one .subwindow {
   -webkit-transform: translateZ(0) translateX(10%) skewX(40deg) scaleX(0.5);
+  -moz-transform: translateZ(0) translateX(10%) skewX(40deg) scaleX(0.5);
   transform: translateZ(0) translateX(10%) skewX(40deg) scaleX(0.5);
 }
 #two .subwindow {
   -webkit-transform: translateZ(0) translateX(-15%) skewX(40deg) scaleX(0.5);
+  -moz-transform: translateZ(0) translateX(-15%) skewX(40deg) scaleX(0.5);
   transform: translateZ(0) translateX(-15%) skewX(40deg) scaleX(0.5);
 }
 #three .subwindow {
   -webkit-transform: translateZ(0) translateX(-40%) skewX(40deg) scaleX(0.5);
+  -moz-transform: translateZ(0) translateX(-40%) skewX(40deg) scaleX(0.5);
   transform: translateZ(0) translateX(-40%) skewX(40deg) scaleX(0.5);
 }
 #four .subwindow {
   -webkit-transform: translateZ(0) translateX(-65%) skewX(40deg) scaleX(0.5);
+  -moz-transform: translateZ(0) translateX(-65%) skewX(40deg) scaleX(0.5);
   transform: translateZ(0) translateX(-65%) skewX(40deg) scaleX(0.5);
 }
 #warp.go.goone {
   -webkit-transform: translateZ(0) scaleX(4) skewX(0deg) translateX(0%);
+  -moz-transform: translateZ(0) scaleX(4) skewX(0deg) translateX(0%);
   transform: translateZ(0) scaleX(4) skewX(0deg) translateX(0%);
 }
 #warp.go.gotwo {
   -webkit-transform: translateZ(0) scaleX(4) skewX(0deg) translateX(-25%);
+  -moz-transform: translateZ(0) scaleX(4) skewX(0deg) translateX(-25%);
   transform: translateZ(0) scaleX(4) skewX(0deg) translateX(-25%);
 }
 #warp.go.gothree {
   -webkit-transform: translateZ(0) scaleX(4) skewX(0deg) translateX(-50%);
+  -moz-transform: translateZ(0) scaleX(4) skewX(0deg) translateX(-50%);
   transform: translateZ(0) scaleX(4) skewX(0deg) translateX(-50%);
 }
 #warp.go.gofour {
   -webkit-transform: translateZ(0) scaleX(4) skewX(0deg) translateX(-75%);
+  -moz-transform: translateZ(0) scaleX(4) skewX(0deg) translateX(-75%);
   transform: translateZ(0) scaleX(4) skewX(0deg) translateX(-75%);
 }
 #warp.go .subwindow {
   -webkit-transform: translateZ(0) scaleX(0.25) skewX(0deg) translateX(0%);
+  -moz-transform: translateZ(0) scaleX(0.25) skewX(0deg) translateX(0%);
   transform: translateZ(0) scaleX(0.25) skewX(0deg) translateX(0%);
 }
 #warp.go > .slice {
@@ -367,26 +432,32 @@ a:-webkit-any-link {
 }
 #warp.go .left1 > .subwindow {
   -webkit-transform: translateZ(0) scaleX(0.25) skewX(0deg) translateX(100%);
+  -moz-transform: translateZ(0) scaleX(0.25) skewX(0deg) translateX(100%);
   transform: translateZ(0) scaleX(0.25) skewX(0deg) translateX(100%);
 }
 #warp.go > .left2 > .subwindow {
   -webkit-transform: translateZ(0) scaleX(0.25) skewX(0deg) translateX(200%);
+  -moz-transform: translateZ(0) scaleX(0.25) skewX(0deg) translateX(200%);
   transform: translateZ(0) scaleX(0.25) skewX(0deg) translateX(200%);
 }
 #warp.go > .left3 > .subwindow {
   -webkit-transform: translateZ(0) scaleX(0.25) skewX(0deg) translateX(300%);
+  -moz-transform: translateZ(0) scaleX(0.25) skewX(0deg) translateX(300%);
   transform: translateZ(0) scaleX(0.25) skewX(0deg) translateX(300%);
 }
 #warp.go > .right1 > .subwindow {
   -webkit-transform: translateZ(0) scaleX(0.25) skewX(0deg) translateX(-100%);
+  -moz-transform: translateZ(0) scaleX(0.25) skewX(0deg) translateX(-100%);
   transform: translateZ(0) scaleX(0.25) skewX(0deg) translateX(-100%);
 }
 #warp.go > .right2 > .subwindow {
   -webkit-transform: translateZ(0) scaleX(0.25) skewX(0deg) translateX(-200%);
+  -moz-transform: translateZ(0) scaleX(0.25) skewX(0deg) translateX(-200%);
   transform: translateZ(0) scaleX(0.25) skewX(0deg) translateX(-200%);
 }
 #warp.go > .right3 > .subwindow {
   -webkit-transform: translateZ(0) scaleX(0.25) skewX(0deg) translateX(-300%);
+  -moz-transform: translateZ(0) scaleX(0.25) skewX(0deg) translateX(-300%);
   transform: translateZ(0) scaleX(0.25) skewX(0deg) translateX(-300%);
 }
 #warp.go .scrollEnabled {

@@ -1,4 +1,21 @@
+function raiseNavbar(e) {
+    var triggered = this.dataset.triggered;
+    this.$element = this.$element || $(this);
+    console.log(e);
+    if ($('#warp').hasClass('goone')) {
+        this.$element.addClass('raise'); }
+    else {
+        this.$element.removeClass('raise'); }
+}
+
+$(function() {
+    $('#navbar').on('raisenav', $.proxy(raiseNavbar, document.getElementById('navbar')));
+}); 
+    
 $(document).on('ready', function() {
+    $('.subwindow a').click(function (e) {
+        e.stopPropagation();
+    });
     var $slices, $artwork, $activeHeap, undoInvert, pullUpViewer, Inverter;
     $slices = $('.slice').attr('data-clicked', "false");
     $slices.on('click', function alternate (e) {
@@ -12,6 +29,7 @@ $(document).on('ready', function() {
             $slices.removeClass('right1 right2 right3 left1 left2 left3 scrollEnabled');
             if (this.dataset.clicked === "true") {
                 this.dataset.clicked = "false";
+                $('#navbar').trigger('raisenav', [e]);
             } else {
                 $slices.attr('data-clicked', "false");
                 $right = $slices.filter('#' + this.id + ' ~ a');
@@ -34,6 +52,7 @@ $(document).on('ready', function() {
                                 console.log("done with set timeout.");                         // apparently I already made it so that
                                 $(that).children().addClass('scrollEnabled'); }, 1500);});} ); // overflow-y get's added :-/
                 }
+                $('#navbar').trigger('raisenav', [e]);
                                                                                                         // learn something new everyday!
             }
         } else {

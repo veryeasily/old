@@ -17,7 +17,7 @@
 }
 #arts-container {
   width: 1000px;
-  margin: 66px auto;
+  margin: 28px auto 0 auto;
 }
 .work-holder {
   display: inline-block;
@@ -48,10 +48,20 @@
   filter: invert(1);
 }
 .bundle {
-  width: 950px;
-  margin: 20px auto 100px auto;
-  padding: 10px;
   border-radius: 7px;
-  position: relative;
-  z-index: 10;
+  margin: auto;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+.bundle .artwork:first-child,
+.bundle .artwork:first-child img {
+  margin-left: 0;
+}
+.bundle .artwork {
+  display: inline-block;
+  margin-left: 35%;
+}
+.bundle img {
+  max-height: 600px;
 }

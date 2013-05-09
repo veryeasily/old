@@ -53,12 +53,44 @@
   color: #951c2d;
 }
 #navbar {
-  position: fixed;
   color: #951c2d;
   left: 0;
-  right: 0;
-  z-index: 5;
   margin: 0 20px;
+  position: fixed;
+  right: 0;
+  -ms-transition: margin 1.5s;
+  -moz-transition: margin 1.5s;
+  -webkit-transition: margin 1.5s;
+  transition: margin 1.5s;
+  z-index: 5;
+}
+#navbar a[data-slice="#one"] {
+  cursor: w-resize;
+}
+#navbar a[data-slice="#two"] {
+  cursor: sw-resize;
+}
+#navbar a[data-slice="#three"] {
+  cursor: se-resize;
+}
+#navbar a[data-slice="#four"] {
+  cursor: e-resize;
+}
+#navbar.raise {
+  margin: 0 15px 0 0;
+}
+#navbar.raise > .container-fluid {
+  margin: 0 10px;
+}
+#navbar > .container-fluid {
+  -ms-transition: margin 1.5s;
+  -moz-transition: margin 1.5s;
+  -webkit-transition: margin 1.5s;
+  transition: margin 1.5s;
+}
+#navbar a.logo {
+  cursor: ew-resize;
+  cursor: -moz-zoom-out;
 }
 #navbar span.logo {
   -webkit-filter: invert(1);
@@ -68,11 +100,11 @@
   filter: invert(1);
   display: block;
   float: right;
-  margin-top: 5px;
   font-size: 20px;
   font-weight: 200;
-  text-shadow: 0 1px 0 green;
   line-height: 25px;
+  margin-top: 5px;
+  text-shadow: 0 1px 0 green;
 }
 #navbar span.logo:hover,
 #navbar span.logo:focus {
