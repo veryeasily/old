@@ -7,6 +7,7 @@
 
 #navbar > .container-fluid {
     background-color: rgba(255, 255, 255, 0.5);
+    margin: 0 450px;
 }
 
 #navbar a {
@@ -32,16 +33,16 @@
         cursor: sw-resize;
     }
     a[data-slice="#three"] {
-        cursor: se-resize;
+        cursor: s-resize;
     }
     a[data-slice="#four"] {
-        cursor: e-resize;
+        cursor: se-resize;
     }
 
     &.raise {          // this raises the navbar when #one is clicked
-        margin: 0 15px 0 0;
+        margin: 0 20px;
         > .container-fluid {
-            margin: 0 10px;
+            margin: 0 450px;
         }
     }
 
@@ -54,7 +55,6 @@
 
     a.logo {
         cursor: ew-resize;
-        cursor: -moz-zoom-out;
     }
     span.logo {
         .filter(invert(1));
