@@ -49,11 +49,14 @@
 }
 .bundle {
   background-color: rgba(0, 0, 0, 0.9);
+  border-top: solid rgba(30, 30, 30, 0.6) 3px;
   border-radius: 2px;
+  box-sizing: content-box;
   margin: auto;
   overflow-x: auto;
   overflow-y: hidden;
-  padding-right: 37px;
+  padding-left: 200px;
+  margin-left: -200px;
   white-space: nowrap;
 }
 .bundle div.artwork:first-child {
