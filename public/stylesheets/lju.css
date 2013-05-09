@@ -276,7 +276,7 @@ div#navbar .four h3 {
 }
 a:-webkit-any-link {
   text-decoration: none;
-  cursor: default;
+  cursor: auto;
 }
 #resume {
   font-size: 206px;
