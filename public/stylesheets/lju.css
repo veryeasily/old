@@ -371,7 +371,7 @@ a:-webkit-any-link {
 }
 .subwindow {
   overflow-y: none;
-  position: relative;
+  position: absolute;
   width: 400%;
   -webkit-transition: -webkit-transform 2s;
   -webkit-transition: transform 2s;
