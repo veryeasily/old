@@ -3,8 +3,13 @@
 @gutter: percentage(.2699/(@number - 1));
 
 #navbar {
+    h3 {
+        line-height: 24px;
+    }
+
     .row-fluid [class*="span"] {
         margin-left: @gutter;
+        min-height: 24px;
     }
     .row-fluid [class*="span"]:first-child {
         margin-left: 0%;

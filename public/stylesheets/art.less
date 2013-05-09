@@ -7,8 +7,8 @@
 @import 'mixins.less';
 
 #arts-container {
-    width: 1000px;
-    margin: 36px auto 0 auto;
+    width: 100%;
+    margin: 24px auto 0 auto;
 }
 
 .work-holder {
@@ -47,25 +47,28 @@
 };
 
 .bundle {
-    background-color: black;
-    border: solid darkgrey 1px;
-    border-radius: 7px;
+    background-color: rgba(0,0,0,0.9);
+    // border: solid darkgrey 1px;
+    border-radius: 2px;
     margin: auto;
     overflow-x: auto;
     overflow-y: hidden;
     padding-right: 37px;
     white-space: nowrap;
-    .artwork:first-child,
-    .artwork:first-child img {
-        margin-left: 17px;
+    div.artwork:first-child {
+        margin-left: 136px;
     }
-    .artwork {
+    div.artwork:last-child {
+        margin-right: 136px;
+    }
+    div.artwork {
         display: inline-block;
-        margin-left: 35%;
-        padding-top: 10px;
-        padding-bottom: 10px;
+        margin-left: 40%;
+        padding-top: 17px;
+        padding-bottom: 17px;
     }
     img {
+        border: solid black 1px;
         max-height: 580px;
     }
 }

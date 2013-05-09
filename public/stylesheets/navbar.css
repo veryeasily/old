@@ -10,8 +10,12 @@
   -ms-perspective: 1000;
   perspective: 1000;
 }
+#navbar h3 {
+  line-height: 24px;
+}
 #navbar .row-fluid [class*="span"] {
   margin-left: 2.9988888888888883%;
+  min-height: 24px;
 }
 #navbar .row-fluid [class*="span"]:first-child {
   margin-left: 0%;
@@ -100,10 +104,9 @@
   filter: invert(1);
   display: block;
   float: right;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 200;
-  line-height: 25px;
-  margin-top: 5px;
+  line-height: 24px;
   text-shadow: 0 1px 0 green;
 }
 #navbar span.logo:hover,

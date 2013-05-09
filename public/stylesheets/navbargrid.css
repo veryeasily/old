@@ -1,5 +1,9 @@
+#navbar h3 {
+  line-height: 24px;
+}
 #navbar .row-fluid [class*="span"] {
   margin-left: 2.9988888888888883%;
+  min-height: 24px;
 }
 #navbar .row-fluid [class*="span"]:first-child {
   margin-left: 0%;
