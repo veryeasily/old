@@ -91,7 +91,7 @@ $(document).on('ready', function() {
         }
     };
 
-    $('.artwork').on('click', Inverter.pullUpViewer);
+    // $('.artwork').on('click', Inverter.pullUpViewer);
     $('#navbar a[data-slice]').on('click'
             , function(e) {
                 $(this.dataset.slice).click();
