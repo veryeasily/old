@@ -202,7 +202,7 @@ div#navbar .four h3 {
 }
 #arts-container {
   width: 1000px;
-  margin: 28px auto 0 auto;
+  margin: 36px auto 0 auto;
 }
 .work-holder {
   display: inline-block;
@@ -337,7 +337,6 @@ a:-webkit-any-link {
   transform: translateZ(0) scaleX(2) skewX(-40deg) translateX(-10%);
 }
 #warp > .slice {
-  border: solid transparent 8px;
   position: relative;
   overflow: hidden;
   height: 100%;

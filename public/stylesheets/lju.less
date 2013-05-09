@@ -39,7 +39,6 @@
     .transition(2s);
     .transformtranslate((@amount-to-left),((-1)*@skewAngle), 2); //shift left, skew in the reverse of the variable, and stretch by 2
     > .slice {
-        border: solid transparent 8px;
         position: relative; // this fixes a webkit bug where it can't see anchor elements otherwise.
         overflow: hidden; // fixes a chrome bug where it was saying #two was like 15,000 px.
         height: 100%;
