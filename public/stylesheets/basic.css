@@ -39,16 +39,16 @@ a:active {
   background-color: rgba(241, 196, 15, 0.7);
 }
 div#navbar .one h3 {
-  color: #2980b9;
+  color: white;
 }
 div#navbar .two h3 {
-  color: #2ecc71;
+  color: white;
 }
 div#navbar .three h3 {
-  color: #e74c3c;
+  color: white;
 }
 div#navbar .four h3 {
-  color: #f1c40f;
+  color: white;
 }
 .slice {
   overflow: auto;
