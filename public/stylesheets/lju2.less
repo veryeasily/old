@@ -1,0 +1,138 @@
+// Central stylesheet for Luke Underwood's (elju's) personal site.
+// url:  http://elju.me
+
+
+@import 'main.css';
+@import 'basic.less';
+@import 'navbar.less';
+@import 'art.less';
+@import 'code.less';
+@import 'other.less';
+@import 'blog.less';
+@import 'mixins.less';
+
+@skewAngle: 0deg;
+@amount-to-left: 0%;
+@subwindow-offset: ((@amount-to-left)*-1);
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.container-fluid {
+    margin: 15px 10px;
+}
+
+//  I set up the warp mesh first and then place the
+//  subwindows inside of it.  The warp mesh itself is
+//  200% of the screen and scooted over 17% to the left
+//  @amount-to-left. All of this happens within the
+//  .transformtranslate() mixin in mixins.less.
+//  Order of operations on the transformations matters,
+//  and winds up being super important to keep track of.
+
+#warp {
+    position: relative;
+    height: 100%;
+    .transorig;
+    .transition(2s);
+    .transformtranslate((@amount-to-left),((-1)*@skewAngle), 1); //shift left, skew in the reverse of the variable, and stretch by 2
+    > .slice {
+        position: relative; // this fixes a webkit bug where it can't see anchor elements otherwise.
+        overflow: hidden; // fixes a chrome bug where it was saying #two was like 15,000 px.
+        height: 100%;
+        width: 25%;
+        float: left;
+        .transition(2s);
+        .transorig; // this makes the animations work smoothly and not be all fucked up on webkit
+                    // for some reason you have to include it even though it's not animated.
+        // .transformtranslate(0px, 0deg, 1);
+    }
+}
+
+.subwindow {
+    overflow-y: none; // strange bug? in browsers where it messes up placement, but only until clicked w/out this change.
+    position: absolute;
+    width: 400%;
+
+    .transition(2s);
+    .transorig;
+
+    > div {
+        margin-top:136px;
+    }
+}
+
+// for some reason we have to avoid the blog slice
+.slice:not(#two) .subwindow {
+    height: 100%;
+}
+
+/* We care which slice we're in, because we have to translateX each subwindo back to the viewport a different amount. */ 
+
+#one .subwindow {
+    .transformtranslaterev((@subwindow-offset), @skewAngle, 1);
+}
+
+#two .subwindow {
+    .transformtranslaterev((@subwindow-offset) - 25%, @skewAngle, 1);
+}
+
+#three .subwindow {
+    .transformtranslaterev((@subwindow-offset) - 50%, @skewAngle, 1);
+}
+
+#four .subwindow {
+    .transformtranslaterev((@subwindow-offset) - 75%, @skewAngle, 1);
+}
+
+
+#warp.go {
+    &.goone {
+        .transformtranslate(0%, 0, 4);
+    }
+    &.gotwo {
+        .transformtranslate(-25%, 0, 4);
+    }
+    &.gothree {
+        .transformtranslate(-50%, 0, 4);
+    }
+    &.gofour {
+        .transformtranslate(-75%, 0, 4);
+    }
+
+    .subwindow {
+        .transformtranslate(0%, 0deg, 0.25);
+    }
+
+    > .slice {
+        overflow-x: none; // this continues correcting for the Webkit browser glitch.
+        // border: solid transparent 0px;
+    }
+
+    .left1 > .subwindow {
+        .transformtranslate(100%, 0deg, 0.25);
+    }
+    > .left2 > .subwindow {
+        .transformtranslate(200%, 0deg, 0.25);
+    }
+    > .left3 > .subwindow {
+        .transformtranslate(300%, 0deg, 0.25);
+    }
+
+    > .right1 > .subwindow {
+        .transformtranslate(-100%, 0deg, 0.25);
+    }
+    > .right2 > .subwindow {
+        .transformtranslate(-200%, 0deg, 0.25);
+    }
+    > .right3 > .subwindow {
+        .transformtranslate(-300%, 0deg, 0.25);
+    }
+
+    .scrollEnabled {
+        overflow-y: auto;
+    }
+}
+
