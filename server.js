@@ -26,6 +26,7 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
+app.get('/cat', routes.index2);
 app.get('/', routes.index);
 
 app.listen(process.env.PORT || 5000, function(){
