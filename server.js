@@ -26,8 +26,8 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
-app.get('/cat', routes.index);
-app.get('/', routes.index2);
+app.get('/cat', routes.index2);
+app.get('/', routes.index);
 
 app.listen(process.env.PORT || 5000, function(){
   console.log('Express server listening on port ' + app.get('port'));
