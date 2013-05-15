@@ -17,6 +17,13 @@ $(function() {
         this.scrollLeft += (delta * 30);
     });
 });
+
+$(window).on('message', function(e) {
+    var evt = e.originalEvent;
+    if (evt.origin === 'http://elju.github.io' && evt.data === 'click') {
+        $('#blog-container').trigger('click');
+    }
+});
     
 $(document).on('ready', function() {
     $('.subwindow a').click(function (e) {
