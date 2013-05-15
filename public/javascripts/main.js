@@ -14,7 +14,7 @@ $(function() {
 
 $(function() {
     $('.bundle').mousewheel(function(event, delta) {
-        this.scrollLeft += (delta * 105);
+        this.scrollLeft += (delta * 30);
     });
 });
     
