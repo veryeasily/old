@@ -26,6 +26,7 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
+app.get('/no-overs', routes.index3);
 app.get('/cat', routes.index2);
 app.get('/', routes.index);
 
