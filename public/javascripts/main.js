@@ -24,6 +24,10 @@ $(window).on('message', function(e) {
         $('#blog-container').trigger('click');
     }
 });
+
+$('a').on('click', function(e) {
+    e.stopPropagation();
+});
     
 $(document).on('ready', function() {
     $('.subwindow a').click(function (e) {
