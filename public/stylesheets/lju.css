@@ -40,16 +40,16 @@ a:active {
   background-color: rgba(241, 196, 15, 0.7);
 }
 div#navbar .one h3 {
-  color: #0d293c;
+  color: #2980b9;
 }
 div#navbar .two h3 {
-  color: #124f2c;
+  color: #2ecc71;
 }
 div#navbar .three h3 {
-  color: #7b190f;
+  color: #e74c3c;
 }
 div#navbar .four h3 {
-  color: #614f06;
+  color: #f1c40f;
 }
 .slice {
   overflow: auto;
@@ -114,11 +114,11 @@ div#navbar .four h3 {
   width: 99.99%;
 }
 #navbar > .container-fluid {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.2);
   margin: 0 450px;
 }
 #navbar a {
-  color: #951c2d;
+  color: #da3d53;
 }
 #navbar {
   color: #951c2d;
@@ -322,6 +322,36 @@ a:-webkit-any-link {
 }
 .container-fluid {
   margin: 15px 10px;
+}
+.slice:after {
+  -webkit-transform: translateY(200px);
+  font-size: 100pt;
+  position: absolute;
+  -webkit-transition: all 1s;
+  z-index: 1000;
+}
+.go .slice:after {
+  opacity: 0;
+}
+#one:after {
+  content: "art";
+  color: red;
+  margin-top: -60%;
+  right: 0px;
+}
+#two:after {
+  content: "blog";
+  color: yellow;
+}
+#three:after {
+  content: "code";
+  color: blue;
+}
+#four:after {
+  margin-top: 200px;
+  content: "other";
+  color: green;
+  left: 0px;
 }
 #warp {
   position: relative;

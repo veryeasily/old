@@ -32,6 +32,40 @@
 //  Order of operations on the transformations matters,
 //  and winds up being super important to keep track of.
 
+.slice:after {
+    -webkit-transform: translateY(200px);
+    font-size: 100pt;
+    position: absolute;
+    z-index: 1000;
+    -webkit-transition: all 1s;
+    z-index: 1000;
+};
+
+.go .slice:after {
+    opacity: 0;
+};
+
+#one:after {
+    content: "art";
+    color: red;
+    margin-top: -60%;
+    right: 0px;
+}
+#two:after {
+    content: "blog";
+    color: yellow;
+}
+#three:after {
+    content: "code";
+    color: blue;
+}
+#four:after {
+    margin-top: 200px;
+    content: "other";
+    color: green;
+    left: 0px;
+}
+
 #warp {
     position: relative;
     height: 100%;
