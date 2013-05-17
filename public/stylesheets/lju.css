@@ -31,7 +31,7 @@ a:active {
   background-color: rgba(46, 204, 113, 0.7);
 }
 #two {
-  background-color: rgba(41, 128, 185, 0.7);
+  background-color: rgba(185, 185, 185, 0.7);
 }
 #three {
   background-color: rgba(231, 76, 60, 0.7);
@@ -43,7 +43,7 @@ div#navbar .one h3 {
   color: #2ecc71;
 }
 div#navbar .two h3 {
-  color: #164666;
+  color: #868686;
 }
 div#navbar .three h3 {
   color: #e74c3c;
@@ -115,15 +115,15 @@ div#navbar .four h3 {
 }
 #navbar > .container-fluid {
   background-color: #ffffff;
-  opacity: 0;
 }
 #navbar a {
   color: #da3d53;
 }
 #navbar {
+  bottom: 0px;
   color: #951c2d;
   left: 0;
-  margin: 0 20px;
+  margin: 0 150px;
   position: fixed;
   right: 0;
   -ms-transition: margin 1.5s;
@@ -145,10 +145,10 @@ div#navbar .four h3 {
   cursor: se-resize;
 }
 #navbar.raise {
-  margin: 0 20px;
+  margin: 0 150px;
 }
 #navbar.raise > .container-fluid {
-  margin: 0 450px;
+  margin: 0 10px;
 }
 #navbar > .container-fluid {
   -ms-transition: margin 1.5s;
@@ -239,7 +239,7 @@ div#navbar .four h3 {
 .bundle {
   background-color: rgba(0, 0, 0, 0.9);
   border-top: solid rgba(41, 128, 185, 0.2) 2.5px;
-  border-bottom: solid rgba(41, 128, 185, 0.2) 200px;
+  border-bottom: solid #323232 200px;
   border-radius: 2px;
   box-sizing: content-box;
   margin: auto;
@@ -321,7 +321,7 @@ a:-webkit-any-link {
   margin: 0;
 }
 .container-fluid {
-  margin: 15px 10px;
+  margin: 0px 10px;
 }
 #warp {
   position: relative;

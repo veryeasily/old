@@ -52,15 +52,15 @@
 }
 #navbar > .container-fluid {
   background-color: #ffffff;
-  opacity: 0;
 }
 #navbar a {
   color: #da3d53;
 }
 #navbar {
+  bottom: 0px;
   color: #951c2d;
   left: 0;
-  margin: 0 20px;
+  margin: 0 150px;
   position: fixed;
   right: 0;
   -ms-transition: margin 1.5s;
@@ -82,10 +82,10 @@
   cursor: se-resize;
 }
 #navbar.raise {
-  margin: 0 20px;
+  margin: 0 150px;
 }
 #navbar.raise > .container-fluid {
-  margin: 0 450px;
+  margin: 0 10px;
 }
 #navbar > .container-fluid {
   -ms-transition: margin 1.5s;

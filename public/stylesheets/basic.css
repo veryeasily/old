@@ -30,7 +30,7 @@ a:active {
   background-color: rgba(46, 204, 113, 0.7);
 }
 #two {
-  background-color: rgba(41, 128, 185, 0.7);
+  background-color: rgba(185, 185, 185, 0.7);
 }
 #three {
   background-color: rgba(231, 76, 60, 0.7);
@@ -42,7 +42,7 @@ div#navbar .one h3 {
   color: #2ecc71;
 }
 div#navbar .two h3 {
-  color: #164666;
+  color: #868686;
 }
 div#navbar .three h3 {
   color: #e74c3c;

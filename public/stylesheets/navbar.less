@@ -7,7 +7,6 @@
 
 #navbar > .container-fluid {
     background-color: rgba(255, 255, 255, 1);
-    opacity: 0;
     // margin: 0 450px;
 }
 
@@ -16,9 +15,10 @@
 }
 
 #navbar {
+    bottom: 0px;
     color: #951c2d;
     left: 0;
-    margin: 0 20px;
+    margin: 0 150px;
     position: fixed;
     right: 0;
     -ms-transition: margin 1.5s;
@@ -41,9 +41,9 @@
     }
 
     &.raise {          // this raises the navbar when #one is clicked
-        margin: 0 20px;
+        margin: 0 150px;
         > .container-fluid {
-            margin: 0 450px;
+            margin: 0 10px;
         }
     }
 
