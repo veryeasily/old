@@ -25,20 +25,78 @@ a {
     float: left;
 }
 
+@haze: 0.7;
+@hazeper: percentage(@haze);
+
+/*
+.go {
+    #one {
+        background-color: fadeout(@firstcolor, 30%);
+    }
+    #two {
+        background-color: fadeout(@secondcolor, 30%);
+        // left: 25%;
+    }
+    #three {
+        background-color: fadeout(@thirdcolor, 30%);
+        // left: 50%;
+    }
+    #four {
+        background-color: fadeout(@fourthcolor, 30%);
+        // left: 75%;
+    }
+    .block {
+        opacity: 0.0;
+    }
+}
+*/
+
 #one {
-    background-color: fadeout(@firstcolor, 30%);
+    background-color: fadeout(fadeout(@firstcolor, 30%), @hazeper);
     // left: 0%;
 }
 #two {
-    background-color: fadeout(@secondcolor, 30%);
+    background-color: fadeout(fadeout(@secondcolor, 30%), @hazeper);
     // left: 25%;
 }
 #three {
-    background-color: fadeout(@thirdcolor, 30%);
+    background-color: fadeout(fadeout(@thirdcolor, 30%), @hazeper);
     // left: 50%;
 }
 #four {
-    background-color: fadeout(@fourthcolor, 30%);
+    background-color: fadeout(fadeout(@fourthcolor, 30%), @hazeper);
+    // left: 75%;
+}
+.block {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: (@haze - 0.7);
+    z-index: 1000;
+    -webkit-transition: all 2s;
+}
+#one {
+    .block {
+        background-color: black;
+    }
+    // left: 0%;
+}
+#two {
+    .block {
+        background-color: black;
+    }
+    // left: 25%;
+}
+#three {
+    .block {
+        background-color: black;
+    }
+    // left: 50%;
+}
+#four {
+    .block {
+        background-color: black;
+    }
     // left: 75%;
 }
 

@@ -27,17 +27,59 @@ a:active {
 #blogHeading {
   float: left;
 }
+/*
+.go {
+    #one {
+        background-color: fadeout(@firstcolor, 30%);
+    }
+    #two {
+        background-color: fadeout(@secondcolor, 30%);
+        // left: 25%;
+    }
+    #three {
+        background-color: fadeout(@thirdcolor, 30%);
+        // left: 50%;
+    }
+    #four {
+        background-color: fadeout(@fourthcolor, 30%);
+        // left: 75%;
+    }
+    .block {
+        opacity: 0.0;
+    }
+}
+*/
 #one {
-  background-color: rgba(46, 204, 113, 0.7);
+  background-color: rgba(46, 204, 113, 0);
 }
 #two {
-  background-color: rgba(185, 185, 185, 0.7);
+  background-color: rgba(185, 185, 185, 0);
 }
 #three {
-  background-color: rgba(231, 76, 60, 0.7);
+  background-color: rgba(231, 76, 60, 0);
 }
 #four {
-  background-color: rgba(241, 196, 15, 0.7);
+  background-color: rgba(241, 196, 15, 0);
+}
+.block {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  z-index: 1000;
+  -webkit-transition: all 2s;
+}
+#one .block {
+  background-color: black;
+}
+#two .block {
+  background-color: black;
+}
+#three .block {
+  background-color: black;
+}
+#four .block {
+  background-color: black;
 }
 div#navbar .one h3 {
   color: #2ecc71;
@@ -353,12 +395,7 @@ a:-webkit-any-link {
   height: 100%;
   width: 25%;
   float: left;
-  -webkit-transition: -webkit-transform 2s;
-  -webkit-transition: transform 2s;
-  -moz-transition: -moz-transform 2s;
-  -moz-transition: transform 2s;
-  transition: -webkit-transform 2s;
-  transition: transform 2s;
+  -webkit-transition: all 2s;
   -webkit-transform-origin: left top;
   transform-origin: left top;
   -webkit-backface-visibility: hidden;

@@ -1,3 +1,44 @@
+
+var hideArt, artClick;
+
+hideArt = function(e) {
+  var $old, $this;
+
+  $this = this.$this || (this.$this = $(this));
+  $this.remove();
+  $old = $("img[src='" + (this.attr("src")) + "']");
+  $old.on('click', artClick);
+};
+
+
+artClick = function artClick(e) {
+    var $this = this.$this = this.$this || $(this)
+        , $zoom
+        , $clone;
+    console.log('inside of artclick!');
+    $this.off('click');
+    $zoom = $('<div id="zoomin_' + this.src + '">').css({
+        position: 'absolute',
+        left: (window.innerWidth - $this.width()) / 2 + 'px',
+        top: (window.innerHeight - $this.height()) / 2 + 'px',
+        height: 'auto',
+        'max-height': 'auto'
+    }); 
+    $zoom.css({
+        left: (window.innerWidth - $zoom.width()) / 2 + 'px',
+        top: (window.innerHeight - $zoom.height()) / 2 + 'px',
+        height: 'auto',
+        'max-height': 'auto'
+    }).appendTo(document.body).append($clone = $this.clone());
+    $clone.on('click', hideArt);
+};
+
+$(function() {
+    ($imgs = $('img')).on('click', artClick);
+    console.log($imgs);
+    console.log('that was all the images we just appended to');
+});
+
 function raiseNavbar(e) {
     var triggered = this.dataset.triggered;
     this.$element = this.$element || $(this);
@@ -58,19 +99,6 @@ $(document).on('ready', function() {
                 $('#warp').addClass('go').addClass('go' + this.id);
                 this.dataset.clicked = "true";
                 var that = this;
-                if (this.id === "two") { // dumb hack to catch the art subwindow right now.
-                    ['transitionend', 'webkitTransitionEnd', 'oTransitionEnd'].forEach(function (evnt, i) {
-                    // set timeout is functional, so I have to make a wrapper function to attach an event. The plot thickens...
-                        console.log("about to call set timeout!");
-                        $(that).on(evnt, function(e) {
-                            setTimeout(function () {
-                                if (that.dataset.clicked !== "true") {
-                                    return; }
-                                console.log("done with set timeout.");                         // apparently I already made it so that
-                                $(that).children().addClass('scrollEnabled'); }, 1500);});} ); // overflow-y get's added :-/
-                }
-                $('#navbar').trigger('raisenav', [e]);
-                                                                                                        // learn something new everyday!
             }
         } else {
             e.preventDefault();
