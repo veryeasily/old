@@ -61,10 +61,10 @@
   white-space: nowrap;
 }
 .bundle div.artwork:first-child {
-  margin-left: 136px;
+  margin-left: 175px;
 }
 .bundle div.artwork:last-child {
-  margin-right: 136px;
+  margin-right: 175px;
 }
 .bundle div.artwork {
   display: inline-block;

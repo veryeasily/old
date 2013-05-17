@@ -11,8 +11,8 @@
 @import 'blog.less';
 @import 'mixins.less';
 
-@skewAngle: 40deg;
-@amount-to-left: -10%;
+@skewAngle: 8deg;
+@amount-to-left: -8%;
 @subwindow-offset: ((@amount-to-left)*-1);
 
 * {
@@ -32,48 +32,12 @@
 //  Order of operations on the transformations matters,
 //  and winds up being super important to keep track of.
 
-.slice:after {
-    -webkit-transform: translateY(200px);
-    font-size: 100pt;
-    position: absolute;
-    z-index: 1000;
-    -webkit-transition: all 1s;
-    z-index: 1000;
-};
-
-.go .slice:after {
-    opacity: 0;
-};
-
-#one:after {
-    content: "art";
-    color: red;
-    margin-top: -40%;
-    right: 0px;
-}
-#two:after {
-    content: "blog";
-    color: yellow;
-    margin-top: 20%;
-}
-#three:after {
-    content: "code";
-    color: blue;
-    margin-top: 20%;
-}
-#four:after {
-    margin-top: 80%;
-    content: "other";
-    color: green;
-    left: 0px;
-}
-
 #warp {
     position: relative;
     height: 100%;
     .transorig;
     .transition(2s);
-    .transformtranslate((@amount-to-left),((-1)*@skewAngle), 2); //shift left, skew in the reverse of the variable, and stretch by 2
+    .transformtranslate((@amount-to-left),((-1)*@skewAngle), 1.25); //shift left, skew in the reverse of the variable, and stretch by 2
     > .slice {
         position: relative; // this fixes a webkit bug where it can't see anchor elements otherwise.
         overflow: hidden; // fixes a chrome bug where it was saying #two was like 15,000 px.
@@ -108,19 +72,19 @@
 /* We care which slice we're in, because we have to translateX each subwindo back to the viewport a different amount. */ 
 
 #one .subwindow {
-    .transformtranslaterev((@subwindow-offset), @skewAngle, 0.5);
+    .transformtranslaterev((@subwindow-offset), @skewAngle, 0.8);
 }
 
 #two .subwindow {
-    .transformtranslaterev((@subwindow-offset) - 25%, @skewAngle, 0.5);
+    .transformtranslaterev((@subwindow-offset) - 25%, @skewAngle, 0.8);
 }
 
 #three .subwindow {
-    .transformtranslaterev((@subwindow-offset) - 50%, @skewAngle, 0.5);
+    .transformtranslaterev((@subwindow-offset) - 50%, @skewAngle, 0.8);
 }
 
 #four .subwindow {
-    .transformtranslaterev((@subwindow-offset) - 75%, @skewAngle, 0.5);
+    .transformtranslaterev((@subwindow-offset) - 75%, @skewAngle, 0.8);
 }
 
 

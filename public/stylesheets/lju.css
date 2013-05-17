@@ -28,10 +28,10 @@ a:active {
   float: left;
 }
 #one {
-  background-color: rgba(41, 128, 185, 0.7);
+  background-color: rgba(46, 204, 113, 0.7);
 }
 #two {
-  background-color: rgba(46, 204, 113, 0.7);
+  background-color: rgba(41, 128, 185, 0.7);
 }
 #three {
   background-color: rgba(231, 76, 60, 0.7);
@@ -40,10 +40,10 @@ a:active {
   background-color: rgba(241, 196, 15, 0.7);
 }
 div#navbar .one h3 {
-  color: #2980b9;
+  color: #2ecc71;
 }
 div#navbar .two h3 {
-  color: #1b7943;
+  color: #164666;
 }
 div#navbar .three h3 {
   color: #e74c3c;
@@ -114,7 +114,8 @@ div#navbar .four h3 {
   width: 99.99%;
 }
 #navbar > .container-fluid {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: #ffffff;
+  opacity: 0;
 }
 #navbar a {
   color: #da3d53;
@@ -249,10 +250,10 @@ div#navbar .four h3 {
   white-space: nowrap;
 }
 .bundle div.artwork:first-child {
-  margin-left: 136px;
+  margin-left: 175px;
 }
 .bundle div.artwork:last-child {
-  margin-right: 136px;
+  margin-right: 175px;
 }
 .bundle div.artwork {
   display: inline-block;
@@ -322,38 +323,6 @@ a:-webkit-any-link {
 .container-fluid {
   margin: 15px 10px;
 }
-.slice:after {
-  -webkit-transform: translateY(200px);
-  font-size: 100pt;
-  position: absolute;
-  -webkit-transition: all 1s;
-  z-index: 1000;
-}
-.go .slice:after {
-  opacity: 0;
-}
-#one:after {
-  content: "art";
-  color: red;
-  margin-top: -40%;
-  right: 0px;
-}
-#two:after {
-  content: "blog";
-  color: yellow;
-  margin-top: 20%;
-}
-#three:after {
-  content: "code";
-  color: blue;
-  margin-top: 20%;
-}
-#four:after {
-  margin-top: 80%;
-  content: "other";
-  color: green;
-  left: 0px;
-}
 #warp {
   position: relative;
   height: 100%;
@@ -373,9 +342,9 @@ a:-webkit-any-link {
   -moz-transition: transform 2s;
   transition: -webkit-transform 2s;
   transition: transform 2s;
-  -webkit-transform: translateZ(0) scaleX(2) skewX(-40deg) translateX(-10%);
-  -moz-transform: translateZ(0) scaleX(2) skewX(-40deg) translateX(-10%);
-  transform: translateZ(0) scaleX(2) skewX(-40deg) translateX(-10%);
+  -webkit-transform: translateZ(0) scaleX(1.25) skewX(-8deg) translateX(-8%);
+  -moz-transform: translateZ(0) scaleX(1.25) skewX(-8deg) translateX(-8%);
+  transform: translateZ(0) scaleX(1.25) skewX(-8deg) translateX(-8%);
 }
 #warp > .slice {
   position: relative;
@@ -428,24 +397,24 @@ a:-webkit-any-link {
   height: 100%;
 }
 /* We care which slice we're in, because we have to translateX each subwindo back to the viewport a different amount. */#one .subwindow {
-  -webkit-transform: translateZ(0) translateX(10%) skewX(40deg) scaleX(0.5);
-  -moz-transform: translateZ(0) translateX(10%) skewX(40deg) scaleX(0.5);
-  transform: translateZ(0) translateX(10%) skewX(40deg) scaleX(0.5);
+  -webkit-transform: translateZ(0) translateX(8%) skewX(8deg) scaleX(0.8);
+  -moz-transform: translateZ(0) translateX(8%) skewX(8deg) scaleX(0.8);
+  transform: translateZ(0) translateX(8%) skewX(8deg) scaleX(0.8);
 }
 #two .subwindow {
-  -webkit-transform: translateZ(0) translateX(-15%) skewX(40deg) scaleX(0.5);
-  -moz-transform: translateZ(0) translateX(-15%) skewX(40deg) scaleX(0.5);
-  transform: translateZ(0) translateX(-15%) skewX(40deg) scaleX(0.5);
+  -webkit-transform: translateZ(0) translateX(-17%) skewX(8deg) scaleX(0.8);
+  -moz-transform: translateZ(0) translateX(-17%) skewX(8deg) scaleX(0.8);
+  transform: translateZ(0) translateX(-17%) skewX(8deg) scaleX(0.8);
 }
 #three .subwindow {
-  -webkit-transform: translateZ(0) translateX(-40%) skewX(40deg) scaleX(0.5);
-  -moz-transform: translateZ(0) translateX(-40%) skewX(40deg) scaleX(0.5);
-  transform: translateZ(0) translateX(-40%) skewX(40deg) scaleX(0.5);
+  -webkit-transform: translateZ(0) translateX(-42%) skewX(8deg) scaleX(0.8);
+  -moz-transform: translateZ(0) translateX(-42%) skewX(8deg) scaleX(0.8);
+  transform: translateZ(0) translateX(-42%) skewX(8deg) scaleX(0.8);
 }
 #four .subwindow {
-  -webkit-transform: translateZ(0) translateX(-65%) skewX(40deg) scaleX(0.5);
-  -moz-transform: translateZ(0) translateX(-65%) skewX(40deg) scaleX(0.5);
-  transform: translateZ(0) translateX(-65%) skewX(40deg) scaleX(0.5);
+  -webkit-transform: translateZ(0) translateX(-67%) skewX(8deg) scaleX(0.8);
+  -moz-transform: translateZ(0) translateX(-67%) skewX(8deg) scaleX(0.8);
+  transform: translateZ(0) translateX(-67%) skewX(8deg) scaleX(0.8);
 }
 #warp.go.goone {
   -webkit-transform: translateZ(0) scaleX(4) skewX(0deg) translateX(0%);

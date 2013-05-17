@@ -27,10 +27,10 @@ a:active {
   float: left;
 }
 #one {
-  background-color: rgba(41, 128, 185, 0.7);
+  background-color: rgba(46, 204, 113, 0.7);
 }
 #two {
-  background-color: rgba(46, 204, 113, 0.7);
+  background-color: rgba(41, 128, 185, 0.7);
 }
 #three {
   background-color: rgba(231, 76, 60, 0.7);
@@ -39,10 +39,10 @@ a:active {
   background-color: rgba(241, 196, 15, 0.7);
 }
 div#navbar .one h3 {
-  color: #2980b9;
+  color: #2ecc71;
 }
 div#navbar .two h3 {
-  color: #1b7943;
+  color: #164666;
 }
 div#navbar .three h3 {
   color: #e74c3c;
