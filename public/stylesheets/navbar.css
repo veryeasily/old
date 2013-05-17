@@ -61,6 +61,7 @@
   color: #951c2d;
   left: 0;
   margin: 0 150px;
+  min-width: 350px;
   position: fixed;
   right: 0;
   -ms-transition: margin 1.5s;
