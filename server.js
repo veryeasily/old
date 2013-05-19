@@ -28,6 +28,7 @@ if ('development' == app.get('env')) {
 
 app.get('/no-overs', routes.index3);
 app.get('/cat', routes.index2);
+app.get('/paper', routes.indexPaper);
 app.get('/', routes.index);
 
 app.listen(process.env.PORT || 5000, function(){
