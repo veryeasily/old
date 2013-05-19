@@ -10,7 +10,7 @@ html.inverted {
 }
 
 html {  
-    background: lightgray; 
+    background: gray; 
     padding: 0 40px;
     overflow: hidden;
     //  -webkit-background-size: cover;

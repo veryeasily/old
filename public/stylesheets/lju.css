@@ -7,7 +7,7 @@ body {
   height: 100%;
   position: relative;
   overflow: hidden;
-  background-color: white;
+  background-color: #F9F9F9;
 }
 a {
   text-decoration: none;
@@ -156,7 +156,7 @@ div#navbar .four h3 {
   width: 99.99%;
 }
 #navbar > .container-fluid {
-  background-color: #ffffff;
+  background-color: #AAA;
 }
 #navbar a {
   color: #da3d53;
@@ -266,7 +266,6 @@ div#navbar .four h3 {
   left: 0%;
   top: 0%;
   width: 100%;
-  background-color: rgba(40, 40, 40, 0.7);
 }
 .display-case {
   text-align: center;
@@ -280,9 +279,8 @@ div#navbar .four h3 {
   filter: invert(1);
 }
 .bundle {
-  background-color: rgba(0, 0, 0, 0.9);
   border-top: solid rgba(41, 128, 185, 0.2) 2.5px;
-  border-bottom: solid #323232 200px;
+  border-bottom: solid transparent 200px;
   border-radius: 2px;
   box-sizing: content-box;
   margin: auto;
@@ -429,7 +427,7 @@ a:-webkit-any-link {
   perspective: 1000;
 }
 .subwindow > div {
-  margin-top: 136px;
+  margin-top: 10px;
 }
 .slice:not(#two) .subwindow {
   height: 100%;
