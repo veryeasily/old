@@ -11,8 +11,10 @@
 @import 'blog.less';
 @import 'mixins.less';
 
-@skewAngle: 8deg;
-@amount-to-left: -8%;
+@stretch: 2;
+@stretchPer: percentage(@stretch);
+@skewAngle: 45deg;
+@amount-to-left: 0%;
 @subwindow-offset: ((@amount-to-left)*-1);
 
 * {
@@ -37,7 +39,7 @@
     height: 100%;
     .transorig;
     .transition(2s);
-    .transformtranslate((@amount-to-left),((-1)*@skewAngle), 1.25); //shift left, skew in the reverse of the variable, and stretch by 2
+    .transformtranslate((@amount-to-left),((-1)*@skewAngle), @stretch); //shift left, skew in the reverse of the variable, and stretch by 2
     > .slice {
         position: relative; // this fixes a webkit bug where it can't see anchor elements otherwise.
         overflow: hidden; // fixes a chrome bug where it was saying #two was like 15,000 px.
@@ -72,19 +74,19 @@
 /* We care which slice we're in, because we have to translateX each subwindo back to the viewport a different amount. */ 
 
 #one .subwindow {
-    .transformtranslaterev((@subwindow-offset), @skewAngle, 0.8);
+    .transformtranslaterev((@subwindow-offset), @skewAngle, (1/@stretch));
 }
 
 #two .subwindow {
-    .transformtranslaterev((@subwindow-offset) - 25%, @skewAngle, 0.8);
+    .transformtranslaterev((@subwindow-offset) - 25%, @skewAngle, (1/@stretch));
 }
 
 #three .subwindow {
-    .transformtranslaterev((@subwindow-offset) - 50%, @skewAngle, 0.8);
+    .transformtranslaterev((@subwindow-offset) - 50%, @skewAngle, (1/@stretch));
 }
 
 #four .subwindow {
-    .transformtranslaterev((@subwindow-offset) - 75%, @skewAngle, 0.8);
+    .transformtranslaterev((@subwindow-offset) - 75%, @skewAngle, (1/@stretch));
 }
 
 
