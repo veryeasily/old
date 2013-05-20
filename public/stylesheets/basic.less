@@ -1,10 +1,14 @@
 html{height:100%;position:relative;}
 body{height:100%;position:relative;overflow:hidden;}
 
-@firstcolor: rgba(46, 204, 113, 1);
+@firstcolor: rgba(125, 125, 125, 1);
 @secondcolor: rgba(185, 185, 185, 1);
-@thirdcolor: rgba(231, 76, 60, 1);
-@fourthcolor: rgba(241, 196, 15, 1);
+@thirdcolor: rgba(125, 125, 125, 1);
+@fourthcolor: rgba(185, 185, 185, 1);
+@firstcolornav: rgba(46, 204, 113, 1);
+@secondcolornav: rgba(185, 185, 185, 1);
+@thirdcolornav: rgba(231, 76, 60, 1);
+@fourthcolornav: rgba(241, 196, 15, 1);
 
 a {
     &:hover, &:visited, &:active {
@@ -101,10 +105,10 @@ a {
 }
 
 div#navbar {
-    .one h3 {color: @firstcolor;}
-    .two h3 {color: darken(@secondcolor, 20%);}
-    .three h3 {color: @thirdcolor;}
-    .four h3 {color: @fourthcolor;}
+    .one h3 {color: @firstcolornav;}
+    .two h3 {color: darken(@secondcolornav, 20%);}
+    .three h3 {color: @thirdcolornav;}
+    .four h3 {color: @fourthcolornav;}
 }
 
 
