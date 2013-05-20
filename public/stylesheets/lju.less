@@ -41,12 +41,18 @@
     .transition(2s);
     .transformtranslate((@amount-to-left),((-1)*@skewAngle), @stretch); //shift left, skew in the reverse of the variable, and stretch by 2
     > .slice {
+        border-left: solid #222 1pt;
+        border-right: solid #222 1pt;
         position: relative; // this fixes a webkit bug where it can't see anchor elements otherwise.
         overflow: hidden; // fixes a chrome bug where it was saying #two was like 15,000 px.
         height: 100%;
         width: 25%;
         float: left;
         -webkit-transition: all 2s;
+        -moz-transition: all 2s;
+        -ms-transition: all 2s;
+        -o-transition: all 2s;
+        transition: all 2s;
         .transorig; // this makes the animations work smoothly and not be all fucked up on webkit
                     // for some reason you have to include it even though it's not animated.
         // .transformtranslate(0px, 0deg, 1);

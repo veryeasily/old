@@ -7,7 +7,6 @@ body {
   height: 100%;
   position: relative;
   overflow: hidden;
-  background-color: #F9F9F9;
 }
 a {
   text-decoration: none;
@@ -388,12 +387,18 @@ a:-webkit-any-link {
   transform: translateZ(0) scaleX(2) skewX(-45deg) translateX(0%);
 }
 #warp > .slice {
+  border-left: solid #222 1pt;
+  border-right: solid #222 1pt;
   position: relative;
   overflow: hidden;
   height: 100%;
   width: 25%;
   float: left;
   -webkit-transition: all 2s;
+  -moz-transition: all 2s;
+  -ms-transition: all 2s;
+  -o-transition: all 2s;
+  transition: all 2s;
   -webkit-transform-origin: left top;
   transform-origin: left top;
   -webkit-backface-visibility: hidden;

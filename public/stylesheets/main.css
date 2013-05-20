@@ -10,17 +10,17 @@ html.inverted {
 }
 
 html {  
-    background: gray; 
+    background: url(https://s3.amazonaws.com/ideabin-images/background.jpg) no-repeat center center fixed;
     padding: 0 40px;
     overflow: hidden;
-    //  -webkit-background-size: cover;
-    //  -moz-background-size: cover;
-    //  -o-background-size: cover;
-    //  background-size: cover; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; 
 }
 
 body {
-  background: url(https://s3.amazonaws.com/ideabin-images/background.jpg) no-repeat center center fixed;
+  background: rgba(50,50,50,.2); 
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
