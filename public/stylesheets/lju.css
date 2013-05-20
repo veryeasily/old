@@ -49,16 +49,16 @@ a:active {
 }
 */
 #one {
-  background-color: rgba(46, 204, 113, 0);
+  background-color: rgba(46, 204, 113, 0.49999999999999994);
 }
 #two {
-  background-color: rgba(185, 185, 185, 0);
+  background-color: rgba(185, 185, 185, 0.49999999999999994);
 }
 #three {
-  background-color: rgba(231, 76, 60, 0);
+  background-color: rgba(231, 76, 60, 0.49999999999999994);
 }
 #four {
-  background-color: rgba(241, 196, 15, 0);
+  background-color: rgba(241, 196, 15, 0.49999999999999994);
 }
 .block {
   position: absolute;
@@ -386,9 +386,9 @@ a:-webkit-any-link {
   -moz-transition: transform 2s;
   transition: -webkit-transform 2s;
   transition: transform 2s;
-  -webkit-transform: translateZ(0) scaleX(2) skewX(-45deg) translateX(0%);
-  -moz-transform: translateZ(0) scaleX(2) skewX(-45deg) translateX(0%);
-  transform: translateZ(0) scaleX(2) skewX(-45deg) translateX(0%);
+  -webkit-transform: translateZ(0) scaleX(2.4) skewX(-45deg) translateX(0%);
+  -moz-transform: translateZ(0) scaleX(2.4) skewX(-45deg) translateX(0%);
+  transform: translateZ(0) scaleX(2.4) skewX(-45deg) translateX(0%);
 }
 #warp > .slice {
   position: relative;
@@ -440,24 +440,24 @@ a:-webkit-any-link {
   height: 100%;
 }
 /* We care which slice we're in, because we have to translateX each subwindo back to the viewport a different amount. */#one .subwindow {
-  -webkit-transform: translateZ(0) translateX(0%) skewX(45deg) scaleX(0.5);
-  -moz-transform: translateZ(0) translateX(0%) skewX(45deg) scaleX(0.5);
-  transform: translateZ(0) translateX(0%) skewX(45deg) scaleX(0.5);
+  -webkit-transform: translateZ(0) translateX(0%) skewX(45deg) scaleX(0.4166666666666667);
+  -moz-transform: translateZ(0) translateX(0%) skewX(45deg) scaleX(0.4166666666666667);
+  transform: translateZ(0) translateX(0%) skewX(45deg) scaleX(0.4166666666666667);
 }
 #two .subwindow {
-  -webkit-transform: translateZ(0) translateX(-25%) skewX(45deg) scaleX(0.5);
-  -moz-transform: translateZ(0) translateX(-25%) skewX(45deg) scaleX(0.5);
-  transform: translateZ(0) translateX(-25%) skewX(45deg) scaleX(0.5);
+  -webkit-transform: translateZ(0) translateX(-25%) skewX(45deg) scaleX(0.4166666666666667);
+  -moz-transform: translateZ(0) translateX(-25%) skewX(45deg) scaleX(0.4166666666666667);
+  transform: translateZ(0) translateX(-25%) skewX(45deg) scaleX(0.4166666666666667);
 }
 #three .subwindow {
-  -webkit-transform: translateZ(0) translateX(-50%) skewX(45deg) scaleX(0.5);
-  -moz-transform: translateZ(0) translateX(-50%) skewX(45deg) scaleX(0.5);
-  transform: translateZ(0) translateX(-50%) skewX(45deg) scaleX(0.5);
+  -webkit-transform: translateZ(0) translateX(-50%) skewX(45deg) scaleX(0.4166666666666667);
+  -moz-transform: translateZ(0) translateX(-50%) skewX(45deg) scaleX(0.4166666666666667);
+  transform: translateZ(0) translateX(-50%) skewX(45deg) scaleX(0.4166666666666667);
 }
 #four .subwindow {
-  -webkit-transform: translateZ(0) translateX(-75%) skewX(45deg) scaleX(0.5);
-  -moz-transform: translateZ(0) translateX(-75%) skewX(45deg) scaleX(0.5);
-  transform: translateZ(0) translateX(-75%) skewX(45deg) scaleX(0.5);
+  -webkit-transform: translateZ(0) translateX(-75%) skewX(45deg) scaleX(0.4166666666666667);
+  -moz-transform: translateZ(0) translateX(-75%) skewX(45deg) scaleX(0.4166666666666667);
+  transform: translateZ(0) translateX(-75%) skewX(45deg) scaleX(0.4166666666666667);
 }
 #warp.go.goone {
   -webkit-transform: translateZ(0) scaleX(4) skewX(0deg) translateX(0%);
@@ -519,4 +519,58 @@ a:-webkit-any-link {
 }
 #warp.go .scrollEnabled {
   overflow-y: auto;
+}
+@media screen and (max-aspect-ratio: 3/2) {
+  #warp {
+    -webkit-transform: translateZ(0) scaleX(2.2) skewX(-35deg) translateX(0%);
+    -moz-transform: translateZ(0) scaleX(2.2) skewX(-35deg) translateX(0%);
+    transform: translateZ(0) scaleX(2.2) skewX(-35deg) translateX(0%);
+  }
+  #one .subwindow {
+    -webkit-transform: translateZ(0) translateX(0%) skewX(35deg) scaleX(0.45454545454545453);
+    -moz-transform: translateZ(0) translateX(0%) skewX(35deg) scaleX(0.45454545454545453);
+    transform: translateZ(0) translateX(0%) skewX(35deg) scaleX(0.45454545454545453);
+  }
+  #two .subwindow {
+    -webkit-transform: translateZ(0) translateX(-25%) skewX(35deg) scaleX(0.45454545454545453);
+    -moz-transform: translateZ(0) translateX(-25%) skewX(35deg) scaleX(0.45454545454545453);
+    transform: translateZ(0) translateX(-25%) skewX(35deg) scaleX(0.45454545454545453);
+  }
+  #three .subwindow {
+    -webkit-transform: translateZ(0) translateX(-50%) skewX(35deg) scaleX(0.45454545454545453);
+    -moz-transform: translateZ(0) translateX(-50%) skewX(35deg) scaleX(0.45454545454545453);
+    transform: translateZ(0) translateX(-50%) skewX(35deg) scaleX(0.45454545454545453);
+  }
+  #four .subwindow {
+    -webkit-transform: translateZ(0) translateX(-75%) skewX(35deg) scaleX(0.45454545454545453);
+    -moz-transform: translateZ(0) translateX(-75%) skewX(35deg) scaleX(0.45454545454545453);
+    transform: translateZ(0) translateX(-75%) skewX(35deg) scaleX(0.45454545454545453);
+  }
+}
+@media screen and (max-aspect-ratio: 1/1) {
+  #warp {
+    -webkit-transform: translateZ(0) scaleX(2) skewX(-25deg) translateX(0%);
+    -moz-transform: translateZ(0) scaleX(2) skewX(-25deg) translateX(0%);
+    transform: translateZ(0) scaleX(2) skewX(-25deg) translateX(0%);
+  }
+  #one .subwindow {
+    -webkit-transform: translateZ(0) translateX(0%) skewX(25deg) scaleX(0.5);
+    -moz-transform: translateZ(0) translateX(0%) skewX(25deg) scaleX(0.5);
+    transform: translateZ(0) translateX(0%) skewX(25deg) scaleX(0.5);
+  }
+  #two .subwindow {
+    -webkit-transform: translateZ(0) translateX(-25%) skewX(25deg) scaleX(0.5);
+    -moz-transform: translateZ(0) translateX(-25%) skewX(25deg) scaleX(0.5);
+    transform: translateZ(0) translateX(-25%) skewX(25deg) scaleX(0.5);
+  }
+  #three .subwindow {
+    -webkit-transform: translateZ(0) translateX(-50%) skewX(25deg) scaleX(0.5);
+    -moz-transform: translateZ(0) translateX(-50%) skewX(25deg) scaleX(0.5);
+    transform: translateZ(0) translateX(-50%) skewX(25deg) scaleX(0.5);
+  }
+  #four .subwindow {
+    -webkit-transform: translateZ(0) translateX(-75%) skewX(25deg) scaleX(0.5);
+    -moz-transform: translateZ(0) translateX(-75%) skewX(25deg) scaleX(0.5);
+    transform: translateZ(0) translateX(-75%) skewX(25deg) scaleX(0.5);
+  }
 }

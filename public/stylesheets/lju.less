@@ -11,7 +11,7 @@
 @import 'blog.less';
 @import 'mixins.less';
 
-@stretch: 2;
+@stretch: 2.4;
 @stretchPer: percentage(@stretch);
 @skewAngle: 45deg;
 @amount-to-left: 0%;
@@ -141,6 +141,58 @@
 
     .scrollEnabled {
         overflow-y: auto;
+    }
+}
+
+@media screen and (max-aspect-ratio: 3/2) {
+    @stretch: 2.2;
+    @stretchPer: percentage(@stretch);
+    @skewAngle: 35deg;
+    @amount-to-left: 0%;
+    @subwindow-offset: ((@amount-to-left)*-1);
+    #warp {
+        .transformtranslate((@amount-to-left),((-1)*@skewAngle), @stretch); //shift left, skew in the reverse of the variable, and stretch by 2
+    }
+    #one .subwindow {
+        .transformtranslaterev((@subwindow-offset), @skewAngle, (1/@stretch));
+    }
+
+    #two .subwindow {
+        .transformtranslaterev((@subwindow-offset) - 25%, @skewAngle, (1/@stretch));
+    }
+
+    #three .subwindow {
+        .transformtranslaterev((@subwindow-offset) - 50%, @skewAngle, (1/@stretch));
+    }
+
+    #four .subwindow {
+        .transformtranslaterev((@subwindow-offset) - 75%, @skewAngle, (1/@stretch));
+    }
+}
+
+@media screen and (max-aspect-ratio: 1/1) {
+    @stretch: 2;
+    @stretchPer: percentage(@stretch);
+    @skewAngle: 25deg;
+    @amount-to-left: 0%;
+    @subwindow-offset: ((@amount-to-left)*-1);
+    #warp {
+        .transformtranslate((@amount-to-left),((-1)*@skewAngle), @stretch); //shift left, skew in the reverse of the variable, and stretch by 2
+    }
+    #one .subwindow {
+        .transformtranslaterev((@subwindow-offset), @skewAngle, (1/@stretch));
+    }
+
+    #two .subwindow {
+        .transformtranslaterev((@subwindow-offset) - 25%, @skewAngle, (1/@stretch));
+    }
+
+    #three .subwindow {
+        .transformtranslaterev((@subwindow-offset) - 50%, @skewAngle, (1/@stretch));
+    }
+
+    #four .subwindow {
+        .transformtranslaterev((@subwindow-offset) - 75%, @skewAngle, (1/@stretch));
     }
 }
 
