@@ -11,7 +11,6 @@ html.inverted {
 
 html {  
     background: url(https://s3.amazonaws.com/ideabin-images/background.jpg) no-repeat center center fixed;
-    padding: 0 40px;
     overflow: hidden;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -21,6 +20,8 @@ html {
 
 body {
   background: rgba(50,50,50,.2); 
+  border-left: solid rgba(255,255,255,0.5) 100px;
+  border-right: solid rgba(255,255,255,0.5) 100px;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;

@@ -296,6 +296,7 @@ div#navbar .four h3 {
   margin-right: 175px;
 }
 .bundle div.artwork {
+  cursor: pointer;
   display: inline-block;
   margin-left: 20%;
   padding-top: 17px;
@@ -304,6 +305,9 @@ div#navbar .four h3 {
 .bundle img {
   border: solid #8D8D8D 1px;
   max-height: 522px;
+}
+.artCenter {
+  cursor: pointer;
 }
 #to {
   font-size: 55px;
@@ -387,8 +391,6 @@ a:-webkit-any-link {
   transform: translateZ(0) scaleX(2) skewX(-45deg) translateX(0%);
 }
 #warp > .slice {
-  border-left: solid #222 1pt;
-  border-right: solid #222 1pt;
   position: relative;
   overflow: hidden;
   height: 100%;

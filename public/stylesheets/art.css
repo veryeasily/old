@@ -65,6 +65,7 @@
   margin-right: 175px;
 }
 .bundle div.artwork {
+  cursor: pointer;
   display: inline-block;
   margin-left: 20%;
   padding-top: 17px;
@@ -73,4 +74,7 @@
 .bundle img {
   border: solid #8D8D8D 1px;
   max-height: 522px;
+}
+.artCenter {
+  cursor: pointer;
 }
