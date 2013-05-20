@@ -49,16 +49,16 @@ a:active {
 }
 */
 #one {
-  background-color: rgba(125, 125, 125, 0.49999999999999994);
+  background-color: rgba(125, 125, 125, 0.6);
 }
 #two {
-  background-color: rgba(185, 185, 185, 0.49999999999999994);
+  background-color: rgba(185, 185, 185, 0.6);
 }
 #three {
-  background-color: rgba(125, 125, 125, 0.49999999999999994);
+  background-color: rgba(125, 125, 125, 0.6);
 }
 #four {
-  background-color: rgba(185, 185, 185, 0.49999999999999994);
+  background-color: rgba(185, 185, 185, 0.6);
 }
 .block {
   position: absolute;
