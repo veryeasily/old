@@ -21,3 +21,6 @@ exports.indexGray = function(req, res){
 exports.indexPaper = function(req, res){
     res.render('index-paper', {title: 'Express' });
 }
+exports.indexOld = function(req, res){
+    res.render('index-old', {title: 'Express' });
+}

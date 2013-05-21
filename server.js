@@ -31,6 +31,7 @@ app.get('/cat', routes.index2);
 app.get('/maybe-ugly', routes.indexPaper);
 app.get('/weird', routes.indexWeird);
 app.get('/gray', routes.indexGray);
+app.get('/old', routes.indexOld);
 app.get('/', routes.index);
 
 app.listen(process.env.PORT || 5000, function(){
