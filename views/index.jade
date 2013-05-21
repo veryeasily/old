@@ -20,16 +20,17 @@ html(lang='en')
       script(src='javascripts/main-coffee.js')
   body
     include navbar
-    #warp
-      .slice#one(href="#/art")
-        .subwindow
-          include art
-      .slice#two(href="#/blog")
-        .subwindow
-          include blog
-      .slice#three(href="#/other")
-        .subwindow
-          include other
-      .slice#four(href="#/code")
-        .subwindow
-          include code
+    #backgrounddiv
+      #warp
+        .slice#one(href="#/art")
+          .subwindow
+            include art
+        .slice#two(href="#/blog")
+          .subwindow
+            include blog
+        .slice#three(href="#/other")
+          .subwindow
+            include other
+        .slice#four(href="#/code")
+          .subwindow
+            include code
