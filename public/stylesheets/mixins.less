@@ -46,11 +46,11 @@
 }
 
 .transition(@sec) {
-    -webkit-transition: -webkit-transform (@sec);
-    -webkit-transition: transform (@sec);
-    // -o-transition: transform ((@sec) + 0s), margin-left ((@sec) + 0s), width ((@sec) + 0s);
-    -moz-transition: -moz-transform ((@sec) + 0s);
-    -moz-transition: transform ((@sec) + 0s);
-    transition: -webkit-transform (@sec);
-    transition: transform (@sec);
+    -webkit-transition: -webkit-transform (@sec) linear;
+    -webkit-transition: transform (@sec) linear;
+    // -o-transition: transform ((@sec) + 0s), margin-left ((@sec) + 0s), width ((@sec) + 0s) linear;
+    -moz-transition: -moz-transform ((@sec) + 0s) linear;
+    -moz-transition: transform ((@sec) + 0s) linear;
+    transition: -webkit-transform (@sec) linear;
+    transition: transform (@sec) linear;
 }
