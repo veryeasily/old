@@ -156,7 +156,7 @@ div#navbar .four h3 {
 }
 #navbar > .container-fluid {
   background-color: #CCC;
-  box-shadow: 0 2pt 1pt rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 30px rgba(60, 40, 75, 0.125), 0 2pt 1pt rgba(0, 0, 0, 0.25);
 }
 #navbar a {
   color: #25c2ac;
