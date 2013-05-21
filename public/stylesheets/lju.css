@@ -392,6 +392,7 @@ h1 {
   transform: translateZ(0) scaleX(2.4) skewX(-45deg) translateX(0%);
 }
 #warp > .slice {
+  cursor: pointer;
   position: relative;
   overflow: hidden;
   height: 100%;
