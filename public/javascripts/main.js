@@ -37,7 +37,7 @@ $(document).on('ready', function() {
             this.dataset.clicked = "false";
         } else {
             $slices.attr('data-clicked', "false");
-            $right = $slices.filter('#' + this.id + ' ~ a');
+            $right = $slices.filter('#' + this.id + ' ~ div');
             $left = $slices.not($right).not(this);
             $left.each(function(i) {
                 $(this).addClass('left' + ($left.length - i));} );

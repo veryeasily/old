@@ -38,7 +38,7 @@
     position: relative;
     height: 100%;
     .transorig;
-    .transition(2s);
+    .transition(0.25s);
     .transformtranslate((@amount-to-left),((-1)*@skewAngle), @stretch); //shift left, skew in the reverse of the variable, and stretch by 2
     > .slice {
         // border-left: solid #222 1pt;
@@ -48,11 +48,11 @@
         height: 100%;
         width: 25%;
         float: left;
-        -webkit-transition: -webkit-transform 2s;
-        -moz-transition: transform 2s;
-        -ms-transition: transform 2s;
-        -o-transition: transform 2s;
-        transition: transfrom 2s;
+        -webkit-transition: -webkit-transform 0.25s;
+        -moz-transition: transform 0.25s;
+        -ms-transition: transform 0.25s;
+        -o-transition: transform 0.25s;
+        transition: transfrom 0.25s;
         .transorig; // this makes the animations work smoothly and not be all fucked up on webkit
                     // for some reason you have to include it even though it's not animated.
         // .transformtranslate(0px, 0deg, 1);
@@ -64,7 +64,7 @@
     position: absolute;
     width: 400%;
 
-    .transition(2s);
+    .transition(0.25s);
     .transorig;
 
     > div {
