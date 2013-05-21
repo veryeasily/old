@@ -1,0 +1,572 @@
+@import 'main.gray.css';
+html {
+  height: 100%;
+  position: relative;
+}
+body {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+a {
+  text-decoration: none;
+}
+a:hover,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+.slice {
+  color: #0c0910;
+}
+.slice:hover,
+.slice:focus {
+  color: #1d1c21;
+}
+#blogHeading {
+  float: left;
+}
+/*
+.go {
+    #one {
+        background-color: fadeout(@firstcolor, 30%);
+    }
+    #two {
+        background-color: fadeout(@secondcolor, 30%);
+        // left: 25%;
+    }
+    #three {
+        background-color: fadeout(@thirdcolor, 30%);
+        // left: 50%;
+    }
+    #four {
+        background-color: fadeout(@fourthcolor, 30%);
+        // left: 75%;
+    }
+    .block {
+        opacity: 0.0;
+    }
+}
+*/
+#one {
+  background-color: rgba(155, 155, 155, 0.6);
+}
+#two {
+  background-color: rgba(185, 185, 185, 0.6);
+}
+#three {
+  background-color: rgba(155, 155, 155, 0.6);
+}
+#four {
+  background-color: rgba(185, 185, 185, 0.6);
+}
+.block {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  z-index: 1000;
+  -webkit-transition: all 2s;
+}
+#one .block {
+  background-color: black;
+}
+#two .block {
+  background-color: black;
+}
+#three .block {
+  background-color: black;
+}
+#four .block {
+  background-color: black;
+}
+div#navbar .one h3 {
+  color: #2ecc71;
+}
+div#navbar .two h3 {
+  color: #868686;
+}
+div#navbar .three h3 {
+  color: #e74c3c;
+}
+div#navbar .four h3 {
+  color: #f1c40f;
+}
+.slice {
+  overflow: auto;
+}
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+.transorig {
+  -webkit-transform-origin: left top;
+  transform-origin: left top;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  -ms-perspective: 1000;
+  perspective: 1000;
+}
+#navbar h3 {
+  line-height: 24px;
+}
+#navbar .row-fluid [class*="span"] {
+  margin-left: 2.9988888888888883%;
+  min-height: 24px;
+}
+#navbar .row-fluid [class*="span"]:first-child {
+  margin-left: 0%;
+}
+#navbar .span1 {
+  width: 7.3%;
+}
+#navbar .span2 {
+  width: 17.598888888888887%;
+}
+#navbar .span3 {
+  width: 27.897777777777776%;
+}
+#navbar .span4 {
+  width: 38.196666666666665%;
+}
+#navbar .span5 {
+  width: 48.495555555555555%;
+}
+#navbar .span6 {
+  width: 58.79444444444444%;
+}
+#navbar .span7 {
+  width: 69.09333333333333%;
+}
+#navbar .span8 {
+  width: 79.39222222222222%;
+}
+#navbar .span9 {
+  width: 89.69111111111111%;
+}
+#navbar .span10 {
+  width: 99.99%;
+}
+#navbar > .container-fluid {
+  background-color: #CCC;
+  box-shadow: 0 2pt 1pt rgba(0, 0, 0, 0.25);
+}
+#navbar a {
+  color: #25c2ac;
+}
+#navbar {
+  bottom: 0px;
+  color: #951c2d;
+  left: 0;
+  margin: 16px 150px;
+  min-width: 350px;
+  position: fixed;
+  right: 0;
+  -ms-transition: margin 1.5s;
+  -moz-transition: margin 1.5s;
+  -webkit-transition: margin 1.5s;
+  transition: margin 1.5s;
+  z-index: 5;
+}
+#navbar a[data-slice="#one"] {
+  cursor: w-resize;
+}
+#navbar a[data-slice="#two"] {
+  cursor: sw-resize;
+}
+#navbar a[data-slice="#three"] {
+  cursor: s-resize;
+}
+#navbar a[data-slice="#four"] {
+  cursor: se-resize;
+}
+#navbar.raise {
+  margin: 0 150px;
+}
+#navbar.raise > .container-fluid {
+  margin: 0 10px;
+}
+#navbar > .container-fluid {
+  -ms-transition: margin 1.5s;
+  -moz-transition: margin 1.5s;
+  -webkit-transition: margin 1.5s;
+  transition: margin 1.5s;
+  border-radius: 2px;
+}
+#navbar a.logo {
+  cursor: ew-resize;
+}
+#navbar span.logo {
+  display: block;
+  float: right;
+  font-size: 18px;
+  font-weight: 200;
+  line-height: 24px;
+  text-shadow: 0 1px 0 #ff7fff;
+}
+#navbar span.logo:hover,
+#navbar span.logo:focus {
+  text-decoration: none;
+}
+.navigation {
+  color: #252824;
+}
+.navigation a {
+  color: #252824;
+  font-size: 30px;
+  line-height: 0px;
+  padding: 0pt 3pt;
+  text-decoration: none;
+}
+/*
+    Why is everything so uniform?
+    this is the CSS files for the art-container
+    subwindow.
+*/
+.transorig {
+  -webkit-transform-origin: left top;
+  transform-origin: left top;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  -ms-perspective: 1000;
+  perspective: 1000;
+}
+#arts-container {
+  width: 100%;
+  margin: 0 auto;
+}
+.work-holder {
+  display: inline-block;
+  margin: 0px 0px -13px 0px;
+  border-color: #364870;
+  border-width: 11px;
+  border-radius: 5px;
+  border-style: solid;
+  box-shadow: 0px 0px 0px 1px darkgrey;
+}
+#screen {
+  position: absolute;
+  z-index: 5;
+  left: 0%;
+  top: 0%;
+  width: 100%;
+}
+.display-case {
+  text-align: center;
+  margin-top: -150px;
+}
+.art-front-and-center {
+  -webkit-filter: invert(1);
+  -ms-filter: invert(1);
+  -moz-filter: invert(1);
+  -o-filter: invert(1);
+  filter: invert(1);
+}
+.bundle {
+  border-top: solid rgba(41, 128, 185, 0.2) 2.5px;
+  border-bottom: solid transparent 200px;
+  border-radius: 2px;
+  box-sizing: content-box;
+  margin: auto;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-left: 200px;
+  margin-left: -200px;
+  white-space: nowrap;
+}
+.bundle div.artwork:first-child {
+  margin-left: 175px;
+}
+.bundle div.artwork:last-child {
+  margin-right: 175px;
+}
+.bundle div.artwork {
+  cursor: pointer;
+  display: inline-block;
+  margin-left: 20%;
+  padding-top: 17px;
+  padding-bottom: 17px;
+}
+.bundle img {
+  border: solid #8D8D8D 1px;
+  max-height: 522px;
+}
+.artCenter {
+  cursor: pointer;
+}
+#to {
+  font-size: 55px;
+  color: #f5851f;
+}
+#three > .subwindow > div {
+  margin-top: 50px;
+}
+#others-container {
+  line-height: 1.4;
+}
+a:-webkit-any-link {
+  text-decoration: none;
+  cursor: auto;
+}
+#resume {
+  font-size: 206px;
+  color: #225a93;
+}
+#blog-container > .container-fluid {
+  height: 100%;
+  padding: 0 175px;
+}
+#blog-container iframe {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+#blog-container subwindow {
+  overflow-y: hidden;
+}
+#blog-container {
+  height: 100%;
+}
+.subwindow > #blog-container {
+  margin-top: 35px;
+}
+#warp #four {
+  overflow-y: hidden;
+}
+.transorig {
+  -webkit-transform-origin: left top;
+  transform-origin: left top;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  -ms-perspective: 1000;
+  perspective: 1000;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+.container-fluid {
+  margin: 0px 10px;
+}
+#warp {
+  position: relative;
+  height: 100%;
+  -webkit-transform-origin: left top;
+  transform-origin: left top;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  -ms-perspective: 1000;
+  perspective: 1000;
+  -webkit-transition: -webkit-transform 0.35s linear;
+  -webkit-transition: transform 0.35s linear;
+  -moz-transition: -moz-transform 0.35s linear;
+  -moz-transition: transform 0.35s linear;
+  transition: -webkit-transform 0.35s linear;
+  transition: transform 0.35s linear;
+  -webkit-transform: translateZ(0) scaleX(2.4) skewX(-45deg) translateX(0%);
+  -moz-transform: translateZ(0) scaleX(2.4) skewX(-45deg) translateX(0%);
+  transform: translateZ(0) scaleX(2.4) skewX(-45deg) translateX(0%);
+}
+#warp > .slice {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  width: 25%;
+  float: left;
+  -webkit-transition: -webkit-transform 0.35s;
+  -moz-transition: transform 0.35s;
+  -ms-transition: transform 0.35s;
+  -o-transition: transform 0.35s;
+  transition: transfrom 0.35s;
+  -webkit-transform-origin: left top;
+  transform-origin: left top;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  -ms-perspective: 1000;
+  perspective: 1000;
+}
+.subwindow {
+  overflow-y: none;
+  position: absolute;
+  width: 400%;
+  -webkit-transition: -webkit-transform 0.35s linear;
+  -webkit-transition: transform 0.35s linear;
+  -moz-transition: -moz-transform 0.35s linear;
+  -moz-transition: transform 0.35s linear;
+  transition: -webkit-transform 0.35s linear;
+  transition: transform 0.35s linear;
+  -webkit-transform-origin: left top;
+  transform-origin: left top;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  -ms-perspective: 1000;
+  perspective: 1000;
+}
+.subwindow > div {
+  margin-top: 10px;
+}
+.slice:not(#two) .subwindow {
+  height: 100%;
+}
+/* We care which slice we're in, because we have to translateX each subwindo back to the viewport a different amount. */#one .subwindow {
+  -webkit-transform: translateZ(0) translateX(0%) skewX(45deg) scaleX(0.4166666666666667);
+  -moz-transform: translateZ(0) translateX(0%) skewX(45deg) scaleX(0.4166666666666667);
+  transform: translateZ(0) translateX(0%) skewX(45deg) scaleX(0.4166666666666667);
+}
+#two .subwindow {
+  -webkit-transform: translateZ(0) translateX(-25%) skewX(45deg) scaleX(0.4166666666666667);
+  -moz-transform: translateZ(0) translateX(-25%) skewX(45deg) scaleX(0.4166666666666667);
+  transform: translateZ(0) translateX(-25%) skewX(45deg) scaleX(0.4166666666666667);
+}
+#three .subwindow {
+  -webkit-transform: translateZ(0) translateX(-50%) skewX(45deg) scaleX(0.4166666666666667);
+  -moz-transform: translateZ(0) translateX(-50%) skewX(45deg) scaleX(0.4166666666666667);
+  transform: translateZ(0) translateX(-50%) skewX(45deg) scaleX(0.4166666666666667);
+}
+#four .subwindow {
+  -webkit-transform: translateZ(0) translateX(-75%) skewX(45deg) scaleX(0.4166666666666667);
+  -moz-transform: translateZ(0) translateX(-75%) skewX(45deg) scaleX(0.4166666666666667);
+  transform: translateZ(0) translateX(-75%) skewX(45deg) scaleX(0.4166666666666667);
+}
+#warp.go.goone {
+  -webkit-transform: translateZ(0) scaleX(4) skewX(0deg) translateX(0%);
+  -moz-transform: translateZ(0) scaleX(4) skewX(0deg) translateX(0%);
+  transform: translateZ(0) scaleX(4) skewX(0deg) translateX(0%);
+}
+#warp.go.gotwo {
+  -webkit-transform: translateZ(0) scaleX(4) skewX(0deg) translateX(-25%);
+  -moz-transform: translateZ(0) scaleX(4) skewX(0deg) translateX(-25%);
+  transform: translateZ(0) scaleX(4) skewX(0deg) translateX(-25%);
+}
+#warp.go.gothree {
+  -webkit-transform: translateZ(0) scaleX(4) skewX(0deg) translateX(-50%);
+  -moz-transform: translateZ(0) scaleX(4) skewX(0deg) translateX(-50%);
+  transform: translateZ(0) scaleX(4) skewX(0deg) translateX(-50%);
+}
+#warp.go.gofour {
+  -webkit-transform: translateZ(0) scaleX(4) skewX(0deg) translateX(-75%);
+  -moz-transform: translateZ(0) scaleX(4) skewX(0deg) translateX(-75%);
+  transform: translateZ(0) scaleX(4) skewX(0deg) translateX(-75%);
+}
+#warp.go .subwindow {
+  -webkit-transform: translateZ(0) scaleX(0.25) skewX(0deg) translateX(0%);
+  -moz-transform: translateZ(0) scaleX(0.25) skewX(0deg) translateX(0%);
+  transform: translateZ(0) scaleX(0.25) skewX(0deg) translateX(0%);
+}
+#warp.go > .slice {
+  overflow-x: none;
+}
+#warp.go .left1 > .subwindow {
+  -webkit-transform: translateZ(0) scaleX(0.25) skewX(0deg) translateX(100%);
+  -moz-transform: translateZ(0) scaleX(0.25) skewX(0deg) translateX(100%);
+  transform: translateZ(0) scaleX(0.25) skewX(0deg) translateX(100%);
+}
+#warp.go > .left2 > .subwindow {
+  -webkit-transform: translateZ(0) scaleX(0.25) skewX(0deg) translateX(200%);
+  -moz-transform: translateZ(0) scaleX(0.25) skewX(0deg) translateX(200%);
+  transform: translateZ(0) scaleX(0.25) skewX(0deg) translateX(200%);
+}
+#warp.go > .left3 > .subwindow {
+  -webkit-transform: translateZ(0) scaleX(0.25) skewX(0deg) translateX(300%);
+  -moz-transform: translateZ(0) scaleX(0.25) skewX(0deg) translateX(300%);
+  transform: translateZ(0) scaleX(0.25) skewX(0deg) translateX(300%);
+}
+#warp.go > .right1 > .subwindow {
+  -webkit-transform: translateZ(0) scaleX(0.25) skewX(0deg) translateX(-100%);
+  -moz-transform: translateZ(0) scaleX(0.25) skewX(0deg) translateX(-100%);
+  transform: translateZ(0) scaleX(0.25) skewX(0deg) translateX(-100%);
+}
+#warp.go > .right2 > .subwindow {
+  -webkit-transform: translateZ(0) scaleX(0.25) skewX(0deg) translateX(-200%);
+  -moz-transform: translateZ(0) scaleX(0.25) skewX(0deg) translateX(-200%);
+  transform: translateZ(0) scaleX(0.25) skewX(0deg) translateX(-200%);
+}
+#warp.go > .right3 > .subwindow {
+  -webkit-transform: translateZ(0) scaleX(0.25) skewX(0deg) translateX(-300%);
+  -moz-transform: translateZ(0) scaleX(0.25) skewX(0deg) translateX(-300%);
+  transform: translateZ(0) scaleX(0.25) skewX(0deg) translateX(-300%);
+}
+#warp.go .scrollEnabled {
+  overflow-y: auto;
+}
+@media screen and (max-aspect-ratio: 3/2) {
+  #warp {
+    -webkit-transform: translateZ(0) scaleX(2.2) skewX(-35deg) translateX(0%);
+    -moz-transform: translateZ(0) scaleX(2.2) skewX(-35deg) translateX(0%);
+    transform: translateZ(0) scaleX(2.2) skewX(-35deg) translateX(0%);
+  }
+  #one .subwindow {
+    -webkit-transform: translateZ(0) translateX(0%) skewX(35deg) scaleX(0.45454545454545453);
+    -moz-transform: translateZ(0) translateX(0%) skewX(35deg) scaleX(0.45454545454545453);
+    transform: translateZ(0) translateX(0%) skewX(35deg) scaleX(0.45454545454545453);
+  }
+  #two .subwindow {
+    -webkit-transform: translateZ(0) translateX(-25%) skewX(35deg) scaleX(0.45454545454545453);
+    -moz-transform: translateZ(0) translateX(-25%) skewX(35deg) scaleX(0.45454545454545453);
+    transform: translateZ(0) translateX(-25%) skewX(35deg) scaleX(0.45454545454545453);
+  }
+  #three .subwindow {
+    -webkit-transform: translateZ(0) translateX(-50%) skewX(35deg) scaleX(0.45454545454545453);
+    -moz-transform: translateZ(0) translateX(-50%) skewX(35deg) scaleX(0.45454545454545453);
+    transform: translateZ(0) translateX(-50%) skewX(35deg) scaleX(0.45454545454545453);
+  }
+  #four .subwindow {
+    -webkit-transform: translateZ(0) translateX(-75%) skewX(35deg) scaleX(0.45454545454545453);
+    -moz-transform: translateZ(0) translateX(-75%) skewX(35deg) scaleX(0.45454545454545453);
+    transform: translateZ(0) translateX(-75%) skewX(35deg) scaleX(0.45454545454545453);
+  }
+}
+@media screen and (max-aspect-ratio: 1/1) {
+  #warp {
+    -webkit-transform: translateZ(0) scaleX(2) skewX(-25deg) translateX(0%);
+    -moz-transform: translateZ(0) scaleX(2) skewX(-25deg) translateX(0%);
+    transform: translateZ(0) scaleX(2) skewX(-25deg) translateX(0%);
+  }
+  #one .subwindow {
+    -webkit-transform: translateZ(0) translateX(0%) skewX(25deg) scaleX(0.5);
+    -moz-transform: translateZ(0) translateX(0%) skewX(25deg) scaleX(0.5);
+    transform: translateZ(0) translateX(0%) skewX(25deg) scaleX(0.5);
+  }
+  #two .subwindow {
+    -webkit-transform: translateZ(0) translateX(-25%) skewX(25deg) scaleX(0.5);
+    -moz-transform: translateZ(0) translateX(-25%) skewX(25deg) scaleX(0.5);
+    transform: translateZ(0) translateX(-25%) skewX(25deg) scaleX(0.5);
+  }
+  #three .subwindow {
+    -webkit-transform: translateZ(0) translateX(-50%) skewX(25deg) scaleX(0.5);
+    -moz-transform: translateZ(0) translateX(-50%) skewX(25deg) scaleX(0.5);
+    transform: translateZ(0) translateX(-50%) skewX(25deg) scaleX(0.5);
+  }
+  #four .subwindow {
+    -webkit-transform: translateZ(0) translateX(-75%) skewX(25deg) scaleX(0.5);
+    -moz-transform: translateZ(0) translateX(-75%) skewX(25deg) scaleX(0.5);
+    transform: translateZ(0) translateX(-75%) skewX(25deg) scaleX(0.5);
+  }
+}

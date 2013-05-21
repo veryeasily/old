@@ -1,0 +1,36 @@
+!!! 5
+html(lang='en')
+  head
+    block head
+      meta(charset='utf-8')
+      title
+        block title
+          = locals.name
+      link(rel='alternate', href=locals.url+'/feed.xml', type='application/rss+xml', title=locals.description)
+      link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Fredericka+the+Great')
+      // link(rel='stylesheet', href='stylesheets/github.css')
+      link(rel='stylesheet', href='css/bootstrap.min.css')
+      // link(rel='stylesheet', href='css/font-awesome.min.css')
+      // link(rel='stylesheet', href='css/font-awesome-ie7.min.css')
+      link(rel='stylesheet', href='stylesheets/lju.css')
+      link(rel='shortcut icon', href='images/favicon.ico')
+      script(src='javascripts/jquery-2.0.0.min.js')
+      script(type='text/javascript', src='javascripts/jquery.mousewheel.js')
+      script(src='javascripts/main.weird.js')
+      script(src='javascripts/main-coffee.js')
+  body
+    include navbar
+    #backgrounddiv
+      #warp
+        .slice#one(href="#/art")
+          .subwindow
+            include art
+        .slice#two(href="#/blog")
+          .subwindow
+            include blog
+        .slice#three(href="#/other")
+          .subwindow
+            include other
+        .slice#four(href="#/code")
+          .subwindow
+            include code

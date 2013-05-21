@@ -30,6 +30,7 @@ app.get('/no-overs', routes.index3);
 app.get('/cat', routes.index2);
 app.get('/maybe-ugly', routes.indexPaper);
 app.get('/weird', routes.indexWeird);
+app.get('/gray', routes.indexGray);
 app.get('/', routes.index);
 
 app.listen(process.env.PORT || 5000, function(){
