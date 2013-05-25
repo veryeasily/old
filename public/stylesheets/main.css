@@ -33,7 +33,7 @@ body {
   overflow: hidden;
   height: 100%;
   background-size: 110% auto;
-  box-shadow: inset -2pt 0 1px rgba(0, 0, 0, 0.25), inset 2pt 0 1px rgba(0, 0, 0, 0.25), inset -20pt 0 40px rgba(0, 0, 0, 0.2), inset 20pt 0 40px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 3pt 6pt rgba(0, 0, 0, 0.2), 0 0 40pt 10pt rgba(0, 0, 0, 0.075);
 }
 @media (max-width: 800px) {
   body {
