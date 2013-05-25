@@ -57,8 +57,10 @@
 #navbar a {
   color: #25c2ac;
 }
+#navbar .container-fluid {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3), 0 0 100px rgba(0, 0, 0, 0.115);
+}
 #navbar {
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3), 0 0 10px rgba(0, 0, 0, 0.075);
   bottom: 0px;
   color: #951c2d;
   left: 0;
