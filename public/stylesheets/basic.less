@@ -1,10 +1,10 @@
 html{height:100%;position:relative;}
 body{height:100%;position:relative;overflow:hidden;}
 
-@firstcolor: rgba(155, 155, 155, 1);
-@secondcolor: rgba(185, 185, 185, 1);
-@thirdcolor: rgba(155, 155, 155, 1);
-@fourthcolor: rgba(185, 185, 185, 1);
+@firstcolor: rgba(245,245,245,1);
+@secondcolor: rgba(255,255,255,1);
+@thirdcolor: rgba(245,245,245,1);
+@fourthcolor: rgba(255,255,255,1);
 @firstcolornav: rgba(46, 204, 113, 1);
 @secondcolornav: rgba(185, 185, 185, 1);
 @thirdcolornav: rgba(231, 76, 60, 1);
@@ -56,19 +56,19 @@ a {
 */
 
 #one {
-    background-color: fadeout(fadeout(@firstcolor, 30%), @hazeper);
+    background-color: @firstcolor;
     // left: 0%;
 }
 #two {
-    background-color: fadeout(fadeout(@secondcolor, 30%), @hazeper);
+    background-color: @secondcolor;
     // left: 25%;
 }
 #three {
-    background-color: fadeout(fadeout(@thirdcolor, 30%), @hazeper);
+    background-color: @thirdcolor;
     // left: 50%;
 }
 #four {
-    background-color: fadeout(fadeout(@fourthcolor, 30%), @hazeper);
+    background-color: @fourthcolor;
     // left: 75%;
 }
 .block {

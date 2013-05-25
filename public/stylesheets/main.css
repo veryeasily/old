@@ -15,7 +15,6 @@ html.inverted {
   filter: invert(1);
 }
 html {
-  background: url(https://s3.amazonaws.com/ideabin-images/background2.jpg) no-repeat center center fixed;
   overflow: hidden;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -23,17 +22,16 @@ html {
   background-size: cover;
 }
 body {
-  background: rgba(50, 50, 50, 0);
-  border-left: solid rgba(239, 139, 128, 0.5) 25px;
-  border-right: solid rgba(239, 139, 128, 0.5) 25px;
+  padding: 10pt 75pt;
+  background: #ebebeb;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
   color: #252824;
 }
 #backgrounddiv {
+  overflow: hidden;
   height: 100%;
-  background: url(https://s3.amazonaws.com/ideabin-images/background.png) no-repeat center center fixed;
   background-size: 110% auto;
   box-shadow: inset -2pt 0 1px rgba(0, 0, 0, 0.25), inset 2pt 0 1px rgba(0, 0, 0, 0.25), inset -20pt 0 40px rgba(0, 0, 0, 0.2), inset 20pt 0 40px rgba(0, 0, 0, 0.2);
 }
