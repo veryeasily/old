@@ -59,7 +59,7 @@ h1 {
         position: relative; // this fixes a webkit bug where it can't see anchor elements otherwise.
         overflow: hidden; // fixes a chrome bug where it was saying #two was like 15,000 px.
         height: 100%;
-        width: 25%;
+        width: 24.99999%;
         float: left;
         -webkit-transition: -webkit-transform 0.8s;
         -moz-transition: transform 0.8s;
@@ -114,13 +114,13 @@ h1 {
         .transformtranslate(0%, 0, 4);
     }
     &.gotwo {
-        .transformtranslate(-25%, 0, 4);
+        .transformtranslate(-25.05%, 0, 4);
     }
     &.gothree {
-        .transformtranslate(-50%, 0, 4);
+        .transformtranslate(-50.05%, 0, 4);
     }
     &.gofour {
-        .transformtranslate(-75%, 0, 4);
+        .transformtranslate(-75.05%, 0, 4);
     }
 
     .subwindow {
@@ -209,3 +209,9 @@ h1 {
     }
 }
 
+.clearfix:after {
+    content: " ";
+    display: block;
+    height: 0;
+    clear: both;
+}

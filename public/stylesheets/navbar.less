@@ -15,21 +15,20 @@
 }
 
 #navbar .container-fluid {
-    box-shadow: 0 1px 1px rgba(0,0,0,.3), 0 0 35px 2px rgba(0,0,0,.125);
+    margin: 10px 0;
+    padding-right: 5px;
+    padding-left: 10px;
+    // box-shadow: 0 1px 1px rgba(0,0,0,.3), 0 0 35px 2px rgba(0,0,0,.075);
 }
 
 #navbar {
-    bottom: 0px;
+    height: 100%;
     color: #951c2d;
     left: 0;
-    margin: 38px 150px;
-    min-width: 350px;
+    margin: 0;
+    min-width: 50px;
     position: fixed;
-    right: 0;
-    -ms-transition: margin 1.5s;
-    -moz-transition: margin 1.5s;
-    -webkit-transition: margin 1.5s;
-    transition: margin 1.5s;
+    top: 0px;
     z-index: 5;
 
     a[data-slice="#one"] {
@@ -45,18 +44,7 @@
         cursor: se-resize;
     }
 
-    &.raise {          // this raises the navbar when #one is clicked
-        margin: 0 150px;
-        > .container-fluid {
-            margin: 0 10px;
-        }
-    }
-
     > .container-fluid {
-        -ms-transition: margin 1.5s;
-        -moz-transition: margin 1.5s;
-        -webkit-transition: margin 1.5s;
-        transition: margin 1.5s;
         border-radius: 2px; 
     }
 
@@ -64,12 +52,13 @@
         cursor: ew-resize;
     }
     span.logo {
+        color: rgba(37, 194, 172, 0.5);
         display: block;
         float: right;
-        font-size: 18px;
+        font-size: 75pt;
         font-weight: 200;
-        line-height: 24px;
-        text-shadow: 0 1px 1px rgba(0,0,0,.3), 0 0 10px rgba(0,0,0,.075), 0 1px 0 #ff7fff;
+        line-height: 75pt;
+        text-shadow: 0 1px 1px rgba(0,0,0,.3), 0 0 10px rgba(0,0,0,.075), 5px 5px 0 rgba(255,127,255,0.5);
         &:hover,
         &:focus {
             text-decoration: none;

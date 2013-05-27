@@ -161,20 +161,18 @@ div#navbar .four h3 {
   color: #25c2ac;
 }
 #navbar .container-fluid {
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3), 0 0 35px 2px rgba(0, 0, 0, 0.125);
+  margin: 10px 0;
+  padding-right: 5px;
+  padding-left: 10px;
 }
 #navbar {
-  bottom: 0px;
+  height: 100%;
   color: #951c2d;
   left: 0;
-  margin: 38px 150px;
-  min-width: 350px;
+  margin: 0;
+  min-width: 50px;
   position: fixed;
-  right: 0;
-  -ms-transition: margin 1.5s;
-  -moz-transition: margin 1.5s;
-  -webkit-transition: margin 1.5s;
-  transition: margin 1.5s;
+  top: 0px;
   z-index: 5;
 }
 #navbar a[data-slice="#one"] {
@@ -189,29 +187,20 @@ div#navbar .four h3 {
 #navbar a[data-slice="#four"] {
   cursor: se-resize;
 }
-#navbar.raise {
-  margin: 0 150px;
-}
-#navbar.raise > .container-fluid {
-  margin: 0 10px;
-}
 #navbar > .container-fluid {
-  -ms-transition: margin 1.5s;
-  -moz-transition: margin 1.5s;
-  -webkit-transition: margin 1.5s;
-  transition: margin 1.5s;
   border-radius: 2px;
 }
 #navbar a.logo {
   cursor: ew-resize;
 }
 #navbar span.logo {
+  color: rgba(37, 194, 172, 0.5);
   display: block;
   float: right;
-  font-size: 18px;
+  font-size: 75pt;
   font-weight: 200;
-  line-height: 24px;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3), 0 0 10px rgba(0, 0, 0, 0.075), 0 1px 0 #ff7fff;
+  line-height: 75pt;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3), 0 0 10px rgba(0, 0, 0, 0.075), 5px 5px 0 rgba(255, 127, 255, 0.5);
 }
 #navbar span.logo:hover,
 #navbar span.logo:focus {
@@ -276,15 +265,12 @@ div#navbar .four h3 {
   filter: invert(1);
 }
 .bundle {
-  border-top: solid rgba(41, 128, 185, 0.2) 2.5px;
   border-bottom: solid transparent 200px;
   border-radius: 2px;
   box-sizing: content-box;
   margin: auto;
   overflow-x: auto;
   overflow-y: hidden;
-  padding-left: 200px;
-  margin-left: -200px;
   white-space: nowrap;
 }
 .bundle div.artwork:first-child {
@@ -403,7 +389,7 @@ h1 {
   position: relative;
   overflow: hidden;
   height: 100%;
-  width: 25%;
+  width: 24.99999%;
   float: left;
   -webkit-transition: -webkit-transform 0.8s;
   -moz-transition: transform 0.8s;
@@ -474,19 +460,19 @@ h1 {
   transform: translateZ(0) scaleX(4) skewX(0deg) translateX(0%);
 }
 #warp.go.gotwo {
-  -webkit-transform: translateZ(0) scaleX(4) skewX(0deg) translateX(-25%);
-  -moz-transform: translateZ(0) scaleX(4) skewX(0deg) translateX(-25%);
-  transform: translateZ(0) scaleX(4) skewX(0deg) translateX(-25%);
+  -webkit-transform: translateZ(0) scaleX(4) skewX(0deg) translateX(-25.05%);
+  -moz-transform: translateZ(0) scaleX(4) skewX(0deg) translateX(-25.05%);
+  transform: translateZ(0) scaleX(4) skewX(0deg) translateX(-25.05%);
 }
 #warp.go.gothree {
-  -webkit-transform: translateZ(0) scaleX(4) skewX(0deg) translateX(-50%);
-  -moz-transform: translateZ(0) scaleX(4) skewX(0deg) translateX(-50%);
-  transform: translateZ(0) scaleX(4) skewX(0deg) translateX(-50%);
+  -webkit-transform: translateZ(0) scaleX(4) skewX(0deg) translateX(-50.05%);
+  -moz-transform: translateZ(0) scaleX(4) skewX(0deg) translateX(-50.05%);
+  transform: translateZ(0) scaleX(4) skewX(0deg) translateX(-50.05%);
 }
 #warp.go.gofour {
-  -webkit-transform: translateZ(0) scaleX(4) skewX(0deg) translateX(-75%);
-  -moz-transform: translateZ(0) scaleX(4) skewX(0deg) translateX(-75%);
-  transform: translateZ(0) scaleX(4) skewX(0deg) translateX(-75%);
+  -webkit-transform: translateZ(0) scaleX(4) skewX(0deg) translateX(-75.05%);
+  -moz-transform: translateZ(0) scaleX(4) skewX(0deg) translateX(-75.05%);
+  transform: translateZ(0) scaleX(4) skewX(0deg) translateX(-75.05%);
 }
 #warp.go .subwindow {
   -webkit-transform: translateZ(0) scaleX(0.25) skewX(0deg) translateX(0%);
@@ -582,4 +568,10 @@ h1 {
     -moz-transform: translateZ(0) translateX(-75%) skewX(25deg) scaleX(0.5);
     transform: translateZ(0) translateX(-75%) skewX(25deg) scaleX(0.5);
   }
+}
+.clearfix:after {
+  content: " ";
+  display: block;
+  height: 0;
+  clear: both;
 }
