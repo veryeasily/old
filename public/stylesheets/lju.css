@@ -200,7 +200,7 @@ div#navbar .four h3 {
   font-size: 75pt;
   font-weight: 200;
   line-height: 75pt;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3), 0 0 10px rgba(0, 0, 0, 0.075), 5px 5px 0 rgba(255, 127, 255, 0.5);
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3), 0 0 10px rgba(0, 0, 0, 0.075), 8px 1px 0 rgba(255, 127, 255, 0.5);
 }
 #navbar span.logo:hover,
 #navbar span.logo:focus {
@@ -375,10 +375,7 @@ h1 {
   -ms-perspective: 1000;
   perspective: 1000;
   -webkit-transition: -webkit-transform 0.8s;
-  -webkit-transition: transform 0.8s;
   -moz-transition: -moz-transform 0.8s;
-  -moz-transition: transform 0.8s;
-  transition: -webkit-transform 0.8s;
   transition: transform 0.8s;
   -webkit-transform: translateZ(0) scaleX(2.4) skewX(-45deg) translateX(0%);
   -moz-transform: translateZ(0) scaleX(2.4) skewX(-45deg) translateX(0%);
@@ -392,7 +389,7 @@ h1 {
   width: 24.99999%;
   float: left;
   -webkit-transition: -webkit-transform 0.8s;
-  -moz-transition: transform 0.8s;
+  -moz-transition: -moz-transform 0.8s;
   -ms-transition: transform 0.8s;
   -o-transition: transform 0.8s;
   transition: transfrom 0.8s;
@@ -412,10 +409,7 @@ h1 {
   position: absolute;
   width: 400%;
   -webkit-transition: -webkit-transform 0.8s;
-  -webkit-transition: transform 0.8s;
   -moz-transition: -moz-transform 0.8s;
-  -moz-transition: transform 0.8s;
-  transition: -webkit-transform 0.8s;
   transition: transform 0.8s;
   -webkit-transform-origin: left top;
   transform-origin: left top;
@@ -445,9 +439,9 @@ h1 {
   transform: translateZ(0) translateX(-25%) skewX(45deg) scaleX(0.4166666666666667);
 }
 #three .subwindow {
-  -webkit-transform: translateZ(0) translateX(-50%) skewX(45deg) scaleX(0.4166666666666667);
-  -moz-transform: translateZ(0) translateX(-50%) skewX(45deg) scaleX(0.4166666666666667);
-  transform: translateZ(0) translateX(-50%) skewX(45deg) scaleX(0.4166666666666667);
+  -webkit-transform: translateZ(0) translateX(-50%) skewX(45deg) scaleX(0.4166366666666667);
+  -moz-transform: translateZ(0) translateX(-50%) skewX(45deg) scaleX(0.4166366666666667);
+  transform: translateZ(0) translateX(-50%) skewX(45deg) scaleX(0.4166366666666667);
 }
 #four .subwindow {
   -webkit-transform: translateZ(0) translateX(-75%) skewX(45deg) scaleX(0.4166666666666667);

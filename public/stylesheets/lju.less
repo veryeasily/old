@@ -62,7 +62,7 @@ h1 {
         width: 24.99999%;
         float: left;
         -webkit-transition: -webkit-transform 0.8s;
-        -moz-transition: transform 0.8s;
+        -moz-transition: -moz-transform 0.8s;
         -ms-transition: transform 0.8s;
         -o-transition: transform 0.8s;
         transition: transfrom 0.8s;
@@ -101,7 +101,7 @@ h1 {
 }
 
 #three .subwindow {
-    .transformtranslaterev((@subwindow-offset) - 50%, @skewAngle, (1/@stretch));
+    .transformtranslaterev((@subwindow-offset) - 50%, @skewAngle, ((1/@stretch) - 0.00003));
 }
 
 #four .subwindow {
