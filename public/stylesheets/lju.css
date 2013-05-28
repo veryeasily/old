@@ -81,16 +81,28 @@ a:active {
   background-color: black;
 }
 div#navbar .one h3 {
-  color: #25a25a;
+  color: #2ecc71;
 }
 div#navbar .two h3 {
-  color: #006471;
+  color: #00bfd7;
 }
 div#navbar .three h3 {
   color: #e74c3c;
 }
 div#navbar .four h3 {
   color: #f1c40f;
+}
+div#navbar .one h3:hover {
+  color: #7d7d7d;
+}
+div#navbar .two h3:hover {
+  color: #6c6c6c;
+}
+div#navbar .three h3:hover {
+  color: #929292;
+}
+div#navbar .four h3:hover {
+  color: #808080;
 }
 .slice {
   overflow: auto;
@@ -205,6 +217,8 @@ div#navbar .four h3 {
 #navbar span.logo:hover,
 #navbar span.logo:focus {
   text-decoration: none;
+  color: rgba(116, 116, 116, 0.5);
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3), 0 0 10px rgba(0, 0, 0, 0.075), 8px 1px 0 rgba(191, 191, 191, 0.5);
 }
 .navigation {
   color: #252824;

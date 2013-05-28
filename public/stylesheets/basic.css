@@ -80,16 +80,28 @@ a:active {
   background-color: black;
 }
 div#navbar .one h3 {
-  color: #25a25a;
+  color: #2ecc71;
 }
 div#navbar .two h3 {
-  color: #006471;
+  color: #00bfd7;
 }
 div#navbar .three h3 {
   color: #e74c3c;
 }
 div#navbar .four h3 {
   color: #f1c40f;
+}
+div#navbar .one h3:hover {
+  color: #7d7d7d;
+}
+div#navbar .two h3:hover {
+  color: #6c6c6c;
+}
+div#navbar .three h3:hover {
+  color: #929292;
+}
+div#navbar .four h3:hover {
+  color: #808080;
 }
 .slice {
   overflow: auto;

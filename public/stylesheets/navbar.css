@@ -101,6 +101,8 @@
 #navbar span.logo:hover,
 #navbar span.logo:focus {
   text-decoration: none;
+  color: rgba(116, 116, 116, 0.5);
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3), 0 0 10px rgba(0, 0, 0, 0.075), 8px 1px 0 rgba(191, 191, 191, 0.5);
 }
 .navigation {
   color: #252824;

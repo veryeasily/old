@@ -5,7 +5,7 @@ body{height:100%;position:relative;overflow:hidden;}
 @secondcolor: rgba(250,250,250,1);
 @thirdcolor: rgba(245,245,245,1);
 @fourthcolor: rgba(250,250,250,1);
-@firstcolornav: darken(rgba(46, 204, 113, 1), 10%);
+@firstcolornav: rgba(46, 204, 113, 1);
 @secondcolornav: rgba(0, 191, 215, 1);
 @thirdcolornav: rgba(231, 76, 60, 1);
 @fourthcolornav: rgba(241, 196, 15, 1);
@@ -106,9 +106,13 @@ a {
 
 div#navbar {
     .one h3 {color: @firstcolornav;}
-    .two h3 {color: darken(@secondcolornav, 20%);}
+    .two h3 {color: @secondcolornav;}
     .three h3 {color: @thirdcolornav;}
     .four h3 {color: @fourthcolornav;}
+    .one h3:hover {color: desaturate(@firstcolornav, 100%);}
+    .two h3:hover {color: desaturate(@secondcolornav, 100%);}
+    .three h3:hover {color: desaturate(@thirdcolornav, 100%);}
+    .four h3:hover {color: desaturate(@fourthcolornav, 100%);}
 }
 
 
