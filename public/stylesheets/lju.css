@@ -431,7 +431,7 @@ h1 {
   cursor: default;
   height: 300%;
   z-index: 10000;
-  width: 0.4%;
+  width: 0.2%;
   opacity: 0.5;
   background: #ccc;
   -webkit-transition: opacity 3s, -webkit-transform 0.8s;
@@ -441,13 +441,13 @@ h1 {
   transition: opacity 3s, transfrom 0.8s;
 }
 .spacer#afterOne {
-  left: 24.8%;
+  left: 24.9%;
 }
 .spacer#afterTwo {
-  left: 49.8%;
+  left: 49.9%;
 }
 .spacer#afterThree {
-  left: 74.8%;
+  left: 74.9%;
 }
 .subwindow {
   overflow-y: none;
