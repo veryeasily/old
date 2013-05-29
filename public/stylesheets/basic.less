@@ -1,14 +1,22 @@
 html{height:100%;position:relative;}
 body{height:100%;position:relative;overflow:hidden;}
 
-@firstcolor: rgba(245,245,245,1);
-@secondcolor: rgba(250,250,250,1);
-@thirdcolor: rgba(245,245,245,1);
-@fourthcolor: rgba(250,250,250,1);
-@firstcolornav: rgba(46, 204, 113, 1);
-@secondcolornav: rgba(0, 191, 215, 1);
-@thirdcolornav: rgba(231, 76, 60, 1);
-@fourthcolornav: rgba(241, 196, 15, 1);
+@green: desaturate(lighten(spin(rgba(46, 204, 113, 1), -20), 15%), 0%);
+@blue: desaturate(lighten(rgba(0, 191, 215, 1), 15%), 35%);
+@red: rgba(231, 76, 60, 1);
+@yellow: saturate(lighten(rgba(241, 196, 15, 1), 8%), 20%);
+@whiteblue: rgb(255,255,255);
+@whitegreen: rgb(255,255,255);
+
+
+@firstcolor: @whiteblue;
+@secondcolor: @whitegreen;
+@thirdcolor: @whiteblue;
+@fourthcolor: @whitegreen;
+@firstcolornav: @green;
+@secondcolornav: @blue;
+@thirdcolornav: @red;
+@fourthcolornav: @yellow;
 
 a {
     &:hover, &:visited, &:active {
@@ -105,14 +113,17 @@ a {
 }
 
 div#navbar {
-    .one h3 {color: @firstcolornav;}
-    .two h3 {color: @secondcolornav;}
-    .three h3 {color: @thirdcolornav;}
-    .four h3 {color: @fourthcolornav;}
-    .one h3:hover {color: desaturate(@firstcolornav, 100%);}
-    .two h3:hover {color: desaturate(@secondcolornav, 100%);}
-    .three h3:hover {color: desaturate(@thirdcolornav, 100%);}
-    .four h3:hover {color: desaturate(@fourthcolornav, 100%);}
+    .normal(@color) {
+        color: desaturate(@color, 100%);
+    }
+    .one h3 {.normal(@firstcolornav); transition: all 0.1s;}
+    .two h3 {.normal(@secondcolornav); transition: all 0.1s;}
+    .three h3 {.normal(@thirdcolornav); transition: all 0.1s;}
+    .four h3 {.normal(@fourthcolornav); transition: all 0.1s;}
+    .one h3:hover {color: darken(@firstcolornav, 0%); text-indent: 20pt;}
+    .two h3:hover {color: darken(@secondcolornav, 0%); text-indent: 20pt;}
+    .three h3:hover {color: darken(@thirdcolornav, 0%); text-indent: 20pt;}
+    .four h3:hover {color: darken(@fourthcolornav, 0%); text-indent: 20pt;}
 }
 
 

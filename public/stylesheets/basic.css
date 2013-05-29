@@ -48,16 +48,16 @@ a:active {
 }
 */
 #one {
-  background-color: #f5f5f5;
+  background-color: #ffffff;
 }
 #two {
-  background-color: #fafafa;
+  background-color: #ffffff;
 }
 #three {
-  background-color: #f5f5f5;
+  background-color: #ffffff;
 }
 #four {
-  background-color: #fafafa;
+  background-color: #ffffff;
 }
 .block {
   position: absolute;
@@ -80,28 +80,36 @@ a:active {
   background-color: black;
 }
 div#navbar .one h3 {
-  color: #2ecc71;
+  color: #a3a3a3;
+  transition: all 0.1s;
 }
 div#navbar .two h3 {
-  color: #00bfd7;
+  color: #929292;
+  transition: all 0.1s;
 }
 div#navbar .three h3 {
-  color: #e74c3c;
+  color: #929292;
+  transition: all 0.1s;
 }
 div#navbar .four h3 {
-  color: #f1c40f;
+  color: #949494;
+  transition: all 0.1s;
 }
 div#navbar .one h3:hover {
-  color: #7d7d7d;
+  color: #69dd74;
+  text-indent: 20pt;
 }
 div#navbar .two h3:hover {
-  color: #6c6c6c;
+  color: #4bc9d9;
+  text-indent: 20pt;
 }
 div#navbar .three h3:hover {
-  color: #929292;
+  color: #e74c3c;
+  text-indent: 20pt;
 }
 div#navbar .four h3:hover {
-  color: #808080;
+  color: #ffd52a;
+  text-indent: 20pt;
 }
 .slice {
   overflow: auto;

@@ -14,8 +14,8 @@
 @stretch: 2.4;
 @stretchPer: percentage(@stretch);
 @skewAngle: 45deg;
-@amount-to-left: 0%;
-@subwindow-offset: ((@amount-to-left)*-1);
+@amount-to-right: -2%;
+@subwindow-offset: ((@amount-to-right)*-1);
 
 h1 {
     text-shadow: 0 1px 3px rgba(0,0,0,0.4), 0 0 30px rgba(0,0,0,0.075);
@@ -41,7 +41,7 @@ h1 {
 //  I set up the warp mesh first and then place the
 //  subwindows inside of it.  The warp mesh itself is
 //  200% of the screen and scooted over 17% to the left
-//  @amount-to-left. All of this happens within the
+//  @amount-to-right. All of this happens within the
 //  .transformtranslate() mixin in mixins.less.
 //  Order of operations on the transformations matters,
 //  and winds up being super important to keep track of.
@@ -51,7 +51,7 @@ h1 {
     height: 100%;
     .transorig;
     .transition(0.8s);
-    .transformtranslate((@amount-to-left),((-1)*@skewAngle), @stretch); //shift left, skew in the reverse of the variable, and stretch by 2
+    .transformtranslate((@amount-to-right),((-1)*@skewAngle), @stretch); //shift left, skew in the reverse of the variable, and stretch by 2
     > .slice {
         // border-left: solid #222 1pt;
         // border-right: solid #222 1pt;
@@ -70,6 +70,35 @@ h1 {
                     // for some reason you have to include it even though it's not animated.
         // .transformtranslate(0px, 0deg, 1);
     }
+}
+
+.spacer {
+    position: absolute;
+    cursor: default;
+    height: 300%;
+    z-index: 10000;
+    width: 0.4%;
+    opacity: 0.5;
+    background: #ccc;
+    @topacity: 3s;
+    -webkit-transition: opacity (@topacity), -webkit-transform 0.8s;
+    -moz-transition: opacity (@topacity), -moz-transform 0.8s;
+    -ms-transition: opacity (@topacity), transform 0.8s;
+    -o-transition: opacity (@topacity), transform 0.8s;
+    transition: opacity (@topacity), transfrom 0.8s;
+    &#afterOne {
+        // background: mix(@firstcolornav, @secondcolornav);
+        left: percentage(.25 - 2/1000);
+    }
+    &#afterTwo {
+        // background: saturate(mix(@secondcolornav, @thirdcolornav), 10%);
+        left: percentage(.50 - 2/1000);
+    }
+    &#afterThree {
+        // background: mix(@thirdcolornav, @fourthcolornav);
+        left: percentage(.75 - 2/1000);
+    }
+
 }
 
 .subwindow {
@@ -131,7 +160,14 @@ h1 {
         overflow-x: none; // this continues correcting for the Webkit browser glitch.
         // border: solid transparent 0px;
     }
-
+    > .spacer {
+        -webkit-transition: opacity 0.8s, -webkit-transform 0.8s;
+        -moz-transition: opacity 0.8s, -moz-transform 0.8s;
+        -ms-transition: opacity 0.8s, transform 0.8s;
+        -o-transition: opacity 0.8s, transform 0.8s;
+        transition: opacity 0.8s, transfrom 0.8s;
+        opacity: 0;
+    }
     .left1 > .subwindow {
         .transformtranslate(100%, 0deg, 0.25);
     }
@@ -161,10 +197,10 @@ h1 {
     @stretch: 2.2;
     @stretchPer: percentage(@stretch);
     @skewAngle: 35deg;
-    @amount-to-left: 0%;
-    @subwindow-offset: ((@amount-to-left)*-1);
+    @amount-to-right: 0%;
+    @subwindow-offset: ((@amount-to-right)*-1);
     #warp {
-        .transformtranslate((@amount-to-left),((-1)*@skewAngle), @stretch); //shift left, skew in the reverse of the variable, and stretch by 2
+        .transformtranslate((@amount-to-right),((-1)*@skewAngle), @stretch); //shift left, skew in the reverse of the variable, and stretch by 2
     }
     #one .subwindow {
         .transformtranslaterev((@subwindow-offset), @skewAngle, (1/@stretch));
@@ -187,10 +223,10 @@ h1 {
     @stretch: 2;
     @stretchPer: percentage(@stretch);
     @skewAngle: 25deg;
-    @amount-to-left: 0%;
-    @subwindow-offset: ((@amount-to-left)*-1);
+    @amount-to-right: 0%;
+    @subwindow-offset: ((@amount-to-right)*-1);
     #warp {
-        .transformtranslate((@amount-to-left),((-1)*@skewAngle), @stretch); //shift left, skew in the reverse of the variable, and stretch by 2
+        .transformtranslate((@amount-to-right),((-1)*@skewAngle), @stretch); //shift left, skew in the reverse of the variable, and stretch by 2
     }
     #one .subwindow {
         .transformtranslaterev((@subwindow-offset), @skewAngle, (1/@stretch));

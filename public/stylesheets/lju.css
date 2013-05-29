@@ -49,16 +49,16 @@ a:active {
 }
 */
 #one {
-  background-color: #f5f5f5;
+  background-color: #ffffff;
 }
 #two {
-  background-color: #fafafa;
+  background-color: #ffffff;
 }
 #three {
-  background-color: #f5f5f5;
+  background-color: #ffffff;
 }
 #four {
-  background-color: #fafafa;
+  background-color: #ffffff;
 }
 .block {
   position: absolute;
@@ -81,28 +81,36 @@ a:active {
   background-color: black;
 }
 div#navbar .one h3 {
-  color: #2ecc71;
+  color: #a3a3a3;
+  transition: all 0.1s;
 }
 div#navbar .two h3 {
-  color: #00bfd7;
+  color: #929292;
+  transition: all 0.1s;
 }
 div#navbar .three h3 {
-  color: #e74c3c;
+  color: #929292;
+  transition: all 0.1s;
 }
 div#navbar .four h3 {
-  color: #f1c40f;
+  color: #949494;
+  transition: all 0.1s;
 }
 div#navbar .one h3:hover {
-  color: #7d7d7d;
+  color: #69dd74;
+  text-indent: 20pt;
 }
 div#navbar .two h3:hover {
-  color: #6c6c6c;
+  color: #4bc9d9;
+  text-indent: 20pt;
 }
 div#navbar .three h3:hover {
-  color: #929292;
+  color: #e74c3c;
+  text-indent: 20pt;
 }
 div#navbar .four h3:hover {
-  color: #808080;
+  color: #ffd52a;
+  text-indent: 20pt;
 }
 .slice {
   overflow: auto;
@@ -181,8 +189,8 @@ div#navbar .four h3:hover {
   height: 100%;
   color: #951c2d;
   left: 0;
-  margin: 0;
-  min-width: 50px;
+  margin: 10pt;
+  min-width: 150pt;
   position: fixed;
   top: 0px;
   z-index: 5;
@@ -391,9 +399,9 @@ h1 {
   -webkit-transition: -webkit-transform 0.8s;
   -moz-transition: -moz-transform 0.8s;
   transition: transform 0.8s;
-  -webkit-transform: translateZ(0) scaleX(2.4) skewX(-45deg) translateX(0%);
-  -moz-transform: translateZ(0) scaleX(2.4) skewX(-45deg) translateX(0%);
-  transform: translateZ(0) scaleX(2.4) skewX(-45deg) translateX(0%);
+  -webkit-transform: translateZ(0) scaleX(2.4) skewX(-45deg) translateX(-2%);
+  -moz-transform: translateZ(0) scaleX(2.4) skewX(-45deg) translateX(-2%);
+  transform: translateZ(0) scaleX(2.4) skewX(-45deg) translateX(-2%);
 }
 #warp > .slice {
   cursor: pointer;
@@ -417,6 +425,29 @@ h1 {
   -moz-perspective: 1000;
   -ms-perspective: 1000;
   perspective: 1000;
+}
+.spacer {
+  position: absolute;
+  cursor: default;
+  height: 300%;
+  z-index: 10000;
+  width: 0.4%;
+  opacity: 0.5;
+  background: #ccc;
+  -webkit-transition: opacity 3s, -webkit-transform 0.8s;
+  -moz-transition: opacity 3s, -moz-transform 0.8s;
+  -ms-transition: opacity 3s, transform 0.8s;
+  -o-transition: opacity 3s, transform 0.8s;
+  transition: opacity 3s, transfrom 0.8s;
+}
+.spacer#afterOne {
+  left: 24.8%;
+}
+.spacer#afterTwo {
+  left: 49.8%;
+}
+.spacer#afterThree {
+  left: 74.8%;
 }
 .subwindow {
   overflow-y: none;
@@ -443,24 +474,24 @@ h1 {
   height: 100%;
 }
 /* We care which slice we're in, because we have to translateX each subwindo back to the viewport a different amount. */#one .subwindow {
-  -webkit-transform: translateZ(0) translateX(0%) skewX(45deg) scaleX(0.4166666666666667);
-  -moz-transform: translateZ(0) translateX(0%) skewX(45deg) scaleX(0.4166666666666667);
-  transform: translateZ(0) translateX(0%) skewX(45deg) scaleX(0.4166666666666667);
+  -webkit-transform: translateZ(0) translateX(2%) skewX(45deg) scaleX(0.4166666666666667);
+  -moz-transform: translateZ(0) translateX(2%) skewX(45deg) scaleX(0.4166666666666667);
+  transform: translateZ(0) translateX(2%) skewX(45deg) scaleX(0.4166666666666667);
 }
 #two .subwindow {
-  -webkit-transform: translateZ(0) translateX(-25%) skewX(45deg) scaleX(0.4166666666666667);
-  -moz-transform: translateZ(0) translateX(-25%) skewX(45deg) scaleX(0.4166666666666667);
-  transform: translateZ(0) translateX(-25%) skewX(45deg) scaleX(0.4166666666666667);
+  -webkit-transform: translateZ(0) translateX(-23%) skewX(45deg) scaleX(0.4166666666666667);
+  -moz-transform: translateZ(0) translateX(-23%) skewX(45deg) scaleX(0.4166666666666667);
+  transform: translateZ(0) translateX(-23%) skewX(45deg) scaleX(0.4166666666666667);
 }
 #three .subwindow {
-  -webkit-transform: translateZ(0) translateX(-50%) skewX(45deg) scaleX(0.4166366666666667);
-  -moz-transform: translateZ(0) translateX(-50%) skewX(45deg) scaleX(0.4166366666666667);
-  transform: translateZ(0) translateX(-50%) skewX(45deg) scaleX(0.4166366666666667);
+  -webkit-transform: translateZ(0) translateX(-48%) skewX(45deg) scaleX(0.4166366666666667);
+  -moz-transform: translateZ(0) translateX(-48%) skewX(45deg) scaleX(0.4166366666666667);
+  transform: translateZ(0) translateX(-48%) skewX(45deg) scaleX(0.4166366666666667);
 }
 #four .subwindow {
-  -webkit-transform: translateZ(0) translateX(-75%) skewX(45deg) scaleX(0.4166666666666667);
-  -moz-transform: translateZ(0) translateX(-75%) skewX(45deg) scaleX(0.4166666666666667);
-  transform: translateZ(0) translateX(-75%) skewX(45deg) scaleX(0.4166666666666667);
+  -webkit-transform: translateZ(0) translateX(-73%) skewX(45deg) scaleX(0.4166666666666667);
+  -moz-transform: translateZ(0) translateX(-73%) skewX(45deg) scaleX(0.4166666666666667);
+  transform: translateZ(0) translateX(-73%) skewX(45deg) scaleX(0.4166666666666667);
 }
 #warp.go.goone {
   -webkit-transform: translateZ(0) scaleX(4) skewX(0deg) translateX(0%);
@@ -489,6 +520,14 @@ h1 {
 }
 #warp.go > .slice {
   overflow-x: none;
+}
+#warp.go > .spacer {
+  -webkit-transition: opacity 0.8s, -webkit-transform 0.8s;
+  -moz-transition: opacity 0.8s, -moz-transform 0.8s;
+  -ms-transition: opacity 0.8s, transform 0.8s;
+  -o-transition: opacity 0.8s, transform 0.8s;
+  transition: opacity 0.8s, transfrom 0.8s;
+  opacity: 0;
 }
 #warp.go .left1 > .subwindow {
   -webkit-transform: translateZ(0) scaleX(0.25) skewX(0deg) translateX(100%);
