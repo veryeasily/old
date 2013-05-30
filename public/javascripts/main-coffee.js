@@ -24,9 +24,14 @@ isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Construct
 isChrome = !!window.chrome;
 
 $(function() {
+  var $warp;
+
+  $warp = $('#warp');
   if (isFirefox) {
-    return $('#warp').addClass('firefox');
+    $warp.addClass('firefox');
   }
+  console.log('about to log parent');
+  return $warp.height($warp.parent().height() - 2 * $('.warpPadding').height());
 });
 
 posImageCenter = function(e) {

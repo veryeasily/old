@@ -21,6 +21,7 @@ html(lang='en')
   body
     include navbar
     #backgrounddiv
+      .warpPadding // don't forget there is jQuery that styles these guys because of annoying CSS
       #warp
         .slice#one(href="#/art")
           .subwindow
@@ -37,3 +38,4 @@ html(lang='en')
         .slice#four(href="#/code")
           .subwindow
             include code
+      .warpPadding

@@ -50,9 +50,6 @@
 #navbar .span10 {
   width: 99.99%;
 }
-#navbar > .container-fluid {
-  background-color: #FFF;
-}
 #navbar a {
   color: #25c2ac;
 }
@@ -61,11 +58,14 @@
   padding-right: 5px;
   padding-left: 10px;
 }
+.paddingStuff {
+  margin: 10pt;
+}
 #navbar {
+  background-color: #fafafa;
   height: 100%;
   color: #951c2d;
   left: 0;
-  margin: 10pt;
   min-width: 150pt;
   position: fixed;
   top: 0px;

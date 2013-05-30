@@ -11,10 +11,10 @@
 @import 'blog.less';
 @import 'mixins.less';
 
-@stretch: 2.4;
+@stretch: 1;
 @stretchPer: percentage(@stretch);
-@skewAngle: 45deg;
-@amount-to-right: -2%;
+@skewAngle: 0deg;
+@amount-to-right: 0%;
 @subwindow-offset: ((@amount-to-right)*-1);
 
 h1 {
@@ -79,11 +79,12 @@ h1 {
 .spacer {
     position: absolute;
     cursor: default;
-    height: 300%;
+    height: 100%;
     z-index: 10000;
-    width: 0.2%;
-    opacity: 0.8;
-    background: #ccc;
+    @wid: 0.0005;
+    width: percentage(@wid);
+    opacity: 0.5;
+    background: #333;
     @topacity: 3s;
     -webkit-transition: opacity (@topacity), -webkit-transform 0.8s;
     -moz-transition: opacity (@topacity), -moz-transform 0.8s;
@@ -92,15 +93,15 @@ h1 {
     transition: opacity (@topacity), transfrom 0.8s;
     &#afterOne {
         // background: mix(@firstcolornav, @secondcolornav);
-        left: percentage(.25 - 1/1000);
+        left: percentage(.25 - @wid / 2);
     }
     &#afterTwo {
         // background: saturate(mix(@secondcolornav, @thirdcolornav), 10%);
-        left: percentage(.50 - 1/1000);
+        left: percentage(.50 - @wid / 2);
     }
     &#afterThree {
         // background: mix(@thirdcolornav, @fourthcolornav);
-        left: percentage(.75 - 1/1000);
+        left: percentage(.75 - @wid / 2);
     }
 
 }
@@ -119,15 +120,12 @@ h1 {
 }
 
 .firefox .subwindow {
-    transition: none;
-    -webkit-transition: none;
-    -moz-transition: none;
-    .transformtranslate(0%, 0deg, 0.25);
+    .transition(2s);
 }
 
 /* We care which slice we're in, because we have to translateX each subwindo back to the viewport a different amount. */ 
 
-#warp:not(.firefox) {
+#warp {
     #one .subwindow {
         .transformtranslaterev((@subwindow-offset), @skewAngle, (1/@stretch));
     }
@@ -160,10 +158,10 @@ h1 {
         .transformtranslate(-75.05%, 0, 4);
     }
 
-    &:not(.firefox) #one .subwindow,
-    &:not(.firefox) #two .subwindow,
-    &:not(.firefox) #three .subwindow,
-    &:not(.firefox) #four .subwindow {
+    #one .subwindow,
+    #two .subwindow,
+    #three .subwindow,
+    #four .subwindow {
         .transformtranslate(0%, 0deg, 0.25);
     }
 
@@ -179,23 +177,23 @@ h1 {
         transition: opacity 0.8s, transfrom 0.8s;
         opacity: 0;
     }
-    &:not(.firefox) .left1 > .subwindow {
+    .left1 > .subwindow {
         .transformtranslate(100%, 0deg, 0.25);
     }
-    &:not(.firefox) .left2 > .subwindow {
+    .left2 > .subwindow {
         .transformtranslate(200%, 0deg, 0.25);
     }
-    &:not(.firefox) .left3 > .subwindow {
+    .left3 > .subwindow {
         .transformtranslate(300%, 0deg, 0.25);
     }
 
-    &:not(.firefox) .right1 > .subwindow {
+    .right1 > .subwindow {
         .transformtranslate(-100%, 0deg, 0.25);
     }
-    &:not(.firefox) .right2 > .subwindow {
+    .right2 > .subwindow {
         .transformtranslate(-200%, 0deg, 0.25);
     }
-    &:not(.firefox) .right3 > .subwindow {
+    .right3 > .subwindow {
         .transformtranslate(-300%, 0deg, 0.25);
     }
 

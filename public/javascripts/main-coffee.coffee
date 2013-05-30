@@ -17,8 +17,13 @@ isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Construct
 isChrome = !!window.chrome                          # Chrome 1+
 
 $ ->
-    if(isFirefox)
-        $('#warp').addClass('firefox')
+    $warp = $('#warp')
+    $warp.addClass 'firefox' if isFirefox
+
+    # here is the mega annoying CSS hack I had to do!
+    # this sets the height of the main section to be 20px less than the whole height of the window
+    console.log 'about to log parent'
+    $warp.height($warp.parent().height() - 2 * $('.warpPadding').height())
 
 posImageCenter = (e) ->
     do e.stopPropagation

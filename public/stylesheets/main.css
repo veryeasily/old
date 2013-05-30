@@ -30,9 +30,13 @@ body {
   color: #252824;
 }
 #backgrounddiv {
-  overflow: hidden;
-  height: 100%;
   background-size: 110% auto;
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+}
+.warpPadding {
+  height: 10px;
 }
 @media (max-width: 800px) {
   body {
