@@ -9,6 +9,7 @@ var portz = (process.env.PORT);
 var dirz = (__dirname);
 console.log(process.env.PORT);
 console.log(__dirname);
+app.locals.name = 'Luke';
 
 app.set('views', './views');
 app.set('view engine', 'jade');
