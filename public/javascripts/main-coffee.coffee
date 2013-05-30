@@ -9,6 +9,17 @@ artClicked = (e) ->
     $img.on('load', posImageCenter)
     return null
 
+isOpera = !!window.opera || navigator.userAgent.indexOf('Opera') >= 0
+# Opera 8.0+ (UA detection to detect Blink/v8-powered Opera)
+isFirefox = typeof InstallTrigger != 'undefined'   # Firefox 1.0+
+isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0
+# At least Safari 3+: "[object HTMLElementConstructor]"
+isChrome = !!window.chrome                          # Chrome 1+
+
+$ ->
+    if(isFirefox)
+        $('#warp').addClass('firefox')
+
 posImageCenter = (e) ->
     do e.stopPropagation
     console.log('the image is now loaded, here it is')

@@ -50,8 +50,12 @@ h1 {
     position: relative;
     height: 100%;
     .transorig;
-    .transition(0.8s);
+    .transition(1.5s);
     .transformtranslate((@amount-to-right),((-1)*@skewAngle), @stretch); //shift left, skew in the reverse of the variable, and stretch by 2
+    &:not(.firefox) {
+        .transition(0.8s);
+    }
+
     > .slice {
         // border-left: solid #222 1pt;
         // border-right: solid #222 1pt;
@@ -78,7 +82,7 @@ h1 {
     height: 300%;
     z-index: 10000;
     width: 0.2%;
-    opacity: 0.5;
+    opacity: 0.8;
     background: #ccc;
     @topacity: 3s;
     -webkit-transition: opacity (@topacity), -webkit-transform 0.8s;
@@ -114,27 +118,31 @@ h1 {
     }
 }
 
-// for some reason we have to avoid the blog slice
-.slice:not(#two) .subwindow {
-    height: 100%;
+.firefox .subwindow {
+    transition: none;
+    -webkit-transition: none;
+    -moz-transition: none;
+    .transformtranslate(0%, 0deg, 0.25);
 }
 
 /* We care which slice we're in, because we have to translateX each subwindo back to the viewport a different amount. */ 
 
-#one .subwindow {
-    .transformtranslaterev((@subwindow-offset), @skewAngle, (1/@stretch));
-}
+#warp:not(.firefox) {
+    #one .subwindow {
+        .transformtranslaterev((@subwindow-offset), @skewAngle, (1/@stretch));
+    }
 
-#two .subwindow {
-    .transformtranslaterev((@subwindow-offset) - 25%, @skewAngle, (1/@stretch));
-}
+    #two .subwindow {
+        .transformtranslaterev((@subwindow-offset) - 25%, @skewAngle, (1/@stretch));
+    }
 
-#three .subwindow {
-    .transformtranslaterev((@subwindow-offset) - 50%, @skewAngle, ((1/@stretch) - 0.00003));
-}
+    #three .subwindow {
+        .transformtranslaterev((@subwindow-offset) - 50%, @skewAngle, ((1/@stretch) - 0.00003));
+    }
 
-#four .subwindow {
-    .transformtranslaterev((@subwindow-offset) - 75%, @skewAngle, (1/@stretch));
+    #four .subwindow {
+        .transformtranslaterev((@subwindow-offset) - 75%, @skewAngle, (1/@stretch));
+    }
 }
 
 
@@ -152,7 +160,10 @@ h1 {
         .transformtranslate(-75.05%, 0, 4);
     }
 
-    .subwindow {
+    &:not(.firefox) #one .subwindow,
+    &:not(.firefox) #two .subwindow,
+    &:not(.firefox) #three .subwindow,
+    &:not(.firefox) #four .subwindow {
         .transformtranslate(0%, 0deg, 0.25);
     }
 
@@ -168,23 +179,23 @@ h1 {
         transition: opacity 0.8s, transfrom 0.8s;
         opacity: 0;
     }
-    .left1 > .subwindow {
+    &:not(.firefox) .left1 > .subwindow {
         .transformtranslate(100%, 0deg, 0.25);
     }
-    > .left2 > .subwindow {
+    &:not(.firefox) .left2 > .subwindow {
         .transformtranslate(200%, 0deg, 0.25);
     }
-    > .left3 > .subwindow {
+    &:not(.firefox) .left3 > .subwindow {
         .transformtranslate(300%, 0deg, 0.25);
     }
 
-    > .right1 > .subwindow {
+    &:not(.firefox) .right1 > .subwindow {
         .transformtranslate(-100%, 0deg, 0.25);
     }
-    > .right2 > .subwindow {
+    &:not(.firefox) .right2 > .subwindow {
         .transformtranslate(-200%, 0deg, 0.25);
     }
-    > .right3 > .subwindow {
+    &:not(.firefox) .right3 > .subwindow {
         .transformtranslate(-300%, 0deg, 0.25);
     }
 
@@ -192,7 +203,7 @@ h1 {
         overflow-y: auto;
     }
 }
-
+/*
 @media screen and (max-aspect-ratio: 3/2) {
     @stretch: 2.2;
     @stretchPer: percentage(@stretch);
@@ -218,6 +229,7 @@ h1 {
         .transformtranslaterev((@subwindow-offset) - 75%, @skewAngle, (1/@stretch));
     }
 }
+*/
 
 @media screen and (max-aspect-ratio: 1/1) {
     @stretch: 2;
