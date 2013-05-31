@@ -1,5 +1,43 @@
-#to {
-    font-size: 55px;
-    color: #f5851f; 
-    // text-shadow: -15px 0px #0c0910, 15px 0px #0c0910, 15px 0px #0c0910, -15px 0px #0c0910;
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700);
+
+
+#code-container {
+    font-family:Ubuntu;
+    font-weight:300;
+    h1 {
+        font-weight:700;
+        border-top:none;
+        border-bottom:none;
+    }
+    h2 {
+        font-weight:500;
+        border-top:none;
+        border-bottom:none;
+    }
+    h3 {
+        font-weight:400;
+        border-top:none;
+        border-bottom:none;
+    }
+    *:hover {
+        border-bottom: solid yellow 1px;
+        transition: all 0.6s;
+        box-shadow: 10px 10px 1px rgba(0,0,0,0.3);
+    }
+    a:hover {
+        border-bottom: solid blue 1px;
+    }
+    .hero-unit {
+        font-weight: 500;
+    }
+
+    #to {
+        font-size: 45px;
+        font-weight:700;
+        color: #f5851f; 
+        // text-shadow: -15px 0px #0c0910, 15px 0px #0c0910, 15px 0px #0c0910, -15px 0px #0c0910;
+        &:hover {
+            border-bottom: solid red 8px;
+        }
+    }
 }

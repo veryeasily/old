@@ -1,8 +1,39 @@
-#three > .subwindow > div {
-  margin-top: 50px;
+.subwindow > #others-container {
+  margin-top: 98px;
+}
+#arts-container h1,
+#others-container h1,
+#code-container h1,
+#arts-container h2,
+#others-container h2,
+#code-container h2,
+#arts-container h3,
+#others-container h3,
+#code-container h3,
+#arts-container h4,
+#others-container h4,
+#code-container h4,
+#arts-container h5,
+#others-container h5,
+#code-container h5,
+#arts-container h6,
+#others-container h6,
+#code-container h6 {
+  border-top: none;
+  border-bottom: none;
 }
 #others-container {
   line-height: 1.4;
+}
+#others-container h1 {
+  font-weight: 800;
+}
+#others-container h2 {
+  font-weight: 400;
+}
+#others-container #resume {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #ccc;
 }
 a:-webkit-any-link {
   text-decoration: none;

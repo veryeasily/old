@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300);
 h1,
 h2,
 h3,
@@ -24,7 +25,7 @@ html {
 body {
   padding: 0 0 0 160pt;
   background: #ffffff;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Roboto Slab', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
   color: #252824;
