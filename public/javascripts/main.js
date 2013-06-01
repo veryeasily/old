@@ -1,7 +1,7 @@
 
 // this does mousescrolling through the art section!
 $(function() {
-    $('.bundle').mousewheel(function(event, delta) {
+    $('#arts-container').mousewheel(function(event, delta) {
         this.scrollLeft += (delta * 30);
     });
 });
