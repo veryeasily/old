@@ -1,0 +1,16 @@
+markdown: rdiscount
+pygments: true
+permalink: /posts/:title
+auto: true
+rdiscount:
+  extensions: [smart]
+title : lju
+production_url : http://lju.me
+description: "I store things here."
+disqus_shortname: lju
+analytics: UA-40273599-1
+author :
+  name : Lucas Jesse Underwood
+  github : elju
+  twitter : nonintuitive
+  email: moresilenter@gmail.com
