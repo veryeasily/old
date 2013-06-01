@@ -37,7 +37,6 @@ posImageCenter = function(e) {
   $this.addClass('artCenter');
   $this.css({
     position: 'absolute',
-    'box-shadow': '0 0 20pt 12pt rgba(0,0,0,0.35)',
     top: (document.body.clientHeight - this.naturalHeight) / 2 + 'px',
     left: (document.body.clientWidth - this.naturalWidth) / 2 + 'px',
     'z-index': 10

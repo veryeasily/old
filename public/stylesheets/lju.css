@@ -51,16 +51,16 @@ a:active {
 }
 */
 #one {
-  background-color: #fdfdfd;
+  background-color: #4bc9d9;
 }
 #two {
-  background-color: #fdfdfd;
+  background-color: #69dd74;
 }
 #three {
-  background-color: #fdfdfd;
+  background-color: #e74c3c;
 }
 #four {
-  background-color: #fdfdfd;
+  background-color: #ffd52a;
 }
 .block {
   position: absolute;
@@ -83,11 +83,11 @@ a:active {
   background-color: black;
 }
 div#navbar .one h3 {
-  color: #a3a3a3;
+  color: #929292;
   transition: all 0.1s;
 }
 div#navbar .two h3 {
-  color: #929292;
+  color: #a3a3a3;
   transition: all 0.1s;
 }
 div#navbar .three h3 {
@@ -99,11 +99,11 @@ div#navbar .four h3 {
   transition: all 0.1s;
 }
 div#navbar .one h3:hover {
-  color: #69dd74;
+  color: #4bc9d9;
   text-indent: 20pt;
 }
 div#navbar .two h3:hover {
-  color: #4bc9d9;
+  color: #69dd74;
   text-indent: 20pt;
 }
 div#navbar .three h3:hover {
@@ -232,7 +232,8 @@ div#navbar h3 {
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3), 0 0 10px rgba(0, 0, 0, 0.075), 7px 1px 0 rgba(255, 127, 255, 0.5);
 }
 #navbar span.logo:hover,
-#navbar span.logo:focus {
+#navbar span.logo:focus,
+#navbar span.logo:active {
   text-decoration: none;
   color: rgba(116, 116, 116, 0.5);
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3), 0 0 10px rgba(0, 0, 0, 0.075), 7px 1px 0 rgba(191, 191, 191, 0.5);
@@ -297,7 +298,7 @@ div#navbar h3 {
   white-space: nowrap;
 }
 .bundle div.artwork:first-child {
-  margin-left: 175px;
+  margin-left: 54px;
 }
 .bundle div.artwork:last-child {
   margin-right: 175px;
@@ -316,6 +317,7 @@ div#navbar h3 {
 }
 .artCenter {
   cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.34902) 0px 0px 20pt 12pt, 0 0 0 700px #333333;
 }
 #code-container {
   font-family: Ubuntu;
