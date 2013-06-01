@@ -25,14 +25,6 @@ isChrome = !!window.chrome                          # Chrome 1+
 */
 
 
-$(function() {
-  var $warp;
-
-  $warp = $('#warp');
-  console.log('about to log parent');
-  return $warp.height($warp.parent().height() - 2 * $('.warpPadding').height());
-});
-
 posImageCenter = function(e) {
   var $this, height, width;
 
