@@ -343,13 +343,9 @@ div#navbar h3 {
   border-top: none;
   border-bottom: none;
 }
-#code-container *:hover {
-  border-bottom: solid yellow 1px;
+#code-container a:hover {
   transition: all 0.6s;
   box-shadow: 10px 10px 1px rgba(0, 0, 0, 0.3);
-}
-#code-container a:hover {
-  border-bottom: solid blue 1px;
 }
 #code-container .hero-unit {
   font-weight: 500;
