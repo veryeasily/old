@@ -6,9 +6,13 @@
 
 @import 'mixins.less';
 
+.slice[href="#/art"] > .subwindow {
+    height: 100%;
+} 
+
 #arts-container {
-    width: 100%;
-    margin: 0 auto;
+    overflow-x: auto;
+    height: 100%;
 }
 
 .work-holder {
@@ -41,18 +45,9 @@
     margin-top: -150px;
 }
 
-.art-front-and-center {
-    .filter(invert(1));
-};
-
 .bundle {
-    // border-top: solid rgba(41, 128, 185, 0.2) 2.5px;
-    border-bottom: solid transparent 200px;
-    border-radius: 2px;
     box-sizing: content-box;
     margin: auto;
-    overflow-x: auto;
-    overflow-y: hidden;
     white-space: nowrap;
     div.artwork:first-child {
         margin-left: 175px;
@@ -69,7 +64,7 @@
     }
     img {
         border: solid #8D8D8D 1px;
-        max-height: 522px;
+        max-height: 600px;
         box-shadow: 0 2px 3px rgba(0,0,0,0.4), 0 0 30px rgba(0,0,0,0.075);
     }
 }

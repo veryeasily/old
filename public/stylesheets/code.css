@@ -25,6 +25,11 @@
 #code-container .hero-unit {
   font-weight: 500;
 }
+#code-container > .container > h2 {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
 #code-container #to {
   font-size: 45px;
   font-weight: 700;

@@ -54,7 +54,7 @@
   color: #25c2ac;
 }
 #navbar .container-fluid {
-  margin: 10px 0;
+  margin: 20px 0;
   padding-right: 5px;
   padding-left: 10px;
 }
@@ -62,9 +62,10 @@
   margin: 10pt;
 }
 #navbar {
-  background-color: #fafafa;
+  background-color: #333;
   height: 100%;
   color: #951c2d;
+  width: 270px;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   left: 0;
   min-width: 150pt;

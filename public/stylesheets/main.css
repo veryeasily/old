@@ -23,8 +23,8 @@ html {
   background-size: cover;
 }
 body {
-  padding: 0 0 0 160pt;
-  background: #ffffff;
+  padding: 0 0 0 203pt;
+  background: #fdfdfd;
   font-family: 'Roboto Slab', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
@@ -37,7 +37,8 @@ body {
   width: 100%;
 }
 .warpPadding {
-  height: 10px;
+  background: #aaa;
+  height: 3px;
 }
 @media (max-width: 800px) {
   body {

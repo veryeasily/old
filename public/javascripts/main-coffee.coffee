@@ -8,17 +8,17 @@ artClicked = (e) ->
     $img.appendTo(document.body)
     $img.on('load', posImageCenter)
     return null
-
+###
 isOpera = !!window.opera || navigator.userAgent.indexOf('Opera') >= 0
 # Opera 8.0+ (UA detection to detect Blink/v8-powered Opera)
 isFirefox = typeof InstallTrigger != 'undefined'   # Firefox 1.0+
 isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0
 # At least Safari 3+: "[object HTMLElementConstructor]"
 isChrome = !!window.chrome                          # Chrome 1+
+###
 
 $ ->
     $warp = $('#warp')
-    $warp.addClass 'firefox' if isFirefox
 
     # here is the mega annoying CSS hack I had to do!
     # this sets the height of the main section to be 20px less than the whole height of the window

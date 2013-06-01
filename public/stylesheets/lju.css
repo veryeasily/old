@@ -51,16 +51,16 @@ a:active {
 }
 */
 #one {
-  background-color: #ffffff;
+  background-color: #fdfdfd;
 }
 #two {
-  background-color: #ffffff;
+  background-color: #fdfdfd;
 }
 #three {
-  background-color: #ffffff;
+  background-color: #fdfdfd;
 }
 #four {
-  background-color: #ffffff;
+  background-color: #fdfdfd;
 }
 .block {
   position: absolute;
@@ -185,7 +185,7 @@ div#navbar h3 {
   color: #25c2ac;
 }
 #navbar .container-fluid {
-  margin: 10px 0;
+  margin: 20px 0;
   padding-right: 5px;
   padding-left: 10px;
 }
@@ -193,9 +193,10 @@ div#navbar h3 {
   margin: 10pt;
 }
 #navbar {
-  background-color: #fafafa;
+  background-color: #333;
   height: 100%;
   color: #951c2d;
+  width: 270px;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   left: 0;
   min-width: 150pt;
@@ -263,9 +264,12 @@ div#navbar h3 {
   -ms-perspective: 1000;
   perspective: 1000;
 }
+.slice[href="#/art"] > .subwindow {
+  height: 100%;
+}
 #arts-container {
-  width: 100%;
-  margin: 0 auto;
+  overflow-x: auto;
+  height: 100%;
 }
 .work-holder {
   display: inline-block;
@@ -287,20 +291,9 @@ div#navbar h3 {
   text-align: center;
   margin-top: -150px;
 }
-.art-front-and-center {
-  -webkit-filter: invert(1);
-  -ms-filter: invert(1);
-  -moz-filter: invert(1);
-  -o-filter: invert(1);
-  filter: invert(1);
-}
 .bundle {
-  border-bottom: solid transparent 200px;
-  border-radius: 2px;
   box-sizing: content-box;
   margin: auto;
-  overflow-x: auto;
-  overflow-y: hidden;
   white-space: nowrap;
 }
 .bundle div.artwork:first-child {
@@ -318,7 +311,7 @@ div#navbar h3 {
 }
 .bundle img {
   border: solid #8D8D8D 1px;
-  max-height: 522px;
+  max-height: 600px;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4), 0 0 30px rgba(0, 0, 0, 0.075);
 }
 .artCenter {
@@ -350,6 +343,11 @@ div#navbar h3 {
 #code-container .hero-unit {
   font-weight: 500;
 }
+#code-container > .container > h2 {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
 #code-container #to {
   font-size: 45px;
   font-weight: 700;
@@ -359,7 +357,7 @@ div#navbar h3 {
   border-bottom: solid red 8px;
 }
 .subwindow > #others-container {
-  margin-top: 98px;
+  margin-top: 75px;
 }
 #arts-container h1,
 #others-container h1,
@@ -394,6 +392,10 @@ div#navbar h3 {
 #others-container #resume {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #ccc;
+}
+#others-container .container-fluid {
+  font-size: 14px;
+  line-height: 1.45;
 }
 a:-webkit-any-link {
   text-decoration: none;
@@ -529,7 +531,7 @@ h1 {
   perspective: 1000;
 }
 .subwindow > div {
-  margin-top: 10px;
+  margin-top: 0px;
 }
 /* We care which slice we're in, because we have to translateX each subwindo back to the viewport a different amount. */#warp #one .subwindow {
   -webkit-transform: translateZ(0) translateX(0%) skewX(0deg) scaleX(1);

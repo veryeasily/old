@@ -1,5 +1,5 @@
 .subwindow > #others-container {
-  margin-top: 98px;
+  margin-top: 75px;
 }
 #arts-container h1,
 #others-container h1,
@@ -34,6 +34,10 @@
 #others-container #resume {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #ccc;
+}
+#others-container .container-fluid {
+  font-size: 14px;
+  line-height: 1.45;
 }
 a:-webkit-any-link {
   text-decoration: none;
