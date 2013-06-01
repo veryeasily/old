@@ -114,6 +114,11 @@ div#navbar .four h3:hover {
   color: #ffd52a;
   text-indent: 20pt;
 }
+div#navbar h3 {
+  font-size: 18px;
+  line-height: 20px;
+  margin: 0;
+}
 .slice {
   overflow: auto;
 }
@@ -410,6 +415,7 @@ a:-webkit-any-link {
 }
 .subwindow > #blog-container {
   margin-top: 35px;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 #warp #four {
   overflow-y: hidden;

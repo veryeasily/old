@@ -6,6 +6,7 @@
 }
 .subwindow > #blog-container {
   margin-top: 35px;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 #warp #four {
   overflow-y: hidden;
