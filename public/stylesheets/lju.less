@@ -103,9 +103,10 @@ h1 {
 }
 
 .subwindow {
-    overflow-y: none; // strange bug? in browsers where it messes up placement, but only until clicked w/out this change.
+    overflow-y: auto; // strange bug? in browsers where it messes up placement, but only until clicked w/out this change.
     position: absolute;
     width: 400%;
+    height: 100%;
 
     .transition(0.8s);
     .transorig;

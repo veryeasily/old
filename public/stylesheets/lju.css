@@ -411,9 +411,6 @@ a:-webkit-any-link {
 #blog-container > .container-fluid {
   height: 100%;
 }
-#blog-container {
-  height: 100%;
-}
 .subwindow > #blog-container {
   margin-top: 35px;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -516,9 +513,10 @@ h1 {
   left: 74.97500000000001%;
 }
 .subwindow {
-  overflow-y: none;
+  overflow-y: auto;
   position: absolute;
   width: 400%;
+  height: 100%;
   -webkit-transition: -webkit-transform 0.8s;
   -moz-transition: -moz-transform 0.8s;
   transition: transform 0.8s;
