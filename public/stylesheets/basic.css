@@ -51,7 +51,7 @@ a:active {
   background-color: #bdcbcc;
 }
 #two {
-  background-color: #0af023;
+  background-color: #5bef2c;
 }
 #three {
   background-color: #f03735;
@@ -84,7 +84,7 @@ div#navbar .one h3 {
   transition: all 0.1s;
 }
 div#navbar .two h3 {
-  color: #7d7d7d;
+  color: #8e8e8e;
   transition: all 0.1s;
 }
 div#navbar .three h3 {
@@ -100,7 +100,7 @@ div#navbar .one h3:hover {
   text-indent: 20pt;
 }
 div#navbar .two h3:hover {
-  color: #0af023;
+  color: #5bef2c;
   text-indent: 20pt;
 }
 div#navbar .three h3:hover {
