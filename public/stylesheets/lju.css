@@ -51,16 +51,16 @@ a:active {
 }
 */
 #one {
-  background-color: #4bc9d9;
+  background-color: #bdcbcc;
 }
 #two {
-  background-color: #69dd74;
+  background-color: #0af023;
 }
 #three {
-  background-color: #e74c3c;
+  background-color: #f03735;
 }
 #four {
-  background-color: #ffd52a;
+  background-color: #fae710;
 }
 .block {
   position: absolute;
@@ -87,15 +87,15 @@ div#navbar .one h3 {
   transition: all 0.1s;
 }
 div#navbar .two h3 {
-  color: #a3a3a3;
+  color: #7d7d7d;
   transition: all 0.1s;
 }
 div#navbar .three h3 {
-  color: #929292;
+  color: #939393;
   transition: all 0.1s;
 }
 div#navbar .four h3 {
-  color: #949494;
+  color: #858585;
   transition: all 0.1s;
 }
 div#navbar .one h3:hover {
@@ -103,15 +103,15 @@ div#navbar .one h3:hover {
   text-indent: 20pt;
 }
 div#navbar .two h3:hover {
-  color: #69dd74;
+  color: #0af023;
   text-indent: 20pt;
 }
 div#navbar .three h3:hover {
-  color: #e74c3c;
+  color: #f03735;
   text-indent: 20pt;
 }
 div#navbar .four h3:hover {
-  color: #ffd52a;
+  color: #fae710;
   text-indent: 20pt;
 }
 div#navbar h3 {
@@ -193,7 +193,7 @@ div#navbar h3 {
   margin: 10pt;
 }
 #navbar {
-  background-color: #333;
+  background-color: #FBFFFC;
   height: 100%;
   color: #951c2d;
   width: 270px;
@@ -308,13 +308,14 @@ div#navbar h3 {
 .bundle div.artwork {
   cursor: pointer;
   display: inline-block;
-  margin-left: 20%;
+  margin-left: 60px;
   padding-top: 17px;
   padding-bottom: 17px;
 }
 .bundle img {
   border: solid #8D8D8D 1px;
-  max-height: 600px;
+  max-height: 480px;
+  max-width: 480px;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4), 0 0 30px rgba(0, 0, 0, 0.075);
 }
 .artCenter {
@@ -496,23 +497,25 @@ h1 {
   cursor: default;
   height: 100%;
   z-index: 10000;
-  width: 0.05%;
-  opacity: 0.0;
-  background: #333;
-  -webkit-transition: opacity 3s, -webkit-transform 0.8s;
-  -moz-transition: opacity 3s, -moz-transform 0.8s;
-  -ms-transition: opacity 3s, transform 0.8s;
-  -o-transition: opacity 3s, transform 0.8s;
-  transition: opacity 3s, transfrom 0.8s;
+  opacity: 1;
+  background: #EEE;
+  -webkit-transition: opacity 1s, -webkit-transform 0.8s;
+  -moz-transition: opacity 1s, -moz-transform 0.8s;
+  -ms-transition: opacity 1s, transform 0.8s;
+  -o-transition: opacity 1s, transform 0.8s;
+  transition: opacity 1s, transfrom 0.8s;
 }
 .spacer#afterOne {
-  left: 24.975%;
+  left: 24.725%;
+  width: 0.5499999999999999%;
 }
 .spacer#afterTwo {
-  left: 49.975%;
+  left: 49.2%;
+  width: 1.6%;
 }
 .spacer#afterThree {
-  left: 74.97500000000001%;
+  left: 74.52499999999999%;
+  width: 0.95%;
 }
 .subwindow {
   overflow-y: auto;

@@ -53,7 +53,7 @@ $(document).on('ready', function() {
             , function(e) {
                 $(this.dataset.slice).click();
             });
-    $('#navbar a.logo').on('click'
+    $('#logoAnchor').on('click'
             , function(e) {
                 console.log("logo clicked!");
                 $('div[data-clicked="true"]').click();

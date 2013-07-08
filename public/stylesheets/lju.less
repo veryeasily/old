@@ -77,11 +77,12 @@ h1 {
     cursor: default;
     height: 100%;
     z-index: 10000;
-    @wid: 0.0005;
-    width: percentage(@wid);
-    opacity: 0.0;
-    background: #333;
-    @topacity: 3s;
+    @wid1: 0.0055;
+    @wid2: 0.016;
+    @wid3: 0.0095;
+    opacity: 1;
+    background: #EEE;
+    @topacity: 1s;
     -webkit-transition: opacity (@topacity), -webkit-transform 0.8s;
     -moz-transition: opacity (@topacity), -moz-transform 0.8s;
     -ms-transition: opacity (@topacity), transform 0.8s;
@@ -89,15 +90,18 @@ h1 {
     transition: opacity (@topacity), transfrom 0.8s;
     &#afterOne {
         // background: mix(@firstcolornav, @secondcolornav);
-        left: percentage(.25 - @wid / 2);
+        left: percentage(.25 - @wid1 / 2);
+        width: percentage(@wid1);
     }
     &#afterTwo {
         // background: saturate(mix(@secondcolornav, @thirdcolornav), 10%);
-        left: percentage(.50 - @wid / 2);
+        left: percentage(.50 - @wid2 / 2);
+        width: percentage(@wid2);
     }
     &#afterThree {
         // background: mix(@thirdcolornav, @fourthcolornav);
-        left: percentage(.75 - @wid / 2);
+        left: percentage(.75 - @wid3 / 2);
+        width: percentage(@wid3);
     }
 
 }
