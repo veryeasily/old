@@ -88,10 +88,10 @@
 #navbar > .container-fluid {
   border-radius: 2px;
 }
-#navbar a.logo {
+#logoAnchor {
   cursor: ew-resize;
 }
-#navbar span.logo {
+#logo {
   color: rgba(37, 194, 172, 0.5);
   display: block;
   float: right;
@@ -99,10 +99,12 @@
   font-weight: 200;
   line-height: 75pt;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3), 0 0 10px rgba(0, 0, 0, 0.075), 7px 1px 0 rgba(255, 127, 255, 0.5);
+  -webkit-transform: scale(1, 1.14);
+  transform: scale(1, 1.14);
 }
-#navbar span.logo:hover,
-#navbar span.logo:focus,
-#navbar span.logo:active {
+#logo:hover,
+#logo:focus,
+#logo:active {
   text-decoration: none;
   color: rgba(116, 116, 116, 0.5);
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3), 0 0 10px rgba(0, 0, 0, 0.075), 7px 1px 0 rgba(191, 191, 191, 0.5);
