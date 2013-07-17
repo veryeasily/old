@@ -59,7 +59,7 @@ h1 {
         position: relative; // this fixes a webkit bug where it can't see anchor elements otherwise.
         overflow: hidden; // fixes a chrome bug where it was saying #two was like 15,000 px.
         height: 100%;
-        width: 24.99999%;
+        width: 24.999%;
         float: left;
         -webkit-transition: -webkit-transform 0.8s;
         -moz-transition: -moz-transform 0.8s;
@@ -143,16 +143,16 @@ h1 {
 
 #warp.go {
     &.goone {
-        .transformtranslate(0%, 0, 4);
+        .transformtranslate(0%, 0, 4.0001);
     }
     &.gotwo {
-        .transformtranslate(-25.05%, 0, 4);
+        .transformtranslate(-25.01%, 0, 4.0001);
     }
     &.gothree {
-        .transformtranslate(-50.05%, 0, 4);
+        .transformtranslate(-50.04%, 0, 4.01);
     }
     &.gofour {
-        .transformtranslate(-75.05%, 0, 4);
+        .transformtranslate(-75.0%, 0, 4.0001);
     }
 
     #one .subwindow,
@@ -164,6 +164,7 @@ h1 {
 
     > .slice {
         overflow-x: none; // this continues correcting for the Webkit browser glitch.
+        width: 25%;
         // border: solid transparent 0px;
     }
     > .spacer {

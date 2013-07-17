@@ -219,6 +219,10 @@ div#navbar h3 {
 #navbar > .container-fluid {
   border-radius: 2px;
 }
+#navbar h3 {
+  border-top: none;
+  border-bottom: 1px solid #f4f4f4;
+}
 #logoAnchor {
   cursor: ew-resize;
 }
@@ -479,7 +483,7 @@ h1 {
   position: relative;
   overflow: hidden;
   height: 100%;
-  width: 24.99999%;
+  width: 24.999%;
   float: left;
   -webkit-transition: -webkit-transform 0.8s;
   -moz-transition: -moz-transform 0.8s;
@@ -565,24 +569,24 @@ h1 {
   transform: translateZ(0) translateX(-75%) skewX(0deg) scaleX(1);
 }
 #warp.go.goone {
-  -webkit-transform: translateZ(0) scaleX(4) skewX(0deg) translateX(0%);
-  -moz-transform: translateZ(0) scaleX(4) skewX(0deg) translateX(0%);
-  transform: translateZ(0) scaleX(4) skewX(0deg) translateX(0%);
+  -webkit-transform: translateZ(0) scaleX(4.0001) skewX(0deg) translateX(0%);
+  -moz-transform: translateZ(0) scaleX(4.0001) skewX(0deg) translateX(0%);
+  transform: translateZ(0) scaleX(4.0001) skewX(0deg) translateX(0%);
 }
 #warp.go.gotwo {
-  -webkit-transform: translateZ(0) scaleX(4) skewX(0deg) translateX(-25.05%);
-  -moz-transform: translateZ(0) scaleX(4) skewX(0deg) translateX(-25.05%);
-  transform: translateZ(0) scaleX(4) skewX(0deg) translateX(-25.05%);
+  -webkit-transform: translateZ(0) scaleX(4.0001) skewX(0deg) translateX(-25.01%);
+  -moz-transform: translateZ(0) scaleX(4.0001) skewX(0deg) translateX(-25.01%);
+  transform: translateZ(0) scaleX(4.0001) skewX(0deg) translateX(-25.01%);
 }
 #warp.go.gothree {
-  -webkit-transform: translateZ(0) scaleX(4) skewX(0deg) translateX(-50.05%);
-  -moz-transform: translateZ(0) scaleX(4) skewX(0deg) translateX(-50.05%);
-  transform: translateZ(0) scaleX(4) skewX(0deg) translateX(-50.05%);
+  -webkit-transform: translateZ(0) scaleX(4.01) skewX(0deg) translateX(-50.04%);
+  -moz-transform: translateZ(0) scaleX(4.01) skewX(0deg) translateX(-50.04%);
+  transform: translateZ(0) scaleX(4.01) skewX(0deg) translateX(-50.04%);
 }
 #warp.go.gofour {
-  -webkit-transform: translateZ(0) scaleX(4) skewX(0deg) translateX(-75.05%);
-  -moz-transform: translateZ(0) scaleX(4) skewX(0deg) translateX(-75.05%);
-  transform: translateZ(0) scaleX(4) skewX(0deg) translateX(-75.05%);
+  -webkit-transform: translateZ(0) scaleX(4.0001) skewX(0deg) translateX(-75%);
+  -moz-transform: translateZ(0) scaleX(4.0001) skewX(0deg) translateX(-75%);
+  transform: translateZ(0) scaleX(4.0001) skewX(0deg) translateX(-75%);
 }
 #warp.go #one .subwindow,
 #warp.go #two .subwindow,
@@ -594,6 +598,7 @@ h1 {
 }
 #warp.go > .slice {
   overflow-x: none;
+  width: 25%;
 }
 #warp.go > .spacer {
   -webkit-transition: opacity 0.8s, -webkit-transform 0.8s;

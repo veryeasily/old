@@ -88,6 +88,10 @@
 #navbar > .container-fluid {
   border-radius: 2px;
 }
+#navbar h3 {
+  border-top: none;
+  border-bottom: 1px solid #f4f4f4;
+}
 #logoAnchor {
   cursor: ew-resize;
 }
