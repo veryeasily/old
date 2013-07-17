@@ -39,12 +39,17 @@
 #others-container .container-fluid {
   font-size: 14px;
   line-height: 1.45;
+  background: lightgray;
+}
+#others-container p {
+  background: white;
+  padding: 2px 10px;
 }
 a:-webkit-any-link {
   text-decoration: none;
   cursor: auto;
 }
 #resume {
-  font-size: 206px;
+  font-size: 100px;
   color: #225a93;
 }
