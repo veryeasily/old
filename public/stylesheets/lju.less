@@ -46,6 +46,23 @@ h1 {
 //  Order of operations on the transformations matters,
 //  and winds up being super important to keep track of.
 
+#one:hover {
+    // background: spin(@firstcolor, 180);
+    background: rgb(250,250,250);
+}
+#two:hover {
+    // background: spin(@secondcolor, 180);
+    background: rgb(250,250,250);
+}
+#three:hover {
+    // background: spin(@thirdcolor, 180);
+    background: rgb(250,250,250);
+}
+#four:hover {
+    // background: spin(@fourthcolor, 180);
+    background: rgb(250,250,250);
+}
+
 #warp {
     position: relative;
     height: 100%;
@@ -61,11 +78,11 @@ h1 {
         height: 100%;
         width: 24.999%;
         float: left;
-        -webkit-transition: -webkit-transform 0.8s;
-        -moz-transition: -moz-transform 0.8s;
-        -ms-transition: transform 0.8s;
-        -o-transition: transform 0.8s;
-        transition: transfrom 0.8s;
+        -webkit-transition: background 0.1s, -webkit-transform 0.8s;
+        -moz-transition: background 0.1s, -moz-transform 0.8s;
+        -ms-transition: background 0.1s, transform 0.8s;
+        -o-transition: background 0.1s, transform 0.8s;
+        transition: background 0.1s, transfrom 0.8s;
         .transorig; // this makes the animations work smoothly and not be all fucked up on webkit
                     // for some reason you have to include it even though it's not animated.
         // .transformtranslate(0px, 0deg, 1);
@@ -146,13 +163,13 @@ h1 {
         .transformtranslate(0%, 0, 4.0001);
     }
     &.gotwo {
-        .transformtranslate(-25.01%, 0, 4.0001);
+        .transformtranslate(-25.04%, 0, 4.0001);
     }
     &.gothree {
         .transformtranslate(-50.04%, 0, 4.01);
     }
     &.gofour {
-        .transformtranslate(-75.0%, 0, 4.0001);
+        .transformtranslate(-75.04%, 0, 4.0001);
     }
 
     #one .subwindow,
@@ -166,6 +183,11 @@ h1 {
         overflow-x: none; // this continues correcting for the Webkit browser glitch.
         width: 25%;
         // border: solid transparent 0px;
+        -webkit-transition: background 0.3s, -webkit-transform 0.8s;
+        -moz-transition: background 0.3s, -moz-transform 0.8s;
+        -ms-transition: background 0.3s, transform 0.8s;
+        -o-transition: background 0.3s, transform 0.8s;
+        transition: background 0.3s, transfrom 0.8s;
     }
     > .spacer {
         -webkit-transition: opacity 0.8s, -webkit-transform 0.8s;

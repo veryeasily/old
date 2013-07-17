@@ -2,7 +2,7 @@ html{height:100%;position:relative;}
 body{height:100%;position:relative;overflow:hidden;}
 
 @green: rgba(91, 239, 44, 1);
-@blue: desaturate(lighten(rgba(0, 191, 215, 1), 15%), 35%);
+@blue: rgba(0, 191, 215, 1);
 @red: rgba(240, 55, 53, 1);
 @yellow: rgba(250, 231, 16, 1);
 @whiteblue: rgb(253,253,253);
@@ -13,7 +13,7 @@ body{height:100%;position:relative;overflow:hidden;}
 @redGrey: spin(@red, 180);
 @yellowGrey: spin(@yellow, 180);
 
-@firstcolor: lighten(mix(@blue, @blueGrey, 60%), 20%);
+@firstcolor: mix(@blue, @blueGrey, 100%);
 @secondcolor: mix(@green, @greenGrey, 100%);
 @thirdcolor: mix(@red, @redGrey, 100%);
 @fourthcolor: mix(@yellow, @yellowGrey, 100%);

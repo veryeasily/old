@@ -48,7 +48,7 @@ a:active {
 }
 */
 #one {
-  background-color: #bdcbcc;
+  background-color: #00bfd7;
 }
 #two {
   background-color: #5bef2c;
@@ -80,7 +80,7 @@ a:active {
   background-color: black;
 }
 div#navbar .one h3 {
-  color: #929292;
+  color: #6c6c6c;
   transition: all 0.1s;
 }
 div#navbar .two h3 {
@@ -96,7 +96,7 @@ div#navbar .four h3 {
   transition: all 0.1s;
 }
 div#navbar .one h3:hover {
-  color: #4bc9d9;
+  color: #00bfd7;
   text-indent: 20pt;
 }
 div#navbar .two h3:hover {

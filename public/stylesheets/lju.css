@@ -51,7 +51,7 @@ a:active {
 }
 */
 #one {
-  background-color: #bdcbcc;
+  background-color: #00bfd7;
 }
 #two {
   background-color: #5bef2c;
@@ -83,7 +83,7 @@ a:active {
   background-color: black;
 }
 div#navbar .one h3 {
-  color: #929292;
+  color: #6c6c6c;
   transition: all 0.1s;
 }
 div#navbar .two h3 {
@@ -99,7 +99,7 @@ div#navbar .four h3 {
   transition: all 0.1s;
 }
 div#navbar .one h3:hover {
-  color: #4bc9d9;
+  color: #00bfd7;
   text-indent: 20pt;
 }
 div#navbar .two h3:hover {
@@ -458,6 +458,18 @@ h1 {
 .go .slice:hover {
   box-shadow: none;
 }
+#one:hover {
+  background: #fafafa;
+}
+#two:hover {
+  background: #fafafa;
+}
+#three:hover {
+  background: #fafafa;
+}
+#four:hover {
+  background: #fafafa;
+}
 #warp {
   position: relative;
   height: 100%;
@@ -485,11 +497,11 @@ h1 {
   height: 100%;
   width: 24.999%;
   float: left;
-  -webkit-transition: -webkit-transform 0.8s;
-  -moz-transition: -moz-transform 0.8s;
-  -ms-transition: transform 0.8s;
-  -o-transition: transform 0.8s;
-  transition: transfrom 0.8s;
+  -webkit-transition: background 0.1s, -webkit-transform 0.8s;
+  -moz-transition: background 0.1s, -moz-transform 0.8s;
+  -ms-transition: background 0.1s, transform 0.8s;
+  -o-transition: background 0.1s, transform 0.8s;
+  transition: background 0.1s, transfrom 0.8s;
   -webkit-transform-origin: left top;
   transform-origin: left top;
   -webkit-backface-visibility: hidden;
@@ -574,9 +586,9 @@ h1 {
   transform: translateZ(0) scaleX(4.0001) skewX(0deg) translateX(0%);
 }
 #warp.go.gotwo {
-  -webkit-transform: translateZ(0) scaleX(4.0001) skewX(0deg) translateX(-25.01%);
-  -moz-transform: translateZ(0) scaleX(4.0001) skewX(0deg) translateX(-25.01%);
-  transform: translateZ(0) scaleX(4.0001) skewX(0deg) translateX(-25.01%);
+  -webkit-transform: translateZ(0) scaleX(4.0001) skewX(0deg) translateX(-25.04%);
+  -moz-transform: translateZ(0) scaleX(4.0001) skewX(0deg) translateX(-25.04%);
+  transform: translateZ(0) scaleX(4.0001) skewX(0deg) translateX(-25.04%);
 }
 #warp.go.gothree {
   -webkit-transform: translateZ(0) scaleX(4.01) skewX(0deg) translateX(-50.04%);
@@ -584,9 +596,9 @@ h1 {
   transform: translateZ(0) scaleX(4.01) skewX(0deg) translateX(-50.04%);
 }
 #warp.go.gofour {
-  -webkit-transform: translateZ(0) scaleX(4.0001) skewX(0deg) translateX(-75%);
-  -moz-transform: translateZ(0) scaleX(4.0001) skewX(0deg) translateX(-75%);
-  transform: translateZ(0) scaleX(4.0001) skewX(0deg) translateX(-75%);
+  -webkit-transform: translateZ(0) scaleX(4.0001) skewX(0deg) translateX(-75.04%);
+  -moz-transform: translateZ(0) scaleX(4.0001) skewX(0deg) translateX(-75.04%);
+  transform: translateZ(0) scaleX(4.0001) skewX(0deg) translateX(-75.04%);
 }
 #warp.go #one .subwindow,
 #warp.go #two .subwindow,
@@ -599,6 +611,11 @@ h1 {
 #warp.go > .slice {
   overflow-x: none;
   width: 25%;
+  -webkit-transition: background 0.3s, -webkit-transform 0.8s;
+  -moz-transition: background 0.3s, -moz-transform 0.8s;
+  -ms-transition: background 0.3s, transform 0.8s;
+  -o-transition: background 0.3s, transform 0.8s;
+  transition: background 0.3s, transfrom 0.8s;
 }
 #warp.go > .spacer {
   -webkit-transition: opacity 0.8s, -webkit-transform 0.8s;
