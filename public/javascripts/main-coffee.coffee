@@ -29,16 +29,26 @@ posImageCenter = (e) ->
         position: 'absolute',
         top: (document.body.clientHeight - this.naturalHeight)/2 + 'px',
         left: (document.body.clientWidth - this.naturalWidth)/2 + 'px',
-        'z-index': 10
+        'z-index': 100,
     })
-    $this.on('click', removeImageCenter)
+
+    # now we have to place something to absorb the click to make the art go away
+    $modal = $('<div id="modalCatch">').css({
+        width: window.innerWidth,
+        height: window.innerHeight,
+        position: 'absolute',
+        top: '0px',
+        left: '0px',
+        'z-index': 101,
+    }).appendTo(document.body).data('imageTarget', $this)
+    $modal.on('click', removeImageCenter)
 
 removeImageCenter = (e) ->
     e.stopPropagation()
     console.log('made it into remove Image Center')
-    $this = $(this)
-    $this.removeClass('artCenter')
-    $this.remove()
+    $img = $(this).data('imageTarget')
+    $img.remove()
+    $(this).remove()
     return null
 
 $ ->

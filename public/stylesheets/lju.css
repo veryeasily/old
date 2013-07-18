@@ -323,7 +323,7 @@ div#navbar h3 {
 }
 .artCenter {
   cursor: pointer;
-  box-shadow: rgba(0, 0, 0, 0.34902) 0px 0px 20pt 12pt, 0 0 0 700px #333333;
+  box-shadow: rgba(0, 0, 0, 0.34902) 0px 0px 20pt 12pt, 0 0 0 700px #dcdcdc;
 }
 #code-container {
   font-family: Ubuntu;

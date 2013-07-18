@@ -26,7 +26,7 @@ isChrome = !!window.chrome                          # Chrome 1+
 
 
 posImageCenter = function(e) {
-  var $this, height, width;
+  var $modal, $this, height, width;
 
   e.stopPropagation();
   console.log('the image is now loaded, here it is');
@@ -39,19 +39,27 @@ posImageCenter = function(e) {
     position: 'absolute',
     top: (document.body.clientHeight - this.naturalHeight) / 2 + 'px',
     left: (document.body.clientWidth - this.naturalWidth) / 2 + 'px',
-    'z-index': 10
+    'z-index': 100
   });
-  return $this.on('click', removeImageCenter);
+  $modal = $('<div id="modalCatch">').css({
+    width: window.innerWidth,
+    height: window.innerHeight,
+    position: 'absolute',
+    top: '0px',
+    left: '0px',
+    'z-index': 101
+  }).appendTo(document.body).data('imageTarget', $this);
+  return $modal.on('click', removeImageCenter);
 };
 
 removeImageCenter = function(e) {
-  var $this;
+  var $img;
 
   e.stopPropagation();
   console.log('made it into remove Image Center');
-  $this = $(this);
-  $this.removeClass('artCenter');
-  $this.remove();
+  $img = $(this).data('imageTarget');
+  $img.remove();
+  $(this).remove();
   return null;
 };
 
