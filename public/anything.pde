@@ -43,7 +43,7 @@ void dragSegment(int i, float xin, float yin) {
     c = color(255, 0, 0, 255);
 
   stroke( c );
-  strokeWeight(10);
+  strokeWeight(10 + i);
   line(0, 0, segLength, 0);
   
   if ( i == x.length - 1 )
