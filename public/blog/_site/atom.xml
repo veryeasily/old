@@ -4,7 +4,7 @@
  <title>lju</title>
  <link href="http://lju.me/atom.xml" rel="self"/>
  <link href="http://lju.me/"/>
- <updated>2013-06-02T03:24:48-05:00</updated>
+ <updated>2013-07-19T17:15:49-04:00</updated>
  <id>http://lju.me</id>
  <author>
    <name>Lucas Jesse Underwood</name>
@@ -13,8 +13,22 @@
  
  <entry>
    <title>update</title>
+   <link href="http://lju.me/posts/infoglut"/>
+   <updated>2013-07-19T00:00:00-04:00</updated>
+   <id>http://lju.me/posts/infoglut</id>
+   <content type="html">&lt;h1&gt;Infoglut&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;So... I'm starting to realize that I need to be keeping a regular blog if I am going to appear professional for the NYC programming community.  Rock and roll, although it seems weird to contribute to the infoglut.  So it goes though.  Who knows, maybe some type of regularity will encourage me to work more thoroughly on stuff.  *who knows*
+I've been playing around with some processing.js examples and also getting back into Raphael.js for the job position at Huffington Post. Also, word on the street is that dataprocessing is really popular right now, so I've been reading some papers about approximating data via rational functions. In theory, Silent barn wants me to help with their barnacles promotion for people donating to them. That should be fun, although I haven't given a whole lot of thought to ideas yet. Probably spend most of tomorrow doing that. Besides that, I've been doing ScriptEd stuff which is pretty comfortable due to all the teaching I've done in the past. Not a long jump from calc to comp, although clearly a lil &amp;lt;---&amp;gt; jump.
+John shows up in a few hours and we go see a poppunk show, which I'm totally ready for. Hope everyone in KC/Lawrence is doing well! Miss you guys a lot!
+&lt;/code&gt;&lt;/pre&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>update</title>
    <link href="http://lju.me/posts/update"/>
-   <updated>2013-05-17T00:00:00-05:00</updated>
+   <updated>2013-05-17T00:00:00-04:00</updated>
    <id>http://lju.me/posts/update</id>
    <content type="html">&lt;h1&gt;Just spent&lt;/h1&gt;
 
@@ -27,7 +41,7 @@
  <entry>
    <title>New UP Version</title>
    <link href="http://lju.me/posts/new-up-version"/>
-   <updated>2013-04-04T00:00:00-05:00</updated>
+   <updated>2013-04-04T00:00:00-04:00</updated>
    <id>http://lju.me/posts/new-up-version</id>
    <content type="html">&lt;p&gt;So I decided to release a new &lt;a href=&quot;https://github.com/caarlos0/up&quot;&gt;UP&lt;/a&gt; version. Changes include:&lt;/p&gt;
 
@@ -67,7 +81,7 @@ ping me at twitter or other social network, or even email me.&lt;/p&gt;
  <entry>
    <title>Up</title>
    <link href="http://lju.me/posts/up"/>
-   <updated>2012-12-13T00:00:00-06:00</updated>
+   <updated>2012-12-13T00:00:00-05:00</updated>
    <id>http://lju.me/posts/up</id>
    <content type="html">&lt;p&gt;Up is a clean and beautiful &lt;a href=&quot;http://getbootstrap.com&quot;&gt;Bootstrap&lt;/a&gt; based layout
 for &lt;a href=&quot;https://github.com/mojombo/jekyll&quot;&gt;Jekyll&lt;/a&gt;.&lt;/p&gt;
