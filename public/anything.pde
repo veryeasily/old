@@ -7,7 +7,7 @@ float segLength = 10;
 PImage a;
 
 void setup() {
-  size(320, 240);
+  size(900, 240);
   smooth();
   a = loadImage("data/dirt.jpg");
 }
