@@ -83,7 +83,7 @@ a:active {
   background-color: black;
 }
 div#navbar .one h3 {
-  color: #6c6c6c;
+  color: #8e8e8e;
   transition: all 0.1s;
 }
 div#navbar .two h3 {
@@ -91,11 +91,11 @@ div#navbar .two h3 {
   transition: all 0.1s;
 }
 div#navbar .three h3 {
-  color: #939393;
+  color: #8e8e8e;
   transition: all 0.1s;
 }
 div#navbar .four h3 {
-  color: #858585;
+  color: #8e8e8e;
   transition: all 0.1s;
 }
 div#navbar .one h3:hover {
@@ -222,6 +222,12 @@ div#navbar h3 {
 #navbar h3 {
   border-top: none;
   border-bottom: 1px solid #f4f4f4;
+}
+#navbar h3.blog,
+#navbar h3.art,
+#navbar h3.code,
+#navbar h3.other {
+  font-weight: 400;
 }
 #logoAnchor {
   cursor: ew-resize;

@@ -92,6 +92,12 @@
   border-top: none;
   border-bottom: 1px solid #f4f4f4;
 }
+#navbar h3.blog,
+#navbar h3.art,
+#navbar h3.code,
+#navbar h3.other {
+  font-weight: 400;
+}
 #logoAnchor {
   cursor: ew-resize;
 }
