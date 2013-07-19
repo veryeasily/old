@@ -528,23 +528,23 @@ h1 {
   z-index: 10000;
   opacity: 1;
   background: #EEE;
-  -webkit-transition: opacity 1s, -webkit-transform 0.8s;
-  -moz-transition: opacity 1s, -moz-transform 0.8s;
-  -ms-transition: opacity 1s, transform 0.8s;
-  -o-transition: opacity 1s, transform 0.8s;
-  transition: opacity 1s, transfrom 0.8s;
+  -webkit-transition: opacity 0.3s, -webkit-transform 0.8s;
+  -moz-transition: opacity 0.3s, -moz-transform 0.8s;
+  -ms-transition: opacity 0.3s, transform 0.8s;
+  -o-transition: opacity 0.3s, transform 0.8s;
+  transition: opacity 0.3s, transfrom 0.8s;
 }
 .spacer#afterOne {
-  left: 24.725%;
-  width: 0.5499999999999999%;
+  left: 20.724999999999998%;
+  width: 8.55%;
 }
 .spacer#afterTwo {
-  left: 49.725%;
-  width: 0.5499999999999999%;
+  left: 45.725%;
+  width: 8.55%;
 }
 .spacer#afterThree {
-  left: 74.725%;
-  width: 0.5499999999999999%;
+  left: 70.72500000000001%;
+  width: 8.55%;
 }
 .subwindow {
   overflow-y: auto;
