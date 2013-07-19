@@ -4,7 +4,7 @@
  <title>lju</title>
  <link href="http://lju.me/atom.xml" rel="self"/>
  <link href="http://lju.me/"/>
- <updated>2013-07-19T17:15:49-04:00</updated>
+ <updated>2013-07-19T17:17:25-04:00</updated>
  <id>http://lju.me</id>
  <author>
    <name>Lucas Jesse Underwood</name>
@@ -12,7 +12,7 @@
 
  
  <entry>
-   <title>update</title>
+   <title>Infoglut</title>
    <link href="http://lju.me/posts/infoglut"/>
    <updated>2013-07-19T00:00:00-04:00</updated>
    <id>http://lju.me/posts/infoglut</id>
@@ -26,7 +26,7 @@ John shows up in a few hours and we go see a poppunk show, which I'm totally rea
  </entry>
  
  <entry>
-   <title>update</title>
+   <title>Update</title>
    <link href="http://lju.me/posts/update"/>
    <updated>2013-05-17T00:00:00-04:00</updated>
    <id>http://lju.me/posts/update</id>
