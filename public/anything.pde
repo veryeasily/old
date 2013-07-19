@@ -36,11 +36,11 @@ void dragSegment(int i, float xin, float yin) {
   color c;
   
   if ( i % 3 == 1 )
-    c = color(0, 0, 0, 255);
+    c = color(0, 0, 0, int(random(255)));
   else if ( i % 3 == 2 )
-    c = color(255, 255, 0, 255);
+    c = color(int(random(255)), int(random(255)), 0, int(random(255)));
   else
-    c = color(255, 0, 0, 255);
+    c = color(int(random(255)), 0, 0, int(random(255)));
 
   stroke( c );
   strokeWeight(10 + i);
