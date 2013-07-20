@@ -55,3 +55,9 @@ $ ->
     $('.artwork').on('click', artClicked)
     console.dir($('.artwork'))
     console.log('loaded main.coffee')
+    removeElt = ->
+        $(this).remove()
+    fadeOuty = $('#help').css({
+            opacity: 0
+        }).on('transitionEnd', removeElt).on('webkitTransitionEnd', removeElt)
+    window.setTimeout(fadeOuty, 5000)

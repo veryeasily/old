@@ -64,7 +64,16 @@ removeImageCenter = function(e) {
 };
 
 $(function() {
+  var fadeOuty, removeElt;
+
   $('.artwork').on('click', artClicked);
   console.dir($('.artwork'));
-  return console.log('loaded main.coffee');
+  console.log('loaded main.coffee');
+  removeElt = function() {
+    return $(this).remove();
+  };
+  fadeOuty = $('#help').css({
+    opacity: 0
+  }).on('transitionEnd', removeElt).on('webkitTransitionEnd', removeElt);
+  return window.setTimeout(fadeOuty, 5000);
 });
