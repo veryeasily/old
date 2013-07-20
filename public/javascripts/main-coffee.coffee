@@ -57,7 +57,8 @@ $ ->
     console.log('loaded main.coffee')
     removeElt = ->
         $(this).remove()
-    fadeOuty = $('#help').css({
+    fadeOuty = ->
+        $('#help').css({
             opacity: 0
         }).on('transitionEnd', removeElt).on('webkitTransitionEnd', removeElt)
-    window.setTimeout(fadeOuty, 5000)
+    window.setTimeout(fadeOuty, 2000)

@@ -455,16 +455,16 @@ h1 {
 }
 #help {
   position: absolute;
-  font-size: 40pt;
+  font-size: 30pt;
   opacity: 1;
   top: 40%;
-  left: -3%;
-  width: 103%;
+  width: 80%;
   -webkit-transition: opacity 2s;
   -moz-transition: opacity 2s;
   -ms-transition: opacity 2s;
   transition: opacity 2s;
   z-index: 1000;
+  text-align: center;
 }
 * {
   padding: 0;

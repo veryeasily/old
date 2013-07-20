@@ -72,8 +72,10 @@ $(function() {
   removeElt = function() {
     return $(this).remove();
   };
-  fadeOuty = $('#help').css({
-    opacity: 0
-  }).on('transitionEnd', removeElt).on('webkitTransitionEnd', removeElt);
-  return window.setTimeout(fadeOuty, 5000);
+  fadeOuty = function() {
+    return $('#help').css({
+      opacity: 0
+    }).on('transitionEnd', removeElt).on('webkitTransitionEnd', removeElt);
+  };
+  return window.setTimeout(fadeOuty, 2000);
 });
