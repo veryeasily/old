@@ -4,7 +4,7 @@
  <title>lju</title>
  <link href="http://lju.me/atom.xml" rel="self"/>
  <link href="http://lju.me/"/>
- <updated>2013-07-25T17:31:34-04:00</updated>
+ <updated>2013-07-25T17:46:15-04:00</updated>
  <id>http://lju.me</id>
  <author>
    <name>Lucas Jesse Underwood</name>
@@ -18,7 +18,7 @@
    <id>http://lju.me/posts/this_is_great</id>
    <content type="html">&lt;h1&gt;This is awesome&lt;/h1&gt;
 
-&lt;p&gt;http://www.frequency.com/video/keeping-realtime-conference-dnode/44785824/&amp;ndash;/5-174578&lt;/p&gt;
+&lt;p&gt;http://www.frequency.com/video/keeping-realtime-conference-dnode/44785824/&amp;ndash;/5-174578[http://www.frequency.com/video/keeping-realtime-conference-dnode/44785824/&amp;ndash;/5-174578]&lt;/p&gt;
 </content>
  </entry>
  
