@@ -645,6 +645,7 @@ h1 {
   -o-transition: opacity 0.8s, transform 0.8s;
   transition: opacity 0.8s, transfrom 0.8s;
   opacity: 0;
+  width: 0px;
 }
 #warp.go .left1 > .subwindow {
   -webkit-transform: translateZ(0) scaleX(0.25) skewX(0deg) translateX(100%);
