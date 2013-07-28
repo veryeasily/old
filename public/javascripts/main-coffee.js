@@ -49,7 +49,7 @@ posImageCenter = function(e) {
     left: '0px',
     'z-index': 101
   }).appendTo(document.body).data('imageTarget', $this);
-  return $modal.on('click', removeImageCenter);
+  return $modal.on('mousedown', removeImageCenter);
 };
 
 removeImageCenter = function(e) {
@@ -64,9 +64,10 @@ removeImageCenter = function(e) {
 };
 
 $(function() {
-  var fadeOuty, removeElt;
+  var MOVEAMNT, TIME, fadeOuty, left, removeElt;
 
-  $('.artwork').on('click', artClicked);
+  left = 0;
+  $('.artwork').on('mousedown', artClicked);
   console.dir($('.artwork'));
   console.log('loaded main.coffee');
   removeElt = function() {
@@ -77,5 +78,49 @@ $(function() {
       opacity: 0
     }).on('transitionEnd', removeElt).on('webkitTransitionEnd', removeElt);
   };
-  return window.setTimeout(fadeOuty, 2000);
+  window.setTimeout(fadeOuty, 2000);
+  MOVEAMNT = 30;
+  TIME = 30;
+  $('#leftArrow').mousedown(function(e) {
+    var moveLeft, movingLeft;
+
+    e.stopPropagation();
+    moveLeft = function() {
+      left = (left + MOVEAMNT) < 0 ? left + MOVEAMNT : 0;
+      return $('.bundle').css('left', left + 'px');
+    };
+    movingLeft = window.setInterval(moveLeft, TIME);
+    $(this).mouseup(function(e) {
+      e.stopPropagation();
+      window.clearInterval(movingLeft);
+      return null;
+    });
+    $(this).mouseleave(function(e) {
+      e.stopPropagation();
+      window.clearInterval(movingLeft);
+      return null;
+    });
+    return null;
+  });
+  return $('#rightArrow').mousedown(function(e) {
+    var moveRight, movingRight;
+
+    e.stopPropagation();
+    moveRight = function() {
+      left = left - MOVEAMNT;
+      return $('.bundle').css('left', left + 'px');
+    };
+    movingRight = window.setInterval(moveRight, TIME);
+    $(this).mouseup(function(e) {
+      e.stopPropagation();
+      window.clearInterval(movingRight);
+      return null;
+    });
+    $(this).mouseleave(function(e) {
+      e.stopPropagation();
+      window.clearInterval(movingRight);
+      return null;
+    });
+    return null;
+  });
 });

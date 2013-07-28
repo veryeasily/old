@@ -41,7 +41,7 @@ posImageCenter = (e) ->
         left: '0px',
         'z-index': 101,
     }).appendTo(document.body).data('imageTarget', $this)
-    $modal.on('click', removeImageCenter)
+    $modal.on('mousedown', removeImageCenter)
 
 removeImageCenter = (e) ->
     e.stopPropagation()
@@ -52,7 +52,8 @@ removeImageCenter = (e) ->
     return null
 
 $ ->
-    $('.artwork').on('click', artClicked)
+    left = 0
+    $('.artwork').on('mousedown', artClicked)
     console.dir($('.artwork'))
     console.log('loaded main.coffee')
     removeElt = ->
@@ -62,3 +63,43 @@ $ ->
             opacity: 0
         }).on('transitionEnd', removeElt).on('webkitTransitionEnd', removeElt)
     window.setTimeout(fadeOuty, 2000)
+    MOVEAMNT = 30
+    TIME = 30
+
+    $('#leftArrow').mousedown( (e) ->
+        e.stopPropagation()
+        moveLeft = ->
+            left = if (left + MOVEAMNT) < 0 then left + MOVEAMNT else 0
+            $('.bundle').css('left', left + 'px')
+        movingLeft = window.setInterval(moveLeft, TIME)
+        $(this).mouseup( (e) ->
+            e.stopPropagation()
+            window.clearInterval(movingLeft)
+            return null
+        )
+        $(this).mouseleave( (e) ->
+            e.stopPropagation()
+            window.clearInterval(movingLeft)
+            return null
+        )
+        return null
+    )
+
+    $('#rightArrow').mousedown( (e) ->
+        e.stopPropagation()
+        moveRight = ->
+            left = left - MOVEAMNT
+            $('.bundle').css('left', left + 'px')
+        movingRight = window.setInterval(moveRight, TIME)
+        $(this).mouseup( (e) ->
+            e.stopPropagation()
+            window.clearInterval(movingRight)
+            return null
+        )
+        $(this).mouseleave( (e) ->
+            e.stopPropagation()
+            window.clearInterval(movingRight)
+            return null
+        )
+        return null
+    )

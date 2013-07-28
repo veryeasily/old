@@ -18,9 +18,30 @@
 .slice[href="#/art"] > .subwindow {
   height: 100%;
 }
+.art-arrows {
+  z-index: 2000;
+  position: absolute;
+  top: 40%;
+  color: #C66;
+  font-size: 60pt;
+  opacity: 0.2;
+  -webkit-transition: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  -ms-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+.art-arrows#leftArrow {
+  left: 2%;
+}
+.art-arrows#rightArrow {
+  right: 2%;
+}
+.art-arrows:hover {
+  opacity: 0.7;
+}
 #arts-container {
-  overflow-x: auto;
   height: 100%;
+  overflow-x: hidden;
 }
 .work-holder {
   display: inline-block;
@@ -48,6 +69,8 @@
   white-space: nowrap;
   padding-top: 17px;
   padding-bottom: 17px;
+  display: inline-block;
+  position: relative;
 }
 .bundle div.artwork:first-child {
   margin-left: 91px;

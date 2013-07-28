@@ -1,19 +1,21 @@
 
 // this does mousescrolling through the art section!
+/*
 $(function() {
     $('#arts-container').mousewheel(function(event, delta) {
         this.scrollLeft += (delta * 30);
     });
 });
+*/
 
 $(window).on('message', function(e) {
     var evt = e.originalEvent;
     if (evt.origin === 'http://elju.github.io' && evt.data === 'click') {
-        $('#blog-container').trigger('click');
+        $('#blog-container').trigger('mousedown');
     }
 });
 
-$('a').on('click', function(e) {
+$('a').on('mousedown', function(e) {
     e.stopPropagation();
 });
     
@@ -22,12 +24,12 @@ $(document).on('ready', function() {
     var $slices, $artwork, $activeHeap, undoInvert, pullUpViewer;
 
     // if we clicked a link, then don't animate!!!
-    $('.subwindow a').click(function (e) {
+    $('.subwindow a').mousedown(function (e) {
         e.stopPropagation();
     });
 
     $slices = $('.slice').attr('data-clicked', "false");
-    $slices.on('click', function alternate (e) {
+    $slices.on('mousedown', function alternate (e) {
         /*
         var $this, $right, $left, $others;
 
@@ -86,14 +88,14 @@ $(document).on('ready', function() {
         }
     }
 
-    $('#navbar a[data-slice]').on('click',
+    $('#navbar a[data-slice]').on('mousedown',
             function(e) {
                 e.preventDefault();
-                $(this.dataset.slice).click();
+                $(this.dataset.slice).mousedown();
             }
         );
 
-    $('#logoAnchor').on('click'
+    $('#logoAnchor').on('mousedown'
             , function(e) {
                 e.preventDefault();
                 window.location.hash = "#/";
@@ -104,25 +106,25 @@ $(document).on('ready', function() {
             window.setTimeout(function() {
                 $('.slice[href="#/art"]').attr("data-clicked", "true");
                 focusOnSlice.apply($('.slice[href="#/art"]')[0]);
-            }, 1500);
+            }, 750);
             break;
         case "#/blog":
             window.setTimeout(function() {
                 $('.slice[href="#/blog"]').attr("data-clicked", "true");
                 focusOnSlice.apply($('.slice[href="#/blog"]')[0]);
-            }, 1500);
+            }, 750);
             break;
         case "#/other":
             window.setTimeout(function() {
                 $('.slice[href="#/other"]').attr("data-clicked", "true");
                 focusOnSlice.apply($('.slice[href="#/other"]')[0]);
-            }, 1500);
+            }, 750);
             break;
         case "#/code":
             window.setTimeout(function() {
                 $('.slice[href="#/code"]').attr("data-clicked", "true");
                 focusOnSlice.apply($('.slice[href="#/code"]')[0]);
-            }, 1500);
+            }, 750);
             break;
     }
     $(window).on('hashchange', function(e) {
