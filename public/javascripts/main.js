@@ -147,6 +147,10 @@ $(document).on('ready', function() {
                 $('#warp').removeClass('go goone gotwo gothree gofour')
                 $slices.removeClass('right1 right2 right3 left1 left2 left3 scrollEnabled');
                 break;
+            case "":
+                $('#warp').removeClass('go goone gotwo gothree gofour')
+                $slices.removeClass('right1 right2 right3 left1 left2 left3 scrollEnabled');
+                break;
         }
     });
 
