@@ -16,11 +16,11 @@
     top: 40%;
     color: #C66;
     font-size: 60pt;
-    opacity: 0.2;
-    -webkit-transition: opacity 0.2s;
-    -moz-transition: opacity 0.2s;
-    -ms-transition: opacity 0.2s;
-    transition: opacity 0.2s;
+    opacity: 1;
+    -webkit-transition: color 0.2s, opacity 0.2s;
+    -moz-transition: color 0.2s, opacity 0.2s;
+    -ms-transition: color 0.2s, opacity 0.2s;
+    transition: color 0.2s, opacity 0.2s;
     &#leftArrow {
         left: 2%;
     }
@@ -28,7 +28,8 @@
         right: 2%;
     }
     &:hover {
-        opacity: 0.7;
+        opacity: 1;
+        color: black;
     }
 }
 

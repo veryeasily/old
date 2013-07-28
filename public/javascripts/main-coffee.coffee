@@ -63,8 +63,8 @@ $ ->
             opacity: 0
         }).on('transitionEnd', removeElt).on('webkitTransitionEnd', removeElt)
     window.setTimeout(fadeOuty, 2000)
-    MOVEAMNT = 30
-    TIME = 30
+    MOVEAMNT = 20
+    TIME = 15
 
     $('#leftArrow').mousedown( (e) ->
         e.stopPropagation()
