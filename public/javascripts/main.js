@@ -15,10 +15,6 @@ $(window).on('message', function(e) {
     }
 });
 
-$('a').on('mousedown', function(e) {
-    e.stopPropagation();
-});
-    
 $(document).on('ready', function() {
 
     var $slices, $artwork, $activeHeap, undoInvert, pullUpViewer;
