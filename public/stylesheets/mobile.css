@@ -1,31 +1,25 @@
 div {
   position: absolute;
+  width: 50%;
+  height: 50%;
 }
 #tl {
   left: 0%;
-  right: 50%;
   top: 0%;
-  bottom: 50%;
   background-color: #00bfd7;
 }
 #tr {
   left: 50%;
-  right: 100%;
   top: 0%;
-  bottom: 50%;
   background-color: #5bef2c;
 }
 #bl {
   left: 0%;
-  right: 50%;
   top: 50%;
-  bottom: 100%;
   background-color: #f03735;
 }
 #br {
   left: 50%;
-  right: 100%;
   top: 50%;
-  bottom: 100%;
   background-color: #fae710;
 }
