@@ -6,26 +6,26 @@ div {
   right: 50%;
   top: 0%;
   bottom: 50%;
-  color: #00bfd7;
+  background-color: #00bfd7;
 }
 #tr {
   left: 50%;
   right: 100%;
   top: 0%;
   bottom: 50%;
-  color: #5bef2c;
+  background-color: #5bef2c;
 }
 #bl {
   left: 0%;
   right: 50%;
   top: 50%;
   bottom: 100%;
-  color: #f03735;
+  background-color: #f03735;
 }
 #br {
   left: 50%;
   right: 100%;
   top: 50%;
   bottom: 100%;
-  color: #fae710;
+  background-color: #fae710;
 }
