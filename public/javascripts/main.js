@@ -1,20 +1,3 @@
-
-// this does mousescrolling through the art section!
-/*
-$(function() {
-    $('#arts-container').mousewheel(function(event, delta) {
-        this.scrollLeft += (delta * 30);
-    });
-});
-*/
-
-$(window).on('message', function(e) {
-    var evt = e.originalEvent;
-    if (evt.origin === 'http://elju.github.io' && evt.data === 'click') {
-        $('#blog-container').trigger('mousedown');
-    }
-});
-
 $(document).on('ready', function() {
 
     var $slices, $artwork, $activeHeap, undoInvert, pullUpViewer;

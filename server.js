@@ -34,6 +34,7 @@ app.get('/weird', routes.indexWeird);
 app.get('/gray', routes.indexGray);
 app.get('/old', routes.indexOld);
 app.get('/', routes.index);
+app.get('/m', routes.mobile);
 
 app.listen(process.env.PORT || 5000, function(){
   console.log('Express server listening on port ' + app.get('port'));

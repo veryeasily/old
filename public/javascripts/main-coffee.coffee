@@ -1,3 +1,4 @@
+
 artClicked = (e) ->
     $this = $(this)
     console.log('an image was clicked, here it is')
@@ -8,14 +9,21 @@ artClicked = (e) ->
     $img.appendTo(document.body)
     $img.on('load', posImageCenter)
     return null
+
 ###
 isOpera = !!window.opera || navigator.userAgent.indexOf('Opera') >= 0
 # Opera 8.0+ (UA detection to detect Blink/v8-powered Opera)
 isFirefox = typeof InstallTrigger != 'undefined'   # Firefox 1.0+
+###
 isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0
+###
 # At least Safari 3+: "[object HTMLElementConstructor]"
 isChrome = !!window.chrome                          # Chrome 1+
 ###
+
+# if we are on something that won't work, give them their consolidation prize (the mobile site)
+if (isSafari or window.innerWidth <= 800)
+    window.location = 'http://lju.me/m'
 
 posImageCenter = (e) ->
     do e.stopPropagation
