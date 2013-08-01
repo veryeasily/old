@@ -102,15 +102,21 @@ h1 {
         // .transformtranslate(0px, 0deg, 1);
     }
 }
+.subwindow {
+    overflow: hidden;
+}
 
 .spacer {
     position: absolute;
     cursor: default;
     height: 100%;
     z-index: 10000;
-    @wid1: 0.0855;
-    @wid2: 0.0855;
-    @wid3: 0.0855;
+    @wid1: 0.022;
+    @wid2: 0.022;
+    @wid3: 0.022;
+    // @wid1: 0.0855;
+    // @wid2: 0.0855;
+    // @wid3: 0.0855;
     opacity: 1;
     background: #EEE;
     @topacity: 0.3s;
@@ -138,7 +144,6 @@ h1 {
 }
 
 .subwindow {
-    overflow-y: auto; // strange bug? in browsers where it messes up placement, but only until clicked w/out this change.
     position: absolute;
     width: 400%;
     height: 100%;
@@ -202,6 +207,9 @@ h1 {
         -ms-transition: background 0.3s, transform 0.8s;
         -o-transition: background 0.3s, transform 0.8s;
         transition: background 0.3s, transfrom 0.8s;
+        .subwindow {
+            overflow: auto;
+        }
     }
     > .spacer {
         -webkit-transition: opacity 0.8s, -webkit-transform 0.8s;

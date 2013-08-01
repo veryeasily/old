@@ -558,6 +558,9 @@ h1 {
   -ms-perspective: 1000;
   perspective: 1000;
 }
+.subwindow {
+  overflow: hidden;
+}
 .spacer {
   position: absolute;
   cursor: default;
@@ -572,19 +575,18 @@ h1 {
   transition: width 0.3s, opacity 0.3s, transfrom 0.8s;
 }
 .spacer#afterOne {
-  left: 20.724999999999998%;
-  width: 8.55%;
+  left: 23.9%;
+  width: 2.1999999999999997%;
 }
 .spacer#afterTwo {
-  left: 45.725%;
-  width: 8.55%;
+  left: 48.9%;
+  width: 2.1999999999999997%;
 }
 .spacer#afterThree {
-  left: 70.72500000000001%;
-  width: 8.55%;
+  left: 73.9%;
+  width: 2.1999999999999997%;
 }
 .subwindow {
-  overflow-y: auto;
   position: absolute;
   width: 400%;
   height: 100%;
@@ -661,6 +663,9 @@ h1 {
   -ms-transition: background 0.3s, transform 0.8s;
   -o-transition: background 0.3s, transform 0.8s;
   transition: background 0.3s, transfrom 0.8s;
+}
+#warp.go > .slice .subwindow {
+  overflow: auto;
 }
 #warp.go > .spacer {
   -webkit-transition: opacity 0.8s, -webkit-transform 0.8s;
