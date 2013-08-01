@@ -20,24 +20,25 @@ $(function() {
       background: 'rgb(217,217,217)',
       'z-index': 1000,
       width: '100%',
-      height: '100%',
+      height: '101%',
       left: '0px',
-      top: document.body.scrollTop + 'px'
+      top: document.body.scrollTop - 1 + 'px'
     });
     $backdrop.appendTo(document.body);
-    $img = $('<img id="centered">').attr('src', e.target.src).imageLoad(function(e) {
+    $img = $('<img id="centered">').attr('src', e.target.src).appendTo($backdrop).imageLoad(function(e) {
       var $this;
 
       $this = $(this);
       $this.css({
-        position: 'absolute',
+        position: 'relative',
         'max-width': '95%',
         'max-height': '95%',
         'z-index': 1001
       });
       $this.css({
-        left: ((window.innerWidth - this.width) / 2) + 'px',
-        top: ((window.innerHeight - this.height) / 2) + 'px'
+        display: 'block',
+        margin: '0 auto',
+        top: ((document.body.clientHeight - this.height) / 2) + 'px'
       });
       return $this.appendTo($backdrop);
     });
