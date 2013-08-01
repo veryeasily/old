@@ -23,7 +23,7 @@ isChrome = !!window.chrome                          # Chrome 1+
 
 # if we are on something that won't work, give them their consolidation prize (the mobile site)
 if (isSafari or window.innerWidth <= 800)
-    window.location = 'http://lju.me/m'
+    window.location.href += 'm'
 
 posImageCenter = (e) ->
     do e.stopPropagation

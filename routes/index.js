@@ -9,6 +9,18 @@ exports.index = function(req, res){
 exports.mobile = function(req, res){
   res.render('mobile', { title: 'Where I hide ideas' });
 };
+exports.mobileArt = function(req, res){
+  res.render('mobile-art', { title: 'Where I hide ideas' });
+};
+exports.mobileBlog = function(req, res){
+  res.render('mobile-blog', { title: 'Where I hide ideas' });
+};
+exports.mobileOther = function(req, res){
+  res.render('mobile-other', { title: 'Where I hide ideas' });
+};
+exports.mobileCode = function(req, res){
+  res.render('mobile-code', { title: 'Where I hide ideas' });
+};
 exports.index2 = function(req, res){
   res.render('index2', { title: 'Express' });
 };

@@ -34,6 +34,10 @@ app.get('/weird', routes.indexWeird);
 app.get('/gray', routes.indexGray);
 app.get('/old', routes.indexOld);
 app.get('/', routes.index);
+app.get('/m/art', routes.mobileArt);
+app.get('/m/blog', routes.mobileBlog);
+app.get('/m/other', routes.mobileOther);
+app.get('/m/code', routes.mobileCode);
 app.get('/m', routes.mobile);
 
 app.listen(process.env.PORT || 5000, function(){

@@ -31,7 +31,7 @@ isChrome = !!window.chrome                          # Chrome 1+
 
 
 if (isSafari || window.innerWidth <= 800) {
-  window.location = 'http://lju.me/m';
+  window.location.href += 'm';
 }
 
 posImageCenter = function(e) {
