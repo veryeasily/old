@@ -1,3 +1,4 @@
+### screw it, it works on all mobile browsers except firefox (I think), but it was better without itlkj1j23;j
 $ ->
     # snippet of code I found on stack overflow for detecting when image is loaded.
     $.fn.imageLoad = (fn) ->
@@ -47,3 +48,4 @@ $ ->
             $(document).off 'scrollstart'
             null #equivalent to e.stopPropagation() and e.preventDefault()
         null #equivalent to e.stopPropagation() and e.preventDefault()
+###
