@@ -9,12 +9,12 @@ $(function() {
     });
   };
   $('i').remove();
-  $(document).on('touchmove', function(e) {
-    return e.preventDefault();
-  });
   return $('img').on('mousedown', function(e) {
     var $backdrop, $img;
 
+    $(document).on('touchstart', function(e) {
+      return e.preventDefault();
+    });
     $(document.body).css({
       'overflow-y': 'hidden'
     });
@@ -52,6 +52,7 @@ $(function() {
       $(document.body).css({
         'overflow-y': 'auto'
       });
+      $(document).off('touchstart');
       return null;
     });
     return null;
