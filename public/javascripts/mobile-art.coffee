@@ -9,9 +9,10 @@ $ ->
 
 
     $('i').remove() #get rid of scroll bars from normal site
-    $(document).on 'touchmove', (e) ->
-        e.preventDefault()
     $('img').on 'mousedown', (e) ->
+        # prevent touchmove scrolling on phones
+        $(document).on 'touchmove', (e) ->
+            e.preventDefault()
         $(document.body).css({'overflow-y': 'hidden'})
         $backdrop = $('<div>').css
             position: 'absolute',
@@ -38,7 +39,10 @@ $ ->
         $backdrop.on 'mousedown', (e) ->
             e.stopPropagation()
             $backdrop.remove()
-            $img.remove() # <-- these all looked better on a single line
+            $img.remove()
             $(document.body).css({'overflow-y': 'auto'})
+
+            # and now restore scrolling
+            $(document).off 'touchmove'
             null #equivalent to e.stopPropagation() and e.preventDefault()
         null #equivalent to e.stopPropagation() and e.preventDefault()
