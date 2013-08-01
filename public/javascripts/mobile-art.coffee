@@ -11,6 +11,7 @@ $ ->
     $('i').remove() #get rid of scroll bars from normal site
     $('img').on 'mousedown', (e) ->
         # prevent scrollstart scrolling on phones
+        fromTop = $(document.body).scrollTop()
         $(document).on 'scrollstart', (e) ->
             e.preventDefault()
         $(document.body).css({'overflow-y': 'hidden'})
@@ -21,7 +22,7 @@ $ ->
             width: '100%',
             height: '101%',
             left: '0px',
-            top: document.body.scrollTop - 1 + 'px'
+            top: fromTop - 1 + 'px'
         $backdrop.appendTo(document.body)
         $img = $('<img id="centered">').attr('src', e.target.src).appendTo($backdrop).imageLoad (e) ->
             $this = $(this)
