@@ -1,3 +1,6 @@
+$ ->
+    $('i').remove() #get rid of scroll bars from normal site
+
 ### screw it, it works on all mobile browsers except firefox (I think), but it was better without itlkj1j23;j
 $ ->
     # snippet of code I found on stack overflow for detecting when image is loaded.
@@ -9,7 +12,6 @@ $ ->
         )
 
 
-    $('i').remove() #get rid of scroll bars from normal site
     $('img').on 'mousedown', (e) ->
         # prevent scrollstart scrolling on phones
         fromTop = $(document.body).scrollTop()
