@@ -10,8 +10,9 @@ $(function() {
   };
   $('i').remove();
   return $('img').on('mousedown', function(e) {
-    var $backdrop, $img;
+    var $backdrop, $img, fromTop;
 
+    fromTop = $(document.body).scrollTop();
     $(document).on('scrollstart', function(e) {
       return e.preventDefault();
     });
@@ -25,7 +26,7 @@ $(function() {
       width: '100%',
       height: '101%',
       left: '0px',
-      top: document.body.scrollTop - 1 + 'px'
+      top: fromTop - 1 + 'px'
     });
     $backdrop.appendTo(document.body);
     $img = $('<img id="centered">').attr('src', e.target.src).appendTo($backdrop).imageLoad(function(e) {
