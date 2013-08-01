@@ -12,7 +12,7 @@ $(function() {
   return $('img').on('mousedown', function(e) {
     var $backdrop, $img;
 
-    $(document).on('touchstart', function(e) {
+    $(document).on('scrollstart', function(e) {
       return e.preventDefault();
     });
     $(document.body).css({
@@ -52,7 +52,7 @@ $(function() {
       $(document.body).css({
         'overflow-y': 'auto'
       });
-      $(document).off('touchstart');
+      $(document).off('scrollstart');
       return null;
     });
     return null;

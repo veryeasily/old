@@ -10,8 +10,8 @@ $ ->
 
     $('i').remove() #get rid of scroll bars from normal site
     $('img').on 'mousedown', (e) ->
-        # prevent touchstart scrolling on phones
-        $(document).on 'touchstart', (e) ->
+        # prevent scrollstart scrolling on phones
+        $(document).on 'scrollstart', (e) ->
             e.preventDefault()
         $(document.body).css({'overflow-y': 'hidden'})
         $backdrop = $('<div>').css
@@ -43,6 +43,6 @@ $ ->
             $(document.body).css({'overflow-y': 'auto'})
 
             # and now restore scrolling
-            $(document).off 'touchstart'
+            $(document).off 'scrollstart'
             null #equivalent to e.stopPropagation() and e.preventDefault()
         null #equivalent to e.stopPropagation() and e.preventDefault()
