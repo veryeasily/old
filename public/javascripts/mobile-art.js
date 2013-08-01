@@ -9,6 +9,9 @@ $(function() {
     });
   };
   $('i').remove();
+  $(document).on('touchmove', function(e) {
+    return e.preventDefault();
+  });
   return $('img').on('mousedown', function(e) {
     var $backdrop, $img;
 

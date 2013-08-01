@@ -9,6 +9,8 @@ $ ->
 
 
     $('i').remove() #get rid of scroll bars from normal site
+    $(document).on 'touchmove', (e) ->
+        e.preventDefault()
     $('img').on 'mousedown', (e) ->
         $(document.body).css({'overflow-y': 'hidden'})
         $backdrop = $('<div>').css
