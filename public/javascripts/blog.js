@@ -4,17 +4,15 @@ $(function() {
 
   $blogContainer = $('#blog-container');
   Blog = (function() {
-    function Blog(currentPage) {
+    function Blog(container, currentPage) {
       this.currentPage = currentPage != null ? currentPage : 'http://lju.me/blog/_site/';
+      this.$container = $(container).on('pageChange', $.proxy(this.loadNewPage, this));
+      this.fixLinks();
     }
 
     Blog.prototype.updatePage = function(page) {
       this.currentPage = page;
-      return $blogContainer.trigger('pageChange', [this]);
-    };
-
-    Blog.prototype.bootstrapBlog = function() {
-      return $blogContainer.on('pageChange', this.loadNewPage);
+      return this.$container.trigger('pageChange', this);
     };
 
     Blog.prototype.fixLinks = function() {
@@ -27,23 +25,18 @@ $(function() {
     };
 
     Blog.prototype.loadNewPage = function(e, blog) {
-      var options, page, swapData;
-
-      swapData = function(data) {
-        $blogContainer.html(data.responseText);
-        return blog.fixLinks();
-      };
-      page = blog.currentPage;
-      options = {
-        complete: swapData
-      };
-      return $.ajax(page, options);
+      return $.ajax(blog.currentPage, {
+        complete: function(data) {
+          this.$container.html(data.responseText);
+          return blog.fixLinks();
+        }
+      });
     };
 
     return Blog;
 
   })();
-  blog = new Blog();
+  blog = new Blog(document.getElementById('blog-container'));
   /*
   # Make an ajax call and get the new page content
   # After getting it, clear out the current page,
@@ -69,6 +62,5 @@ $(function() {
       )
   */
 
-  blog.bootstrapBlog();
   return blog.fixLinks();
 });

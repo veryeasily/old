@@ -3,29 +3,39 @@ $ ->
     $blogContainer = $('#blog-container')
 
     class Blog
-        constructor: (@currentPage = 'http://lju.me/blog/_site/') ->
+
+        constructor: (container, @currentPage = 'http://lju.me/blog/_site/') ->
+
+            @$container = $(container).on('pageChange', $.proxy(@loadNewPage, this))
+            @fixLinks()
+
         updatePage: (page) ->
+
             @currentPage = page
-            $blogContainer.trigger('pageChange', [this])
-        bootstrapBlog: () ->
-            $blogContainer.on('pageChange', this.loadNewPage)
+            @$container.trigger('pageChange', this)
+
+        # bootstrapBlog: () ->
+        #    @$container.on('pageChange', this.loadNewPage)
+        
         fixLinks: () ->
+
             $('#blog-container a[href*="blog/_site"]').on('click', (e) ->
                 e.preventDefault()
                 e.stopPropagation()
-                blog.updatePage(this.href)
+                blog.updatePage this.href
                 return null
             )
+
         loadNewPage: (e, blog) ->
-            swapData = (data) ->
-                $blogContainer.html(data.responseText)
-                do blog.fixLinks
-            page = blog.currentPage
-            options = {complete: swapData}
-            $.ajax(page, options)
+
+            $.ajax blog.currentPage, {
+                complete: (data) ->
+                    @$container.html(data.responseText)
+                    blog.fixLinks()
+            }
 
 
-    blog = new Blog()
+    blog = new Blog(document.getElementById 'blog-container')
 
     ###
     # Make an ajax call and get the new page content
@@ -52,5 +62,4 @@ $ ->
         )
     ###
     
-    do blog.bootstrapBlog
     do blog.fixLinks
