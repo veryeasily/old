@@ -25,6 +25,9 @@ isChrome = !!window.chrome                          # Chrome 1+
 if (isSafari or window.innerWidth <= 800)
     window.location.href += 'm'
 
+if navigator.appName is 'Microsoft Internet Explorer'
+    window.location.href += 'ie'
+
 posImageCenter = (e) ->
     do e.stopPropagation
     console.log('the image is now loaded, here it is')

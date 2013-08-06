@@ -6,6 +6,9 @@
 exports.index = function(req, res){
   res.render('index', { title: 'Where I hide ideas' });
 };
+exports.ie = function(req, res){
+  res.render('ie', { title: 'Where I hide ideas' });
+};
 exports.mobile = function(req, res){
   res.render('mobile', { title: 'Where I hide ideas' });
 };

@@ -39,6 +39,7 @@ app.get('/m/blog', routes.mobileBlog);
 app.get('/m/other', routes.mobileOther);
 app.get('/m/code', routes.mobileCode);
 app.get('/m', routes.mobile);
+app.get('/ie', routes.ie);
 
 app.listen(process.env.PORT || 5000, function(){
   console.log('Express server listening on port ' + app.get('port'));
