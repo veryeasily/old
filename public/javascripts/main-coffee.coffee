@@ -23,10 +23,11 @@ isChrome = !!window.chrome                          # Chrome 1+
 
 # if we are on something that won't work, give them their consolidation prize (the mobile site)
 if (isSafari or window.innerWidth <= 800)
-    window.location.href += 'm'
+    if (window.location.path.indexOf '/m') isnt 0
+        window.location.href = window.location.protocol + '//' + window.location.hostname + '/m' + window.location.pathname
 
 if navigator.appName is 'Microsoft Internet Explorer'
-    window.location.href += 'ie'
+    window.location.href = window.location.protocol + '//' + window.location.hostname + '/ie'
 
 posImageCenter = (e) ->
     do e.stopPropagation

@@ -31,7 +31,13 @@ isChrome = !!window.chrome                          # Chrome 1+
 
 
 if (isSafari || window.innerWidth <= 800) {
-  window.location.href += 'm';
+  if ((window.location.path.indexOf('/m')) !== 0) {
+    window.location.href = window.location.protocol + '//' + window.location.hostname + '/m' + window.location.pathname;
+  }
+}
+
+if (navigator.appName === 'Microsoft Internet Explorer') {
+  window.location.href = window.location.protocol + '//' + window.location.hostname + '/ie';
 }
 
 posImageCenter = function(e) {
