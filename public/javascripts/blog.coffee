@@ -6,20 +6,19 @@ $ ->
 
         constructor: (container, @currentPage = 'http://lju.me/blog/_site/') ->
 
-            @$container = $(container).on('pageChange', $.proxy(@loadNewPage, this))
-            @fixLinks()
+            @$container = $(container)
 
         updatePage: (page) ->
 
             @currentPage = page
             @$container.trigger('pageChange', this)
 
-        # bootstrapBlog: () ->
-        #    @$container.on('pageChange', this.loadNewPage)
+        bootstrap: () ->
+            @$container.on('pageChange', $.proxy(this.loadNewPage, this))
         
         fixLinks: () ->
 
-            $('#blog-container a[href*="blog/_site"]').on('click', (e) ->
+            $('#blog-container a[href*="blog/_site"]').on('mousedown', (e) ->
                 e.preventDefault()
                 e.stopPropagation()
                 blog.updatePage this.href
@@ -29,9 +28,9 @@ $ ->
         loadNewPage: (e, blog) ->
 
             $.ajax blog.currentPage, {
-                complete: (data) ->
+                complete: (data) =>
                     @$container.html(data.responseText)
-                    blog.fixLinks()
+                    @fixLinks()
             }
 
 
@@ -41,7 +40,7 @@ $ ->
     # Make an ajax call and get the new page content
     # After getting it, clear out the current page,
     # and replace with the new html.
-    bootstrapBlog = () ->
+    bootstrap = () ->
         loadNewPage = (e) ->
             swapData = (data) ->
                 $blogContainer.html(data.responseText)
@@ -54,7 +53,7 @@ $ ->
         $blogContainer.on('pageChange', loadNewPage)
 
     fixLinks = () ->
-        $('#blog-container a[href*="blog/_site"]').on('click', (e) ->
+        $('#blog-container a[href*="blog/_site"]').on('mousedown', (e) ->
             e.preventDefault()
             e.stopPropagation()
             blog.updatePage(this.href)
@@ -62,4 +61,5 @@ $ ->
         )
     ###
     
-    do blog.fixLinks
+    blog.bootstrap()
+    blog.fixLinks()

@@ -6,8 +6,7 @@ $(function() {
   Blog = (function() {
     function Blog(container, currentPage) {
       this.currentPage = currentPage != null ? currentPage : 'http://lju.me/blog/_site/';
-      this.$container = $(container).on('pageChange', $.proxy(this.loadNewPage, this));
-      this.fixLinks();
+      this.$container = $(container);
     }
 
     Blog.prototype.updatePage = function(page) {
@@ -15,8 +14,12 @@ $(function() {
       return this.$container.trigger('pageChange', this);
     };
 
+    Blog.prototype.bootstrap = function() {
+      return this.$container.on('pageChange', $.proxy(this.loadNewPage, this));
+    };
+
     Blog.prototype.fixLinks = function() {
-      return $('#blog-container a[href*="blog/_site"]').on('click', function(e) {
+      return $('#blog-container a[href*="blog/_site"]').on('mousedown', function(e) {
         e.preventDefault();
         e.stopPropagation();
         blog.updatePage(this.href);
@@ -25,10 +28,12 @@ $(function() {
     };
 
     Blog.prototype.loadNewPage = function(e, blog) {
+      var _this = this;
+
       return $.ajax(blog.currentPage, {
         complete: function(data) {
-          this.$container.html(data.responseText);
-          return blog.fixLinks();
+          _this.$container.html(data.responseText);
+          return _this.fixLinks();
         }
       });
     };
@@ -41,7 +46,7 @@ $(function() {
   # Make an ajax call and get the new page content
   # After getting it, clear out the current page,
   # and replace with the new html.
-  bootstrapBlog = () ->
+  bootstrap = () ->
       loadNewPage = (e) ->
           swapData = (data) ->
               $blogContainer.html(data.responseText)
@@ -54,7 +59,7 @@ $(function() {
       $blogContainer.on('pageChange', loadNewPage)
   
   fixLinks = () ->
-      $('#blog-container a[href*="blog/_site"]').on('click', (e) ->
+      $('#blog-container a[href*="blog/_site"]').on('mousedown', (e) ->
           e.preventDefault()
           e.stopPropagation()
           blog.updatePage(this.href)
@@ -62,5 +67,6 @@ $(function() {
       )
   */
 
+  blog.bootstrap();
   return blog.fixLinks();
 });
