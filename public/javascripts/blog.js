@@ -5,36 +5,31 @@ $(function() {
   $blogContainer = $('#blog-container');
   Blog = (function() {
     function Blog(container, currentPage) {
-      this.currentPage = currentPage != null ? currentPage : 'http://lju.me/blog/_site/';
+      if (currentPage == null) {
+        currentPage = 'http://lju.me/blog/_site/';
+      }
       this.$container = $(container);
+      this.currentPage = currentPage;
     }
 
     Blog.prototype.updatePage = function(page) {
-      this.currentPage = page;
-      return this.$container.trigger('pageChange', this);
-    };
+      var _this = this;
 
-    Blog.prototype.bootstrap = function() {
-      return this.$container.on('pageChange', $.proxy(this.loadNewPage, this));
+      this.currentPage = page;
+      return $.ajax(this.currentPage, {
+        complete: function(data) {
+          _this.$container.html('');
+          $(data.responseText).appendTo(_this.$container);
+          return _this.fixLinks();
+        }
+      });
     };
 
     Blog.prototype.fixLinks = function() {
       return $('#blog-container a[href*="blog/_site"]').on('mousedown', function(e) {
         e.preventDefault();
         e.stopPropagation();
-        blog.updatePage(this.href);
-        return null;
-      });
-    };
-
-    Blog.prototype.loadNewPage = function(e, blog) {
-      var _this = this;
-
-      return $.ajax(blog.currentPage, {
-        complete: function(data) {
-          _this.$container.html(data.responseText);
-          return _this.fixLinks();
-        }
+        return blog.updatePage(this.href);
       });
     };
 
@@ -42,6 +37,7 @@ $(function() {
 
   })();
   blog = new Blog(document.getElementById('blog-container'));
+  return blog.fixLinks();
   /*
   # Make an ajax call and get the new page content
   # After getting it, clear out the current page,
@@ -67,6 +63,4 @@ $(function() {
       )
   */
 
-  blog.bootstrap();
-  return blog.fixLinks();
 });

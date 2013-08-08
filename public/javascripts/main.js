@@ -4,6 +4,7 @@ $(document).on('ready', function() {
 
     // if we clicked a link inside a subwindow, then make sure not to animate!!!
     $('.subwindow a').mousedown(function (e) {
+        console.log(e);
         e.stopPropagation();
     });
 
@@ -12,6 +13,7 @@ $(document).on('ready', function() {
     // Now we basically do some routing.  If you click on a slice, then we want the page to zoom in on this slice.
     // We do this by updating the hash, and catching it with the 'onhashchange' event later on.
     $slices.on('mousedown', function alternate (e) {
+        console.log(e);
         if (window.location.hash === $(this).attr('href')) {
             window.location.hash = "#/";
         } else {
@@ -38,16 +40,13 @@ $(document).on('ready', function() {
         }
     }
 
-    $('#navbar a[data-slice]').on('mousedown',
-            function(e) {
-                $(this.dataset.slice).mousedown();
-            }
-        );
+    $('#navbar a[data-slice]').on('mousedown', function(e) {
+        $(this.dataset.slice).mousedown();
+    });
 
-    $('#logoAnchor').on('mousedown'
-            , function(e) {
-                window.location.hash = "#/";
-            });
+    $('#logoAnchor').on('mousedown' , function(e) {
+        window.location.hash = "#/";
+    });
 
     // Here's where we handle coming in to the page and going to a specific slice:
     switch (window.location.hash) {
