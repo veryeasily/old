@@ -4,7 +4,7 @@
  <title>lju</title>
  <link href="http://lju.me/atom.xml" rel="self"/>
  <link href="http://lju.me/"/>
- <updated>2013-07-26T18:59:30-04:00</updated>
+ <updated>2013-08-08T18:13:01-04:00</updated>
  <id>http://lju.me</id>
  <author>
    <name>Lucas Jesse Underwood</name>
@@ -23,17 +23,6 @@
  </entry>
  
  <entry>
-   <title>Never</title>
-   <link href="http://lju.me/posts/never"/>
-   <updated>2013-07-26T00:00:00-04:00</updated>
-   <id>http://lju.me/posts/never</id>
-   <content type="html">&lt;h1&gt;Let Me&lt;/h1&gt;
-
-&lt;p&gt;do work on DNS again. Die CNAMES&lt;/p&gt;
-</content>
- </entry>
- 
- <entry>
    <title>Check it out!</title>
    <link href="http://lju.me/posts/this_is_great"/>
    <updated>2013-07-25T00:00:00-04:00</updated>
@@ -41,20 +30,6 @@
    <content type="html">&lt;h1&gt;This is awesome&lt;/h1&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://www.frequency.com/video/keeping-realtime-conference-dnode/44785824/-/5-174578&quot;&gt;http://www.frequency.com/video/keeping-realtime-conference-dnode/44785824/&amp;ndash;/5-174578&lt;/a&gt;&lt;/p&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>Infoglut</title>
-   <link href="http://lju.me/posts/infoglut"/>
-   <updated>2013-07-19T00:00:00-04:00</updated>
-   <id>http://lju.me/posts/infoglut</id>
-   <content type="html">&lt;h1&gt;Infoglut&lt;/h1&gt;
-
-&lt;pre&gt;&lt;code&gt;So... I'm starting to realize that I need to be keeping a regular blog if I am going to appear professional for the NYC programming community.  Rock and roll, although it seems weird to contribute to the infoglut.  So it goes though.  Who knows, maybe some type of regularity will encourage me to work more thoroughly on stuff.  *who knows*
-I've been playing around with some processing.js examples and also getting back into Raphael.js and making some examples for job positions. Also, word on the street is that dataprocessing is really popular right now, so I've been reading some papers about approximating data via rational functions. I'm helping Silent barn with their barnacles promotion and newsletters for people donating to them. That should be fun!, although I haven't given a whole lot of thought to new ideas for it yet. Probably spend most of tomorrow doing that. Besides that, I've been doing ScriptEd stuff which is pretty comfortable due to my past experiences teaching. Not a long jump from calc to comp, although clearly a lil &amp;lt;---&amp;gt; jump.
-John shows up in a few hours and we go see a poppunk show, which I'm totally ready for. Hope everyone in KC/Lawrence is doing well! Miss you guys a lot!
-&lt;/code&gt;&lt;/pre&gt;
 </content>
  </entry>
  
