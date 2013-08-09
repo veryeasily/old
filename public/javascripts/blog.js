@@ -31,7 +31,7 @@ $(function() {
     };
 
     Blog.prototype.fixLinks = function() {
-      return $('#blog-container a[href*="blog/_site"]').on('mousedown', function(e) {
+      return $('#blog-container a[href*="blog/_site"]').off('mousedown').on('mousedown', function(e) {
         e.preventDefault();
         e.stopPropagation();
         return blog.updatePage(this.href);

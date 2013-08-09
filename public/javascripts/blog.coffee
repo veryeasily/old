@@ -24,11 +24,12 @@ $ ->
             }
 
         fixLinks: () ->
-            $('#blog-container a[href*="blog/_site"]').on('mousedown', (e) ->
-                e.preventDefault()
-                e.stopPropagation()
-                blog.updatePage this.href
-            )
+            $('#blog-container a[href*="blog/_site"]').off('mousedown')
+                .on('mousedown', (e) ->
+                    e.preventDefault()
+                    e.stopPropagation()
+                    blog.updatePage this.href
+                )
 
     blog = new Blog(document.getElementById 'blog-container')
     blog.fixLinks()
