@@ -6,7 +6,11 @@ $ ->
 
         constructor: (container, currentPage = 'http://lju.me/blog/_site/') ->
 
-            @$container = $(container)
+            @$container = $(container).on('mousedown', (e) ->
+                if e.target.tagName is "A"
+                    e.preventDefault()
+                    e.stopPropagation()
+            )
             @currentPage = currentPage
 
         updatePage: (page) ->

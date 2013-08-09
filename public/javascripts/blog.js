@@ -8,7 +8,12 @@ $(function() {
       if (currentPage == null) {
         currentPage = 'http://lju.me/blog/_site/';
       }
-      this.$container = $(container);
+      this.$container = $(container).on('mousedown', function(e) {
+        if (e.target.tagName === "A") {
+          e.preventDefault();
+          return e.stopPropagation();
+        }
+      });
       this.currentPage = currentPage;
     }
 
