@@ -38,15 +38,17 @@ posImageCenter = (e) ->
     console.log('the image is now loaded, here it is')
     console.dir(this)
     $this = $(this)
-    width = this.naturalWidth
-    height = this.naturalHeight
+    # width = this.naturalWidth
+    # height = this.naturalHeight
     $this.addClass('artCenter')
     $this.css({
         position: 'absolute',
-        top: (document.body.clientHeight - this.naturalHeight)/2 + 'px',
-        left: (document.body.clientWidth - this.naturalWidth)/2 + 'px',
-        'z-index': 100,
+        'z-index': 100
+    }).css({
+        top: (document.body.clientHeight - this.height)/2 + 'px',
+        left: (document.body.clientWidth - this.width)/2 + 'px'
     })
+
 
     # now we have to place something to absorb the click to make the art go away
     $modal = $('<div id="modalCatch">').css({
@@ -69,7 +71,7 @@ removeImageCenter = (e) ->
 
 $ ->
     left = 0
-    $('.artwork').on('mousedown', artClicked)
+    $('img.artwork').on('mousedown', artClicked)
     console.dir($('.artwork'))
     console.log('loaded main.coffee')
     removeElt = ->
@@ -119,3 +121,8 @@ $ ->
         )
         return null
     )
+
+    $('.bundle img').css({
+        'max-width': Math.floor(window.innerWidth * .9) + 'px',
+        'max-height': Math.floor(window.innerHeight * .9) + 'px'
+    })
