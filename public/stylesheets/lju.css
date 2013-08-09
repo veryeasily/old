@@ -776,6 +776,14 @@ h1 {
     line-height: 1;
     padding: 0 0 0 14pt;
   }
+  #navbar {
+    opacity: 0;
+    min-width: 0px;
+    width: 0px;
+  }
+  body {
+    padding: 0;
+  }
 }
 .clearfix:after {
   content: " ";
