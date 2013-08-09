@@ -22,9 +22,15 @@ isChrome = !!window.chrome                          # Chrome 1+
 ###
 
 # if we are on something that won't work, give them their consolidation prize (the mobile site)
+#
+###
 if isSafari
     if (window.location.path.indexOf '/m') isnt 0
         window.location.href = window.location.protocol + '//' + window.location.hostname + '/m' + window.location.pathname
+###
+
+if isSafari
+    $('#help > strong').text($('#help > strong').text() + "  Also, for some reason Safari has rendering glitches that I am unable to fix currently.  Sorry about that!")
 
 if window.innerWidth <= 800
     $('#navbar').remove()
