@@ -273,9 +273,9 @@ h1 {
 */
 
 @media screen and (max-aspect-ratio: 1/1) {
-    @stretch: 2;
+    @stretch: 1;
     @stretchPer: percentage(@stretch);
-    @skewAngle: 25deg;
+    @skewAngle: 0deg;
     @amount-to-right: 0%;
     @subwindow-offset: ((@amount-to-right)*-1);
     #warp {
@@ -295,6 +295,13 @@ h1 {
 
     #four .subwindow {
         .transformtranslaterev((@subwindow-offset) - 75%, @skewAngle, (1/@stretch));
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #help {
+        line-height: 1;
+        padding: 0 0 0 14pt;
     }
 }
 

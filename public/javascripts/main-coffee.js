@@ -30,10 +30,15 @@ isChrome = !!window.chrome                          # Chrome 1+
 */
 
 
-if (isSafari || window.innerWidth <= 800) {
+if (isSafari) {
   if ((window.location.path.indexOf('/m')) !== 0) {
     window.location.href = window.location.protocol + '//' + window.location.hostname + '/m' + window.location.pathname;
   }
+}
+
+if (window.innerWidth <= 800) {
+  $('#navbar').remove();
+  $(document.body).css('padding', 0);
 }
 
 if (navigator.appName === 'Microsoft Internet Explorer') {
