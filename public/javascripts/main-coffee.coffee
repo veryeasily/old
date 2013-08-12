@@ -30,8 +30,10 @@ if isSafari
 ###
 
 if window.innerWidth <= 800
+    mobile = true
     $('#navbar').remove()
     $(document.body).css('padding', 0)
+    $('#rightArrow, #leftArrow').remove()
 
 if navigator.appName is 'Microsoft Internet Explorer'
     window.location.href = window.location.protocol + '//' + window.location.hostname + '/ie'
@@ -74,7 +76,8 @@ removeImageCenter = (e) ->
 
 $ ->
     left = 0
-    $('img.artwork').on('mousedown', artClicked)
+    if mobile isnt true
+        $('img.artwork').on('mousedown', artClicked)
     console.dir($('.artwork'))
     console.log('loaded main.coffee')
     removeElt = ->
