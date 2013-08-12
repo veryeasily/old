@@ -7,7 +7,7 @@ $ ->
         constructor: (container, currentPage = 'http://lju.me/blog/_site/') ->
 
             @$container = $(container).on('mousedown', (e) ->
-                if e.target.tagName is "A"
+                if e.target.tagName is "A" or "a"
                     e.preventDefault()
                     e.stopPropagation()
             )
@@ -25,10 +25,12 @@ $ ->
 
         fixLinks: () ->
             $('#blog-container a[href*="blog/_site"]').off('mousedown')
-                .on('mousedown', (e) ->
+                .off('click')
+                .on('click', (e) ->
                     e.preventDefault()
                     e.stopPropagation()
                     blog.updatePage this.href
+                    return null
                 )
 
     blog = new Blog(document.getElementById 'blog-container')
