@@ -16,6 +16,8 @@ $(document).on('ready', function() {
         console.log(e);
         if (e.target.tagName === "A")
             return true;
+        if (window.location.hash === "#/art" && window.innerWidth < 800)
+            return true;
         if (window.location.hash === $(this).attr('href')) {
             window.location.hash = "#/";
         } else {
