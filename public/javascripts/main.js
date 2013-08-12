@@ -14,6 +14,8 @@ $(document).on('ready', function() {
     // We do this by updating the hash, and catching it with the 'onhashchange' event later on.
     $slices.on('mousedown', function alternate (e) {
         console.log(e);
+        if (e.target.tagName === "A")
+            return true;
         if (window.location.hash === $(this).attr('href')) {
             window.location.hash = "#/";
         } else {

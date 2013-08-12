@@ -8,11 +8,13 @@ $(function() {
       if (currentPage == null) {
         currentPage = 'http://lju.me/blog/_site/';
       }
-      this.$container = $(container).on('mousedown', function(e) {
+      this.$container = $(container).on('click', function(e) {
         if (e.target.tagName === "A" || "a") {
           e.preventDefault();
           return e.stopPropagation();
         }
+      }).on('mousedown', function(e) {
+        return null;
       });
       this.currentPage = currentPage;
     }
@@ -31,10 +33,12 @@ $(function() {
     };
 
     Blog.prototype.fixLinks = function() {
-      return $('#blog-container a[href*="blog/_site"]').off('mousedown').off('click').on('click', function(e) {
+      return $('#blog-container a[href*="blog/_site"]').on('click', function(e) {
         e.preventDefault();
         e.stopPropagation();
         blog.updatePage(this.href);
+        return null;
+      }).mousedown(function(e) {
         return null;
       });
     };
