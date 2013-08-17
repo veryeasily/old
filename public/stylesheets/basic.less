@@ -51,18 +51,30 @@ a {
 #one {
     background-color: @firstcolor;
     // left: 0%;
+    > .subwindow {
+        background-color: @firstcolor;
+    }
 }
 #two {
     background-color: @secondcolor;
     // left: 25%;
+    > .subwindow {
+        background-color: @secondcolor;
+    }
 }
 #three {
     background-color: @thirdcolor;
     // left: 50%;
+    > .subwindow {
+        background-color: @thirdcolor;
+    }
 }
 #four {
     background-color: @fourthcolor;
     // left: 75%;
+    > .subwindow {
+        background-color: @fourthcolor;
+    }
 }
 .block {
     position: absolute;

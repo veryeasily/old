@@ -50,13 +50,25 @@ a:active {
 #one {
   background-color: #00bfd7;
 }
+#one > .subwindow {
+  background-color: #00bfd7;
+}
 #two {
+  background-color: #5bef2c;
+}
+#two > .subwindow {
   background-color: #5bef2c;
 }
 #three {
   background-color: #f03735;
 }
+#three > .subwindow {
+  background-color: #f03735;
+}
 #four {
+  background-color: #fae710;
+}
+#four > .subwindow {
   background-color: #fae710;
 }
 .block {
