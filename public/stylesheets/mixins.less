@@ -1,10 +1,10 @@
 .transformskew(@deg) {
-    // -ms-transform-origin: left top;
+    -ms-transform-origin: left top;
     -webkit-transform-origin: left top;
     transform-origin: left top;
-    // -ms-transform: skewX((@deg + 0deg)) translateZ(0);
-    -webkit-transform: skewX((@deg + 0deg)) translateZ(0);
-    transform: skewX((@deg + 0deg)) translateZ(0);
+    -ms-transform: skewX((@deg + 0deg));
+    -webkit-transform: skewX((@deg + 0deg));
+    transform: skewX((@deg + 0deg));
 }
 
 .filter(@string) {
@@ -16,17 +16,17 @@
 }
 
 .transformtranslate(@amt, @deg, @scale) {
-    // -ms-transform: translateZ(0) scaleX((@scale)) skewX((@deg + 0deg)) translateX((@amt + 0%));
-    -webkit-transform: translateZ(0) scaleX((@scale)) skewX((@deg + 0deg)) translateX((@amt + 0%));
-    -moz-transform: translateZ(0) scaleX((@scale)) skewX((@deg + 0deg)) translateX((@amt + 0%));
-    transform: translateZ(0) scaleX((@scale)) skewX((@deg + 0deg)) translateX((@amt + 0%));
+    -ms-transform: scaleX((@scale)) skewX((@deg + 0deg)) translateX((@amt + 0%));
+    -webkit-transform: scaleX((@scale)) skewX((@deg + 0deg)) translateX((@amt + 0%));
+    -moz-transform: scaleX((@scale)) skewX((@deg + 0deg)) translateX((@amt + 0%));
+    transform: scaleX((@scale)) skewX((@deg + 0deg)) translateX((@amt + 0%));
 }
 
 .transformtranslaterev(@amt, @deg, @scale) {
-    // -ms-transform: translateZ(0) translateX((@amt + 0%)) skewX((@deg + 0deg)) scaleX((@scale));
-    -webkit-transform: translateZ(0) translateX((@amt + 0%)) skewX((@deg + 0deg)) scaleX((@scale));
-    -moz-transform: translateZ(0) translateX((@amt + 0%)) skewX((@deg + 0deg)) scaleX((@scale));
-    transform: translateZ(0) translateX((@amt + 0%)) skewX((@deg + 0deg)) scaleX((@scale));
+    -ms-transform: translateX((@amt + 0%)) skewX((@deg + 0deg)) scaleX((@scale));
+    -webkit-transform: translateX((@amt + 0%)) skewX((@deg + 0deg)) scaleX((@scale));
+    -moz-transform: translateX((@amt + 0%)) skewX((@deg + 0deg)) scaleX((@scale));
+    transform: translateX((@amt + 0%)) skewX((@deg + 0deg)) scaleX((@scale));
 }
 
 .transorig {
