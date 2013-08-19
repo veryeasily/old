@@ -51,28 +51,28 @@ a:active {
 }
 */
 #one {
-  background-color: #00bfd7;
+  background-color: #9cffff;
 }
 #one > .subwindow {
-  background-color: #00bfd7;
+  background-color: #9cffff;
 }
 #two {
-  background-color: #5bef2c;
+  background-color: #abff78;
 }
 #two > .subwindow {
-  background-color: #5bef2c;
+  background-color: #abff78;
 }
 #three {
-  background-color: #f03735;
+  background-color: #ff958f;
 }
 #three > .subwindow {
-  background-color: #f03735;
+  background-color: #ff958f;
 }
 #four {
-  background-color: #fae710;
+  background-color: #ffff6f;
 }
 #four > .subwindow {
-  background-color: #fae710;
+  background-color: #ffff6f;
 }
 .block {
   position: absolute;
@@ -111,19 +111,19 @@ div#navbar .four h3 {
   transition: all 0.1s;
 }
 div#navbar .one h3:hover {
-  color: #00bfd7;
+  color: #9cffff;
   text-indent: 20pt;
 }
 div#navbar .two h3:hover {
-  color: #5bef2c;
+  color: #abff78;
   text-indent: 20pt;
 }
 div#navbar .three h3:hover {
-  color: #f03735;
+  color: #ff958f;
   text-indent: 20pt;
 }
 div#navbar .four h3:hover {
-  color: #fae710;
+  color: #ffff6f;
   text-indent: 20pt;
 }
 div#navbar h3 {
