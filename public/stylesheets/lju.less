@@ -11,9 +11,9 @@
 @import 'blog.less';
 @import 'mixins.less';
 
-@stretch: 1;
+@stretch: 3;
 @stretchPer: percentage(@stretch);
-@skewAngle: 0deg;
+@skewAngle: 45deg;
 @amount-to-right: 0%;
 @subwindow-offset: ((@amount-to-right)*-1);
 
@@ -105,43 +105,6 @@ h1 {
 }
 .subwindow {
     overflow: hidden;
-}
-
-.spacer {
-    position: absolute;
-    cursor: default;
-    height: 100%;
-    z-index: 10000;
-    @wid1: 0.022;
-    @wid2: 0.022;
-    @wid3: 0.022;
-    // @wid1: 0.0855;
-    // @wid2: 0.0855;
-    // @wid3: 0.0855;
-    opacity: 1;
-    background: #EEE;
-    @topacity: 0.3s;
-    -webkit-transition: width (@topacity), opacity (@topacity), -webkit-transform 0.8s;
-    -moz-transition: width (@topacity), opacity (@topacity), -moz-transform 0.8s;
-    -ms-transition: width (@topacity), opacity (@topacity), transform 0.8s;
-    -o-transition: width (@topacity), opacity (@topacity), transform 0.8s;
-    transition: width (@topacity), opacity (@topacity), transfrom 0.8s;
-    &#afterOne {
-        // background: mix(@firstcolornav, @secondcolornav);
-        left: percentage(.25 - @wid1 / 2);
-        width: percentage(@wid1);
-    }
-    &#afterTwo {
-        // background: saturate(mix(@secondcolornav, @thirdcolornav), 10%);
-        left: percentage(.50 - @wid2 / 2);
-        width: percentage(@wid2);
-    }
-    &#afterThree {
-        // background: mix(@thirdcolornav, @fourthcolornav);
-        left: percentage(.75 - @wid3 / 2);
-        width: percentage(@wid3);
-    }
-
 }
 
 .subwindow {

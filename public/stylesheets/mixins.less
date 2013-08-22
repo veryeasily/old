@@ -1,20 +1,3 @@
-.transformskew(@deg) {
-    -ms-transform-origin: left top;
-    -webkit-transform-origin: left top;
-    transform-origin: left top;
-    -ms-transform: skewX((@deg + 0deg));
-    -webkit-transform: skewX((@deg + 0deg));
-    transform: skewX((@deg + 0deg));
-}
-
-.filter(@string) {
-    -webkit-filter: (@string);
-    -ms-filter: (@string);
-    -moz-filter: (@string);
-    -o-filter: (@string);
-    filter: (@string);
-}
-
 .transformtranslate(@amt, @deg, @scale) {
     -ms-transform: scaleX((@scale)) skewX((@deg + 0deg)) translateX((@amt + 0%));
     -webkit-transform: scaleX((@scale)) skewX((@deg + 0deg)) translateX((@amt + 0%));
@@ -30,7 +13,7 @@
 }
 
 .transorig {
-    // -ms-transform-origin: left top;
+    -ms-transform-origin: left top;
     -webkit-transform-origin: left top;
     transform-origin: left top;
 
@@ -49,7 +32,7 @@
 
 .transition(@sec) {
     -webkit-transition: -webkit-transform (@sec) ;
-    // -o-transition: transform ((@sec) + 0s), margin-left ((@sec) + 0s), width ((@sec) + 0s) ;
+    -o-transition: transform ((@sec) + 0s), margin-left ((@sec) + 0s), width ((@sec) + 0s) ;
     -moz-transition: -moz-transform ((@sec) + 0s) ;
     transition: transform (@sec) ;
 }

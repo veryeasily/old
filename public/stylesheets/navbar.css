@@ -1,55 +1,3 @@
-.transorig {
-  -webkit-transform-origin: left top;
-  transform-origin: left top;
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  -ms-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -webkit-perspective: 1000;
-  -moz-perspective: 1000;
-  -ms-perspective: 1000;
-  perspective: 1000;
-}
-#navbar h3 {
-  line-height: 24px;
-}
-#navbar .row-fluid [class*="span"] {
-  margin-left: 2.9988888888888883%;
-  min-height: 24px;
-}
-#navbar .row-fluid [class*="span"]:first-child {
-  margin-left: 0%;
-}
-#navbar .span1 {
-  width: 7.3%;
-}
-#navbar .span2 {
-  width: 17.598888888888887%;
-}
-#navbar .span3 {
-  width: 27.897777777777776%;
-}
-#navbar .span4 {
-  width: 38.196666666666665%;
-}
-#navbar .span5 {
-  width: 48.495555555555555%;
-}
-#navbar .span6 {
-  width: 58.79444444444444%;
-}
-#navbar .span7 {
-  width: 69.09333333333333%;
-}
-#navbar .span8 {
-  width: 79.39222222222222%;
-}
-#navbar .span9 {
-  width: 89.69111111111111%;
-}
-#navbar .span10 {
-  width: 99.99%;
-}
 #navbar a {
   color: #25c2ac;
 }
@@ -59,16 +7,19 @@
   padding-left: 10px;
 }
 .paddingStuff {
+  bottom: 0;
+  left: 100px;
   margin: 10pt;
+  position: absolute;
+  width: 100%;
 }
 #navbar {
   background-color: #FBFFFC;
   height: 100%;
   color: #951c2d;
-  width: 270px;
+  width: 0px;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   left: 0;
-  min-width: 150pt;
   position: fixed;
   top: 0px;
   z-index: 5;
@@ -105,9 +56,7 @@
   color: rgba(37, 194, 172, 0.5);
   display: block;
   float: right;
-  font-size: 75pt;
-  font-weight: 200;
-  line-height: 75pt;
+  font: 200 68pt/1 Arial;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3), 0 0 10px rgba(0, 0, 0, 0.075), 7px 1px 0 rgba(255, 127, 255, 0.5);
   -webkit-transform: scale(1, 1.14);
   transform: scale(1, 1.14);

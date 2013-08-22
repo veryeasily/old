@@ -1,12 +1,5 @@
-@import 'mixins.less';
-@import 'navbargrid.less';
-
-//  #navbar h3 {
-//      color: #dda56c;
-//  }
-
-@navColOne: rgb(37, 194, 172);
-@navColTwo: rgb(255, 127, 255);
+@nav_color_one: rgb(37, 194, 172);
+@nav_color_two: rgb(255, 127, 255);
 
 #navbar > .container-fluid {
     // margin: 0 450px;
@@ -24,17 +17,20 @@
 }
 
 .paddingStuff {
+    bottom: 0;
+    left: 100px;
     margin: 10pt;
+    position: absolute;
+    width: 100%;
 }
 
 #navbar {
     background-color: #FBFFFC;
     height: 100%;
     color: #951c2d;
-    width: 270px;
+    width: 0px;
     font-family:'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
     left: 0;
-    min-width: 150pt;
     position: fixed;
     top: 0px;
     z-index: 5;
@@ -69,21 +65,25 @@
 }
 
 #logo {
-    color: fade(@navColOne, 50%);
+    color: fade(@nav_color_one, 50%);
     display: block;
     float: right;
-    font-size: 75pt;
-    font-weight: 200;
-    line-height: 75pt;
-    text-shadow: 0 1px 1px rgba(0,0,0,.3), 0 0 10px rgba(0,0,0,.075), 7px 1px 0 fade(@navColTwo, 50%);
+    font: 200 68pt/1 Arial;
+    text-shadow:
+        0 1px 1px rgba(0,0,0,.3),
+        0 0 10px rgba(0,0,0,.075),
+        7px 1px 0 fade(@nav_color_two, 50%);
     -webkit-transform: scale(1,1.14);
     transform: scale(1,1.14);
     &:hover,
     &:focus,
     &:active {
         text-decoration: none;
-        color: fade(desaturate(@navColOne, 100%), 50%);
-        text-shadow: 0 1px 1px rgba(0,0,0,.3), 0 0 10px rgba(0,0,0,.075), 7px 1px 0 fade(desaturate(@navColTwo, 100%), 50%);
+        color: fade(desaturate(@nav_color_one, 100%), 50%);
+        text-shadow:
+            0 1px 1px rgba(0,0,0,.3),
+            0 0 10px rgba(0,0,0,.075),
+            7px 1px 0 fade(desaturate(@nav_color_two, 100%), 50%);
     }
 }
 
