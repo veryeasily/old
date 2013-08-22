@@ -3,7 +3,7 @@ $(document).on('ready', function() {
     var $slices, $artwork, $activeHeap, undoInvert, pullUpViewer;
 
     // if we clicked a link inside a subwindow, then make sure not to animate!!!
-    $('.subwindow a').mousedown(function (e) {
+    $('.subwindow a').mouseup(function (e) {
         console.log(e);
         e.stopPropagation();
     });
@@ -12,7 +12,7 @@ $(document).on('ready', function() {
 
     // Now we basically do some routing.  If you click on a slice, then we want the page to zoom in on this slice.
     // We do this by updating the hash, and catching it with the 'onhashchange' event later on.
-    $slices.on('mousedown', function alternate (e) {
+    $slices.on('mouseup', function alternate (e) {
         console.log(e);
         if (e.target.tagName === "A")
             return true;
@@ -44,11 +44,13 @@ $(document).on('ready', function() {
         }
     }
 
-    $('#navbar a[data-slice]').on('mousedown', function(e) {
-        $(this.dataset.slice).mousedown();
+    $('#navbar a[data-slice]').on('mouseup', function(e) {
+        e.stopPropgation();
+        $(this.dataset.slice).mouseup();
+        return false;
     });
 
-    $('#logoAnchor').on('mousedown' , function(e) {
+    $('#logoAnchor').on('mouseup' , function(e) {
         window.location.hash = "#/";
     });
 

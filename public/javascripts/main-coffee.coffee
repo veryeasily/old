@@ -67,7 +67,7 @@ posImageCenter = (e) ->
         left: '0px',
         'z-index': 101,
     }).appendTo(document.body).data('imageTarget', $this)
-    $modal.on('mousedown', removeImageCenter)
+    $modal.on('mouseup', removeImageCenter)
 
 removeImageCenter = (e) ->
     e.stopPropagation()
@@ -80,7 +80,7 @@ removeImageCenter = (e) ->
 $ ->
     left = 0
     if mobile isnt true
-        $('img.artwork').on('mousedown', artClicked)
+        $('img.artwork').on('mouseup', artClicked)
     console.dir($('.artwork'))
     console.log('loaded main.coffee')
     removeElt = ->
@@ -93,7 +93,7 @@ $ ->
     MOVEAMNT = 20
     TIME = 15
 
-    $('#leftArrow').mousedown( (e) ->
+    $('#leftArrow').mouseup( (e) ->
         e.stopPropagation()
         moveLeft = ->
             left = if (left + MOVEAMNT) < 0 then left + MOVEAMNT else 0
@@ -112,7 +112,7 @@ $ ->
         return null
     )
 
-    $('#rightArrow').mousedown( (e) ->
+    $('#rightArrow').mouseup( (e) ->
         e.stopPropagation()
         moveRight = ->
             left = left - MOVEAMNT

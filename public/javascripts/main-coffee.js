@@ -71,7 +71,7 @@ posImageCenter = function(e) {
     left: '0px',
     'z-index': 101
   }).appendTo(document.body).data('imageTarget', $this);
-  return $modal.on('mousedown', removeImageCenter);
+  return $modal.on('mouseup', removeImageCenter);
 };
 
 removeImageCenter = function(e) {
@@ -90,7 +90,7 @@ $(function() {
 
   left = 0;
   if (mobile !== true) {
-    $('img.artwork').on('mousedown', artClicked);
+    $('img.artwork').on('mouseup', artClicked);
   }
   console.dir($('.artwork'));
   console.log('loaded main.coffee');
@@ -105,7 +105,7 @@ $(function() {
   window.setTimeout(fadeOuty, 2000);
   MOVEAMNT = 20;
   TIME = 15;
-  $('#leftArrow').mousedown(function(e) {
+  $('#leftArrow').mouseup(function(e) {
     var moveLeft, movingLeft;
 
     e.stopPropagation();
@@ -126,7 +126,7 @@ $(function() {
     });
     return null;
   });
-  $('#rightArrow').mousedown(function(e) {
+  $('#rightArrow').mouseup(function(e) {
     var moveRight, movingRight;
 
     e.stopPropagation();
