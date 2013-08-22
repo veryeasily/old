@@ -48,28 +48,28 @@ a:active {
 }
 */
 #one {
-  background-color: #00bfd7;
+  background-color: #9cffff;
 }
 #one > .subwindow {
-  background-color: #00bfd7;
+  background-color: #9cffff;
 }
 #two {
-  background-color: #5bef2c;
+  background-color: #abff78;
 }
 #two > .subwindow {
-  background-color: #5bef2c;
+  background-color: #abff78;
 }
 #three {
-  background-color: #f03735;
+  background-color: #ff958f;
 }
 #three > .subwindow {
-  background-color: #f03735;
+  background-color: #ff958f;
 }
 #four {
-  background-color: #fae710;
+  background-color: #ffff6f;
 }
 #four > .subwindow {
-  background-color: #fae710;
+  background-color: #ffff6f;
 }
 .block {
   position: absolute;
@@ -91,42 +91,50 @@ a:active {
 #four .block {
   background-color: black;
 }
-div#navbar .one h3 {
+div#navbar h3 {
   color: #8e8e8e;
+  -o-transition: all 0.1s;
+  -ms-transition: all 0.1s;
+  -moz-transition: all 0.1s;
+  -webkit-transition: all 0.1s;
   transition: all 0.1s;
 }
-div#navbar .two h3 {
-  color: #8e8e8e;
+div#navbar h3 > a {
+  -o-transition: all 0.1s;
+  -ms-transition: all 0.1s;
+  -moz-transition: all 0.1s;
+  -webkit-transition: all 0.1s;
   transition: all 0.1s;
 }
-div#navbar .three h3 {
-  color: #8e8e8e;
-  transition: all 0.1s;
-}
-div#navbar .four h3 {
-  color: #8e8e8e;
-  transition: all 0.1s;
-}
-div#navbar .one h3:hover {
-  color: #00bfd7;
+div#navbar h3.art:hover {
   text-indent: 20pt;
 }
-div#navbar .two h3:hover {
-  color: #5bef2c;
+div#navbar h3.blog:hover {
   text-indent: 20pt;
 }
-div#navbar .three h3:hover {
-  color: #f03735;
+div#navbar h3.other:hover {
   text-indent: 20pt;
 }
-div#navbar .four h3:hover {
-  color: #fae710;
+div#navbar h3.code:hover {
   text-indent: 20pt;
+}
+div#navbar a.one > h3:hover {
+  color: #9cffff;
+}
+div#navbar a.two > h3:hover {
+  color: #abff78;
+}
+div#navbar a.three > h3:hover {
+  color: #ff958f;
+}
+div#navbar a.four > h3:hover {
+  color: #ffff6f;
 }
 div#navbar h3 {
   font-size: 18px;
   line-height: 20px;
   margin: 0;
+  width: 70px;
 }
 .slice {
   overflow: auto;

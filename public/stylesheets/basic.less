@@ -10,8 +10,7 @@ a {
     text-decoration: none;
 }
 
-.slice {
-    color: #0c0910;
+.slice { color: #0c0910;
 }
 
 .slice:hover, .slice:focus {
@@ -113,18 +112,34 @@ div#navbar {
     .normal(@color) {
         color: rgb(142,142,142);
     }
-    .one h3 {.normal(@firstcolornav); transition: all 0.1s;}
-    .two h3 {.normal(@secondcolornav); transition: all 0.1s;}
-    .three h3 {.normal(@thirdcolornav); transition: all 0.1s;}
-    .four h3 {.normal(@fourthcolornav); transition: all 0.1s;}
-    .one h3:hover {color: darken(@firstcolornav, 0%); text-indent: 20pt;}
-    .two h3:hover {color: darken(@secondcolornav, 0%); text-indent: 20pt;}
-    .three h3:hover {color: darken(@thirdcolornav, 0%); text-indent: 20pt;}
-    .four h3:hover {color: darken(@fourthcolornav, 0%); text-indent: 20pt;}
+    h3 {
+        .normal(@secondcolornav);
+        -o-transition: all 0.1s;
+        -ms-transition: all 0.1s;
+        -moz-transition: all 0.1s;
+        -webkit-transition: all 0.1s;
+        transition: all 0.1s;
+        > a {
+            -o-transition: all 0.1s;
+            -ms-transition: all 0.1s;
+            -moz-transition: all 0.1s;
+            -webkit-transition: all 0.1s;
+            transition: all 0.1s;
+        }
+    }
+    h3.art:hover {text-indent: 20pt;}
+    h3.blog:hover {text-indent: 20pt;}
+    h3.other:hover {text-indent: 20pt;}
+    h3.code:hover {text-indent: 20pt;}
+    a.one > h3:hover{color: darken(@firstcolornav, 0%);}
+    a.two > h3:hover {color: darken(@secondcolornav, 0%);}
+    a.three > h3:hover {color: darken(@thirdcolornav, 0%);}
+    a.four > h3:hover {color: darken(@fourthcolornav, 0%);}
     h3 {
         font-size:18px;
         line-height:20px;
         margin:0;
+        width: 70px;
     }
 }
 

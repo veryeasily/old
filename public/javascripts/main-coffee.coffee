@@ -31,12 +31,15 @@ if isSafari
 
 if window.innerWidth <= 800
     mobile = true
-    $('#navbar').remove()
-    $(document.body).css('padding', 0)
+    # $('#navbar').remove()
+    # $(document.body).css('padding', 0)
     $('#rightArrow, #leftArrow').remove()
 
+
+###
 if navigator.appName is 'Microsoft Internet Explorer'
     window.location.href = window.location.protocol + '//' + window.location.hostname + '/ie'
+###
 
 posImageCenter = (e) ->
     do e.stopPropagation

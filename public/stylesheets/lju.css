@@ -94,42 +94,50 @@ a:active {
 #four .block {
   background-color: black;
 }
-div#navbar .one h3 {
+div#navbar h3 {
   color: #8e8e8e;
+  -o-transition: all 0.1s;
+  -ms-transition: all 0.1s;
+  -moz-transition: all 0.1s;
+  -webkit-transition: all 0.1s;
   transition: all 0.1s;
 }
-div#navbar .two h3 {
-  color: #8e8e8e;
+div#navbar h3 > a {
+  -o-transition: all 0.1s;
+  -ms-transition: all 0.1s;
+  -moz-transition: all 0.1s;
+  -webkit-transition: all 0.1s;
   transition: all 0.1s;
 }
-div#navbar .three h3 {
-  color: #8e8e8e;
-  transition: all 0.1s;
+div#navbar h3.art:hover {
+  text-indent: 20pt;
 }
-div#navbar .four h3 {
-  color: #8e8e8e;
-  transition: all 0.1s;
+div#navbar h3.blog:hover {
+  text-indent: 20pt;
 }
-div#navbar .one h3:hover {
+div#navbar h3.other:hover {
+  text-indent: 20pt;
+}
+div#navbar h3.code:hover {
+  text-indent: 20pt;
+}
+div#navbar a.one > h3:hover {
   color: #9cffff;
-  text-indent: 20pt;
 }
-div#navbar .two h3:hover {
+div#navbar a.two > h3:hover {
   color: #abff78;
-  text-indent: 20pt;
 }
-div#navbar .three h3:hover {
+div#navbar a.three > h3:hover {
   color: #ff958f;
-  text-indent: 20pt;
 }
-div#navbar .four h3:hover {
+div#navbar a.four > h3:hover {
   color: #ffff6f;
-  text-indent: 20pt;
 }
 div#navbar h3 {
   font-size: 18px;
   line-height: 20px;
   margin: 0;
+  width: 70px;
 }
 .slice {
   overflow: auto;
@@ -140,9 +148,6 @@ div#navbar h3 {
   -ms-box-sizing: border-box;
   -o-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-}
-#navbar a {
-  color: #25c2ac;
 }
 #navbar .container-fluid {
   margin: 20px 0;
@@ -776,11 +781,6 @@ h1 {
   #help {
     line-height: 1;
     padding: 0 0 0 14pt;
-  }
-  #navbar {
-    opacity: 0;
-    min-width: 0px;
-    width: 0px;
   }
   body {
     padding: 0;

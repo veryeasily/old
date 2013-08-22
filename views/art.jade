@@ -1,32 +1,7 @@
 #arts-container
    i#leftArrow.icon-angle-left.icon-4x.art-arrows
    i#rightArrow.icon-angle-right.icon-4x.art-arrows
-   // .display-case.container-fluid
-   - ljuHelper = {};
-   - ljuHelper.arrayOfRands = function(){
-   -    var num = Math.ceil(Math.random()*5);
-   -    for(var i=0, temp=[];i<num; i++){temp.push(Math.floor(Math.random()*11)+1);}
-   -     return temp;};
-   - ljuHelper.populateGallery = function(fn, option) {
-   -    var i, temp, stop = Math.ceil(Math.random()*5);
-   -    for (i=0, temp=[]; i<stop; i++) {
-   -        temp.push(fn());
-   -    }
-   -    return temp;
-   -  };
-   -  ljuHelper.images = ljuHelper.populateGallery(ljuHelper.arrayOfRands);
-   -  ljuHelper.colors = ['rgba(64,224,208,0.3)', 'rgba(188,143,143,0.3)', 'rgba(220,20,60,0.3)', 'rgba(240,230,140,0.3)', 'rgba(128,128,0,0.3)'];
-   //  each _array, _i in ljuHelper.images
-   //    .bundle
-   //    - var _color = Math.floor(Math.random()*5);
-   //      each number, _j in _array
-   //        a.thumbnail(href="#", alt="")
-   //          // i.icon-arrow-up.icon-2x.arrow
-   //          img.artwork(src='https://s3.amazonaws.com/ideabin-images/art-large/artwork_#{number}_large.jpg')
-   //          // i.icon-arrow-down.icon-2x.arrow
    .bundle
-     // .artwork
-       // img.artwork(src='http://farm6.staticflickr.com/5338/9288760247_6153e06904_z.jpg')
      .artwork
        img.artwork(src='http://farm6.staticflickr.com/5500/9288758335_cc17d37ac4_b.jpg')
      .artwork
@@ -51,3 +26,5 @@
        img.artwork(src='http://farm6.staticflickr.com/5492/9291547924_37e0b7f98e_z.jpg')
      .artwork
        img.artwork(src='http://farm4.staticflickr.com/3735/9291559944_47b107f72e_z.jpg')
+      .artwork
+        img.artwork(src='http://farm6.staticflickr.com/5338/9288760247_6153e06904_z.jpg')

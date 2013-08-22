@@ -39,14 +39,14 @@ if isSafari
 
 if (window.innerWidth <= 800) {
   mobile = true;
-  $('#navbar').remove();
-  $(document.body).css('padding', 0);
   $('#rightArrow, #leftArrow').remove();
 }
 
-if (navigator.appName === 'Microsoft Internet Explorer') {
-  window.location.href = window.location.protocol + '//' + window.location.hostname + '/ie';
-}
+/*
+if navigator.appName is 'Microsoft Internet Explorer'
+    window.location.href = window.location.protocol + '//' + window.location.hostname + '/ie'
+*/
+
 
 posImageCenter = function(e) {
   var $modal, $this;
