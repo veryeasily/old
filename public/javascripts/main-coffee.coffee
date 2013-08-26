@@ -77,6 +77,24 @@ removeImageCenter = (e) ->
     $(this).remove()
     return null
 
+
+disable = () ->
+  $('.slice').off('mouseup')
+  $('.subwindow a').off('mouseup')
+  $('#navbar a[data-slice]').off('mouseup')
+  $('#logoAnchor').off('mouseup')
+  $('img.artwork').off('mouseup')
+  console.log("removed event listeners!!!")
+
+enable = () ->
+  $('.slice').on('mouseup', alternate)
+  $('.subwindow a').on('mouseup', linkClicked)
+  $('#navbar a[data-slice]').on('mouseup', navButtonClicked)
+  $('#logoAnchor').on('mouseup', mainNavClicked)
+  if mobile isnt true
+    $('img.artwork').on('mouseup', artClicked)
+  console.log("added event listeners!!!")
+
 $ ->
     left = 0
     if mobile isnt true
@@ -93,42 +111,49 @@ $ ->
     MOVEAMNT = 20
     TIME = 15
 
-    $('#leftArrow').mouseup( (e) ->
+    clear = (interval) ->
+      fn = () ->
+        window.clearInterval(interval)
+      return fn
+
+    $('#leftArrow').mousedown( (e) ->
         e.stopPropagation()
         moveLeft = ->
             left = if (left + MOVEAMNT) < 0 then left + MOVEAMNT else 0
             $('.bundle').css('left', left + 'px')
+        disable()
         movingLeft = window.setInterval(moveLeft, TIME)
-        $(this).mouseup( (e) ->
-            e.stopPropagation()
-            window.clearInterval(movingLeft)
-            return null
+        clearLeft = clear(movingLeft)
+        $(document.body).one('mouseup', (e) ->
+          clearLeft(e)
+          enable()
+          return false
         )
-        $(this).mouseleave( (e) ->
-            e.stopPropagation()
-            window.clearInterval(movingLeft)
-            return null
+        $(this).one('mouseleave', (e) ->
+          clearLeft(e)
+          return false
         )
-        return null
+        return false
     )
 
-    $('#rightArrow').mouseup( (e) ->
+    $('#rightArrow').mousedown( (e) ->
         e.stopPropagation()
         moveRight = ->
             left = left - MOVEAMNT
             $('.bundle').css('left', left + 'px')
+        disable()
         movingRight = window.setInterval(moveRight, TIME)
-        $(this).mouseup( (e) ->
-            e.stopPropagation()
-            window.clearInterval(movingRight)
-            return null
+        clearRight = clear(movingRight)
+        $(document.body).one('mouseup', (e) ->
+          clearRight()
+          enable()
+          return false
         )
-        $(this).mouseleave( (e) ->
-            e.stopPropagation()
-            window.clearInterval(movingRight)
-            return null
+        $(this).one('mouseleave', (e) ->
+          clearRight()
+          return false
         )
-        return null
+        return false
     )
 
     $('.bundle img').css({

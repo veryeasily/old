@@ -3,28 +3,13 @@ $(document).on('ready', function() {
     var $slices, $artwork, $activeHeap, undoInvert, pullUpViewer;
 
     // if we clicked a link inside a subwindow, then make sure not to animate!!!
-    $('.subwindow a').mouseup(function (e) {
-        console.log(e);
-        e.stopPropagation();
-    });
+    $('.subwindow a').mouseup();
 
     $slices = $('.slice');
 
     // Now we basically do some routing.  If you click on a slice, then we want the page to zoom in on this slice.
     // We do this by updating the hash, and catching it with the 'onhashchange' event later on.
-    $slices.on('mouseup', function alternate (e) {
-        console.log(e);
-        if (e.target.tagName === "A")
-            return true;
-        if (window.location.hash === "#/art" && window.innerWidth < 800)
-            return true;
-        if (window.location.hash === $(this).attr('href')) {
-            window.location.hash = "#/";
-        } else {
-            var that = this;
-            window.location.hash = $(this).attr('href');
-        }
-    });
+    $slices.on('mouseup', alternate);
 
     // Here is where all the magic happens.  (Well it a lot of it really also happens in lju.less)
     function focusOnSlice (e) {
@@ -44,15 +29,9 @@ $(document).on('ready', function() {
         }
     }
 
-    $('#navbar a[data-slice]').on('mouseup', function(e) {
-        e.stopPropgation();
-        $(this.dataset.slice).mouseup();
-        return false;
-    });
+    $('#navbar a[data-slice]').on('mouseup', navButtonClicked);
 
-    $('#logoAnchor').on('mouseup' , function(e) {
-        window.location.hash = "#/";
-    });
+    $('#logoAnchor').on('mouseup', mainNavClicked);
 
     // Here's where we handle coming in to the page and going to a specific slice:
     switch (window.location.hash) {
@@ -107,3 +86,31 @@ $(document).on('ready', function() {
                 }
     });
 });
+
+function alternate (e) {
+    console.log(e);
+    if (window.location.hash === "#/art" && window.innerWidth < 800)
+        return true;
+    if (window.location.hash === $(this).attr('href')) {
+        window.location.hash = "#/";
+    } else {
+        var that = this;
+        window.location.hash = $(this).attr('href');
+    }
+    return false;
+}
+
+function navButtonClicked (e) {
+        e.stopPropagation();
+        $(this.dataset.slice).mouseup();
+        return false;
+    }
+
+function mainNavClicked (e) {
+        window.location.hash = "#/";
+    }
+
+function linkClicked (e) {
+        console.log(e);
+        e.stopPropagation();
+    }
