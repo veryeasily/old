@@ -3,13 +3,11 @@ $(document).on('ready', function() {
     var $slices, $artwork, $activeHeap, undoInvert, pullUpViewer;
 
     // if we clicked a link inside a subwindow, then make sure not to animate!!!
-    $('.subwindow a').mouseup();
-
     $slices = $('.slice');
 
     // Now we basically do some routing.  If you click on a slice, then we want the page to zoom in on this slice.
     // We do this by updating the hash, and catching it with the 'onhashchange' event later on.
-    $slices.on('mouseup', alternate);
+    $slices.on('click', alternate);
 
     // Here is where all the magic happens.  (Well it a lot of it really also happens in lju.less)
     function focusOnSlice (e) {
@@ -29,9 +27,9 @@ $(document).on('ready', function() {
         }
     }
 
-    $('#navbar a[data-slice]').on('mouseup', navButtonClicked);
+    $('#navbar a[data-slice]').on('click', navButtonClicked);
 
-    $('#logoAnchor').on('mouseup', mainNavClicked);
+    $('#logoAnchor').on('click', mainNavClicked);
 
     // Here's where we handle coming in to the page and going to a specific slice:
     switch (window.location.hash) {
@@ -60,6 +58,7 @@ $(document).on('ready', function() {
     // Here's the switchboard where we navigate to a new part of the page as the hash changes.
     // I possibly could have done this by actually naming the slices in the hash and using the CSS selector :target, but some browsers
     // such as Firefox have weird behavior when they try to center the element that is targeted in the hash of the url.
+    var oldhash = window.location.hash;
     $(window).on('hashchange'
             , function(e) {
                 switch (window.location.hash) {
@@ -84,6 +83,7 @@ $(document).on('ready', function() {
                         $slices.removeClass('right1 right2 right3 left1 left2 left3 scrollEnabled');
                         break;
                 }
+                oldhash = window.location.hash;
     });
 });
 
@@ -94,7 +94,6 @@ function alternate (e) {
     if (window.location.hash === $(this).attr('href')) {
         window.location.hash = "#/";
     } else {
-        var that = this;
         window.location.hash = $(this).attr('href');
     }
     return false;
@@ -102,7 +101,7 @@ function alternate (e) {
 
 function navButtonClicked (e) {
         e.stopPropagation();
-        $(this.dataset.slice).mouseup();
+        $(this.dataset.slice).click();
         return false;
     }
 

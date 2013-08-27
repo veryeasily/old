@@ -71,7 +71,7 @@ posImageCenter = function(e) {
     left: '0px',
     'z-index': 101
   }).appendTo(document.body).data('imageTarget', $this);
-  return $modal.on('mouseup', removeImageCenter);
+  return $modal.on('click', removeImageCenter);
 };
 
 removeImageCenter = function(e) {
@@ -86,21 +86,21 @@ removeImageCenter = function(e) {
 };
 
 disable = function() {
-  $('.slice').off('mouseup');
-  $('.subwindow a').off('mouseup');
-  $('#navbar a[data-slice]').off('mouseup');
-  $('#logoAnchor').off('mouseup');
-  $('img.artwork').off('mouseup');
+  $('.slice').off('click');
+  $('.subwindow a').off('click');
+  $('#navbar a[data-slice]').off('click');
+  $('#logoAnchor').off('click');
+  $('img.artwork').off('click');
   return console.log("removed event listeners!!!");
 };
 
 enable = function() {
-  $('.slice').on('mouseup', alternate);
-  $('.subwindow a').on('mouseup', linkClicked);
-  $('#navbar a[data-slice]').on('mouseup', navButtonClicked);
-  $('#logoAnchor').on('mouseup', mainNavClicked);
+  $('.slice').on('click', alternate);
+  $('.subwindow a').on('click', linkClicked);
+  $('#navbar a[data-slice]').on('click', navButtonClicked);
+  $('#logoAnchor').on('click', mainNavClicked);
   if (mobile !== true) {
-    $('img.artwork').on('mouseup', artClicked);
+    $('img.artwork').on('click', artClicked);
   }
   return console.log("added event listeners!!!");
 };
@@ -110,7 +110,7 @@ $(function() {
 
   left = 0;
   if (mobile !== true) {
-    $('img.artwork').on('mouseup', artClicked);
+    $('img.artwork').on('click', artClicked);
   }
   console.dir($('.artwork'));
   console.log('loaded main.coffee');
@@ -134,7 +134,8 @@ $(function() {
     return fn;
   };
   $('#leftArrow').mousedown(function(e) {
-    var clearLeft, moveLeft, movingLeft;
+    var clearLeft, moveLeft, movingLeft,
+      _this = this;
 
     e.stopPropagation();
     moveLeft = function() {
@@ -144,19 +145,22 @@ $(function() {
     disable();
     movingLeft = window.setInterval(moveLeft, TIME);
     clearLeft = clear(movingLeft);
-    $(document.body).one('mouseup', function(e) {
+    $(document.body).one('click', function(e) {
       clearLeft(e);
       enable();
+      $(_this).off('mouseleave');
       return false;
     });
     $(this).one('mouseleave', function(e) {
       clearLeft(e);
+      $(document.body).off('mouseup');
       return false;
     });
     return false;
   });
-  $('#rightArrow').mousedown(function(e) {
-    var clearRight, moveRight, movingRight;
+  return $('#rightArrow').mousedown(function(e) {
+    var clearRight, moveRight, movingRight,
+      _this = this;
 
     e.stopPropagation();
     moveRight = function() {
@@ -166,9 +170,10 @@ $(function() {
     disable();
     movingRight = window.setInterval(moveRight, TIME);
     clearRight = clear(movingRight);
-    $(document.body).one('mouseup', function(e) {
+    $(document.body).one('click', function(e) {
       clearRight();
       enable();
+      $(_this).off('mouseleave');
       return false;
     });
     $(this).one('mouseleave', function(e) {
@@ -176,9 +181,5 @@ $(function() {
       return false;
     });
     return false;
-  });
-  return $('.bundle img').css({
-    'max-width': Math.floor(window.innerWidth * .9) + 'px',
-    'max-height': Math.floor(window.innerHeight * .9) + 'px'
   });
 });

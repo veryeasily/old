@@ -11,10 +11,11 @@ $(function() {
       this.$container = $(container).on('click', function(e) {
         if (e.target.tagName === "A" || "a") {
           e.preventDefault();
-          return e.stopPropagation();
+          e.stopPropagation();
         }
+        return true;
       }).on('mousedown', function(e) {
-        return null;
+        return true;
       });
       this.currentPage = currentPage;
     }
@@ -37,9 +38,11 @@ $(function() {
         e.preventDefault();
         e.stopPropagation();
         blog.updatePage(this.href);
-        return null;
+        return false;
       }).mousedown(function(e) {
-        return null;
+        e.preventDefault();
+        e.stopPropagation();
+        return false;
       });
     };
 

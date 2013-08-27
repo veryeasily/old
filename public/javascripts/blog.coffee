@@ -10,8 +10,9 @@ $ ->
                 if e.target.tagName is "A" or "a"
                     e.preventDefault()
                     e.stopPropagation()
+                return true
             ).on('mousedown', (e) ->
-                return null
+                return true
             )
             @currentPage = currentPage
 
@@ -30,11 +31,11 @@ $ ->
                     e.preventDefault()
                     e.stopPropagation()
                     blog.updatePage this.href
-                    return null
+                    return false
             ).mousedown( (e) ->
                 e.preventDefault()
                 e.stopPropagation()
-                return null
+                return false
             )
 
     blog = new Blog(document.getElementById 'blog-container')

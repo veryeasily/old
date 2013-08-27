@@ -67,7 +67,7 @@ posImageCenter = (e) ->
         left: '0px',
         'z-index': 101,
     }).appendTo(document.body).data('imageTarget', $this)
-    $modal.on('mouseup', removeImageCenter)
+    $modal.on('click', removeImageCenter)
 
 removeImageCenter = (e) ->
     e.stopPropagation()
@@ -79,26 +79,26 @@ removeImageCenter = (e) ->
 
 
 disable = () ->
-  $('.slice').off('mouseup')
-  $('.subwindow a').off('mouseup')
-  $('#navbar a[data-slice]').off('mouseup')
-  $('#logoAnchor').off('mouseup')
-  $('img.artwork').off('mouseup')
+  $('.slice').off('click')
+  $('.subwindow a').off('click')
+  $('#navbar a[data-slice]').off('click')
+  $('#logoAnchor').off('click')
+  $('img.artwork').off('click')
   console.log("removed event listeners!!!")
 
 enable = () ->
-  $('.slice').on('mouseup', alternate)
-  $('.subwindow a').on('mouseup', linkClicked)
-  $('#navbar a[data-slice]').on('mouseup', navButtonClicked)
-  $('#logoAnchor').on('mouseup', mainNavClicked)
+  $('.slice').on('click', alternate)
+  $('.subwindow a').on('click', linkClicked)
+  $('#navbar a[data-slice]').on('click', navButtonClicked)
+  $('#logoAnchor').on('click', mainNavClicked)
   if mobile isnt true
-    $('img.artwork').on('mouseup', artClicked)
+    $('img.artwork').on('click', artClicked)
   console.log("added event listeners!!!")
 
 $ ->
     left = 0
     if mobile isnt true
-        $('img.artwork').on('mouseup', artClicked)
+        $('img.artwork').on('click', artClicked)
     console.dir($('.artwork'))
     console.log('loaded main.coffee')
     removeElt = ->
@@ -124,13 +124,15 @@ $ ->
         disable()
         movingLeft = window.setInterval(moveLeft, TIME)
         clearLeft = clear(movingLeft)
-        $(document.body).one('mouseup', (e) ->
+        $(document.body).one('click', (e) =>
           clearLeft(e)
           enable()
+          $(this).off('mouseleave')
           return false
         )
         $(this).one('mouseleave', (e) ->
           clearLeft(e)
+          $(document.body).off('mouseup')
           return false
         )
         return false
@@ -144,9 +146,10 @@ $ ->
         disable()
         movingRight = window.setInterval(moveRight, TIME)
         clearRight = clear(movingRight)
-        $(document.body).one('mouseup', (e) ->
+        $(document.body).one('click', (e) =>
           clearRight()
           enable()
+          $(this).off('mouseleave')
           return false
         )
         $(this).one('mouseleave', (e) ->
@@ -155,8 +158,3 @@ $ ->
         )
         return false
     )
-
-    $('.bundle img').css({
-        'max-width': Math.floor(window.innerWidth * .9) + 'px',
-        'max-height': Math.floor(window.innerHeight * .9) + 'px'
-    })
