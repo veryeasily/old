@@ -504,18 +504,6 @@ h1 {
 .go .slice:hover {
   box-shadow: none;
 }
-#one:hover {
-  background: #fafafa;
-}
-#two:hover {
-  background: #fafafa;
-}
-#three:hover {
-  background: #fafafa;
-}
-#four:hover {
-  background: #fafafa;
-}
 #warp {
   height: 100%;
   position: relative;
