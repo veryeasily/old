@@ -1,67 +1,56 @@
 $ ->
 
-    $blogContainer = $('#blog-container')
+  blogContainer$ = $('#blog-container')
 
-    class Blog
+  class Blog
 
-        constructor: (container, currentPage = 'http://lju.me/blog/_site/') ->
+    constructor: (container, currentPage = 'http://lju.me/blog/_site/') ->
+      @container$ = $(container)
+      @currentPage = currentPage
 
-            @$container = $(container).on('click', (e) ->
-                if e.target.tagName is "A" or "a"
-                    e.preventDefault()
-                    e.stopPropagation()
-                return true
-            ).on('mousedown', (e) ->
-                return true
-            )
-            @currentPage = currentPage
 
-        updatePage: (page) ->
+    updatePage: (page) ->
+      $.ajax @currentPage = page,
+        complete: (data) =>
+          @container$.html(data.responseText)
+          @fixLinks()
 
-            @currentPage = page
-            $.ajax this.currentPage, {
-                complete: (data) =>
-                    this.$container.html('')
-                    $(data.responseText).appendTo(this.$container)
-                    this.fixLinks()
-            }
 
-        fixLinks: () ->
-            $('#blog-container a[href*="blog/_site"]').on('click', (e) ->
-                    e.preventDefault()
-                    e.stopPropagation()
-                    blog.updatePage this.href
-                    return false
-            ).mousedown( (e) ->
-                e.preventDefault()
-                e.stopPropagation()
-                return false
-            )
+    fixLinks: () ->
+      $('#blog-container a[href*="blog/_site"]').on('click', (e) ->
+        e.preventDefault()
+        e.stopPropagation()
+        blog.updatePage this.href
+      ).mousedown( (e) ->
+        e.preventDefault()
+        e.stopPropagation()
+      )
 
-    blog = new Blog(document.getElementById 'blog-container')
-    blog.fixLinks()
 
-    ###
-    # Make an ajax call and get the new page content
-    # After getting it, clear out the current page,
-    # and replace with the new html.
-    bootstrap = () ->
-        loadNewPage = (e) ->
-            swapData = (data) ->
-                $blogContainer.html(data.responseText)
-                do fixLinks
+  blog = new Blog document.getElementById 'blog-container'
+  blog.fixLinks()
 
-            page = this.currentPage
-            options = {complete: swapData}
-            $.ajax(page, options)
+  ###
+  # Make an ajax call and get the new page content
+  # After getting it, clear out the current page,
+  # and replace with the new html.
+  bootstrap = () ->
+    loadNewPage = (e) ->
+      swapData = (data) ->
+        blogContainer$.html(data.responseText)
+        do fixLinks
 
-        $blogContainer.on('pageChange', loadNewPage)
+      page = this.currentPage
+      options = {complete: swapData}
+      $.ajax(page, options)
 
-    fixLinks = () ->
-        $('#blog-container a[href*="blog/_site"]').on('mousedown', (e) ->
-            e.preventDefault()
-            e.stopPropagation()
-            blog.updatePage(this.href)
-            return null
-        )
-    ###
+    blogContainer$.on('pageChange', loadNewPage)
+
+  fixLinks = () ->
+    $('#blog-container a[href*="blog/_site"]').on('mousedown', (e) ->
+      e.preventDefault()
+      e.stopPropagation()
+      blog.updatePage(this.href)
+      return null
+    )
+  ###
