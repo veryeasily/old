@@ -1,13 +1,13 @@
 
 artClicked = (e) ->
-    $this = $(this)
+    this$ = $(this)
     console.log('an image was clicked, here it is')
     console.dir(this)
     e.stopPropagation()
     src = $(this).attr('src')
-    $img = $('<img>').attr('src', src)
-    $img.appendTo(document.body)
-    $img.on('load', posImageCenter)
+    img$ = $('<img>').attr('src', src)
+    img$.appendTo(document.body)
+    img$.on('load', posImageCenter)
     return null
 
 ###
@@ -45,11 +45,11 @@ posImageCenter = (e) ->
     do e.stopPropagation
     console.log('the image is now loaded, here it is')
     console.dir(this)
-    $this = $(this)
+    this$ = $(this)
     # width = this.naturalWidth
     # height = this.naturalHeight
-    $this.addClass('artCenter')
-    $this.css({
+    this$.addClass('artCenter')
+    this$.css({
         position: 'absolute',
         'z-index': 100
     }).css({
@@ -59,21 +59,21 @@ posImageCenter = (e) ->
 
 
     # now we have to place something to absorb the click to make the art go away
-    $modal = $('<div id="modalCatch">').css({
+    modal$ = $('<div id="modalCatch">').css({
         width: window.innerWidth,
         height: window.innerHeight,
         position: 'absolute',
         top: '0px',
         left: '0px',
         'z-index': 101,
-    }).appendTo(document.body).data('imageTarget', $this)
-    $modal.on('click', removeImageCenter)
+    }).appendTo(document.body).data('imageTarget', this$)
+    modal$.on('click', removeImageCenter)
 
 removeImageCenter = (e) ->
     e.stopPropagation()
     console.log('made it into remove Image Center')
-    $img = $(this).data('imageTarget')
-    $img.remove()
+    img$ = $(this).data('imageTarget')
+    img$.remove()
     $(this).remove()
     return null
 

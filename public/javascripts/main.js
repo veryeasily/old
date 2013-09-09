@@ -1,27 +1,27 @@
 $(document).on('ready', function() {
 
-    var $slices, $artwork, $activeHeap, undoInvert, pullUpViewer;
+    var slices$, artwork$, activeHeap$, undoInvert, pullUpViewer;
 
     // if we clicked a link inside a subwindow, then make sure not to animate!!!
-    $slices = $('.slice');
+    slices$ = $('.slice');
 
     // Now we basically do some routing.  If you click on a slice, then we want the page to zoom in on this slice.
     // We do this by updating the hash, and catching it with the 'onhashchange' event later on.
-    $slices.on('click', alternate);
+    slices$.on('click', alternate);
 
     // Here is where all the magic happens.  (Well it a lot of it really also happens in lju.less)
     function focusOnSlice (e) {
-        var $this, $right, $left, $others;
+        var this$, right$, left$, others$;
 
         // e.stopPropagation();
         $('#warp').removeClass('go goone gotwo gothree gofour')
-        $slices.removeClass('right1 right2 right3 left1 left2 left3 scrollEnabled');
+        slices$.removeClass('right1 right2 right3 left1 left2 left3 scrollEnabled');
         if (window.location.hash !== "#/" && window.location.hash !== "") {
-            $right = $slices.filter('#' + this.id + ' ~ a');
-            $left = $slices.not($right).not(this);
-            $left.each(function(i) {
-                $(this).addClass('left' + ($left.length - i));} );
-            $right.each(function(i) {
+            right$ = slices$.filter('#' + this.id + ' ~ a');
+            left$ = slices$.not(right$).not(this);
+            left$.each(function(i) {
+                $(this).addClass('left' + (left$.length - i));} );
+            right$.each(function(i) {
                 $(this).addClass('right' + (i + 1)); });
             $('#warp').addClass('go').addClass('go' + this.id);
         }
@@ -76,11 +76,11 @@ $(document).on('ready', function() {
                         break;
                     case "#/":
                         $('#warp').removeClass('go goone gotwo gothree gofour')
-                        $slices.removeClass('right1 right2 right3 left1 left2 left3 scrollEnabled');
+                        slices$.removeClass('right1 right2 right3 left1 left2 left3 scrollEnabled');
                         break;
                     case "":
                         $('#warp').removeClass('go goone gotwo gothree gofour')
-                        $slices.removeClass('right1 right2 right3 left1 left2 left3 scrollEnabled');
+                        slices$.removeClass('right1 right2 right3 left1 left2 left3 scrollEnabled');
                         break;
                 }
                 oldhash = window.location.hash;
