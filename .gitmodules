@@ -1,0 +1,6 @@
+[submodule "beep"]
+	path = beep
+	url = git@github.com:elju/shaker.go.git
+[submodule "boop"]
+	path = boop
+	url = git@github.com:elju/shaker.go.git
