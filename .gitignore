@@ -1,6 +1,4 @@
 *.swp
 *.swo
 node_modules
-*.jpg
-*.png
 tags
