@@ -1,3 +1,7 @@
+require('dotenv').config()
+
+console.log(process.env)
+
 var express = require('express')
   , routes = require('./routes')
 
@@ -11,9 +15,12 @@ console.log(process.env.PORT);
 console.log(__dirname);
 app.locals.name = 'Luke';
 
+console.log(app.get('env'))
+
 app.set('views', './views');
 app.set('view engine', 'jade');
 app.set('view options', {layout: false });
+app.set('port', process.env.PORT);
 
 app.use(express.favicon());
 app.use(express.logger('dev'));

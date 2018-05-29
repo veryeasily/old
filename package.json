@@ -9,22 +9,21 @@
   "author": {
     "name": "OpenShift",
     "email": "ramr@example.org",
-    "url":  "http://openshift.redhat.com/"
+    "url": "http://openshift.redhat.com/"
   },
   "homepage": "http://lju.me/",
   "engines": {
     "node": "0.10.x",
     "npm": "1.2.x"
   },
-
   "dependencies": {
+    "dotenv": "^5.0.1",
     "express": "3.1.x",
-    "jade": "*",
-    "github": "0.1.8"
+    "github": "0.1.8",
+    "jade": "*"
   },
   "devDependencies": {},
   "bundleDependencies": [],
-
   "private": true,
   "main": "server.js"
 }
